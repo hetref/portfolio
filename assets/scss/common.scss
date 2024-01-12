@@ -1,0 +1,23 @@
+@import "_variables.scss";
+@import "components/Navbar.scss";
+@import "components/Header.scss";
+@import "components/AboutMe.scss";
+@import "components/ScrollIndicator.scss";
+@import "components/ScrollInfo.scss";
+@import "components/HorizontalFramer.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.3;
+  font-family: "Bebas Neue", cursive;
+  overflow-x: hidden;
+}
