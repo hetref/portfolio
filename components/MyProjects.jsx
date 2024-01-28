@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -10,7 +11,7 @@ const projects = [
     tags: ["NextJS", "Solidity", "ShadCN", "ThirdWeb"],
     image:
       "https://hetref.github.io/portfolio-assets/project/lottery-dapp-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://lottery-dapp-hetref.vercel.app/",
     inspiration: "Sonny Sangha",
   },
   {
@@ -19,7 +20,7 @@ const projects = [
       "Filedrop simplifies file sharing with a user-friendly interface. Built using NextJS, ShadCN, Firebase, and Clerk, this project ensures efficient and reliable file transfer experiences.",
     tags: ["NextJS", "ShadCN", "Firebase", "Clerk"],
     image: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://filedrop-mu.vercel.app/",
     inspiration: "Sonny Sangha",
   },
   {
@@ -29,7 +30,7 @@ const projects = [
     tags: ["NextJS", "ThreeJS", "ShadCN"],
     image:
       "https://hetref.github.io/portfolio-assets/project/customize-shirt-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://customizeshirt.netlify.app/",
     inspiration: "JS Mastery",
   },
   {
@@ -39,7 +40,7 @@ const projects = [
     tags: ["ReactJS"],
     image:
       "https://hetref.github.io/portfolio-assets/project/textutils-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://hetref.github.io/textutils/",
     inspiration: "CodeWithHarry",
   },
   {
@@ -48,7 +49,7 @@ const projects = [
       "Manage your tasks efficiently with YourTodo. This project, crafted with HTML, CSS, JavaScript, MaterializeCSS, and Firebase, offers a user-friendly interface for organizing your daily activities.",
     tags: ["HTML", "CSS", "JavaScript", "MaterializeCSS", "Firebase"],
     image: "https://hetref.github.io/portfolio-assets/project/yourtodo-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://hetref.github.io/yourtodo/",
   },
   {
     name: "AISYWLC",
@@ -56,7 +57,7 @@ const projects = [
       "AISYWLC, powered by WordPress, delivers a captivating online presence. Explore the world of this project with its immersive content and engaging features.",
     tags: ["Wordpress"],
     image: "https://hetref.github.io/portfolio-assets/project/aisywlc-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://aisywlc.ieeebombay.org/",
   },
   {
     name: "IBSYWLC",
@@ -64,7 +65,7 @@ const projects = [
       "IBSYWLC presents a modern and visually appealing website built with ReactJS and TailwindCSS. Experience a seamless and aesthetically pleasing user interface.",
     tags: ["ReactJS", "TailwindCSS"],
     image: "https://hetref.github.io/portfolio-assets/project/ibsywlc-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://ieeebombay.org/ibsywlc23/",
   },
   {
     name: "CrownVitrea",
@@ -73,7 +74,7 @@ const projects = [
     tags: ["Wordpress"],
     image:
       "https://hetref.github.io/portfolio-assets/project/crownvitrea-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://crownvitrea.com/",
   },
   {
     name: "IDream Realty",
@@ -82,7 +83,7 @@ const projects = [
     tags: ["Wordpress"],
     image:
       "https://hetref.github.io/portfolio-assets/project/idream-realty-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://idreamrealty.ca/",
   },
   {
     name: "Lehagen",
@@ -90,7 +91,7 @@ const projects = [
       "Lehagen, a WordPress project, showcases a captivating online presence. Dive into the content and experience the unique charm of this website.",
     tags: ["Wordpress"],
     image: "https://hetref.github.io/portfolio-assets/project/lehagen-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://lehagen.in/",
   },
   {
     name: "Devoutlooks",
@@ -99,7 +100,7 @@ const projects = [
     tags: ["ReactJS", "Firebase", "Bootstrap"],
     image:
       "https://hetref.github.io/portfolio-assets/project/devoutlooks-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://devoutlook.netlify.app/",
   },
   {
     name: "Tile Game",
@@ -108,7 +109,7 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript"],
     image:
       "https://hetref.github.io/portfolio-assets/project/tile-game-min.png",
-    url: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
+    url: "https://hetref.github.io/tilesgame/",
   },
 ];
 

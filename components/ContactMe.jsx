@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import EarthCanvas from "./Earth";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 const ContactMe = () => {
   const [name, setName] = useState("");
@@ -174,7 +175,7 @@ const ContactMe = () => {
               onClick={handleSubmit}
             >
               {loading ? (
-                <img
+                <Image
                   className="animate-spin"
                   src="https://hetref.github.io/portfolio-assets/loaders/loading.png"
                   alt="Loading"

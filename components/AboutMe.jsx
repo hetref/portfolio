@@ -99,8 +99,7 @@ const AboutMe = () => {
             <div className="about_meme">
               <img
                 src="https://hetref.github.io/portfolio-assets/images/profile.png"
-                alt="meme"
-                loading="lazy"
+                alt="Profile"
                 className="w-[400px] rounded-full border-[10px] border-[#000000] bg-[#000000]"
               />
             </div>
@@ -136,7 +135,6 @@ const AboutMe = () => {
                     src="https://hetref.github.io/portfolio-assets/images/whatiknow-min.png"
                     alt="What I Know"
                     className="w-full p-8 object-cover"
-                    loading="lazy"
                   />
                   <motion.div
                     initial={{ bottom: "20%", opacity: 0 }}
@@ -161,7 +159,6 @@ const AboutMe = () => {
                     src="https://hetref.github.io/portfolio-assets/images/experience-min.png"
                     alt="Work Experience"
                     className="w-full p-8 object-cover"
-                    loading="lazy"
                   />
                   <motion.div
                     initial={{ bottom: "20%", opacity: 0 }}
@@ -186,7 +183,6 @@ const AboutMe = () => {
                     src="https://hetref.github.io/portfolio-assets/images/projects-min.png"
                     alt="Technologies Preview"
                     className="w-full p-8 object-cover"
-                    loading="lazy"
                   />
                   <motion.div
                     initial={{ bottom: "20%", opacity: 0 }}
