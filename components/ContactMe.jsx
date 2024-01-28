@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import EarthCanvas from "./Earth";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactMe = () => {
   const [name, setName] = useState("");
@@ -13,20 +12,12 @@ const ContactMe = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    recaptchaRef.current.execute();
-  };
-
-  const onReCAPTCHAChange = (captchaCode) => {
-    if (!captchaCode) {
-      return;
-    }
     setName("");
     setEmail("");
     setPhone("");
     setMessage("");
 
     alert("Thank you for contacting me");
-    recaptchaRef.current.reset();
   };
 
   return (
@@ -135,13 +126,6 @@ const ContactMe = () => {
                 placeholder="Enter your Message"
               />
             </div>
-
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              size="invisible"
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              onChange={onReCAPTCHAChange}
-            />
 
             <button className="button-submit" type="submit">
               Send
