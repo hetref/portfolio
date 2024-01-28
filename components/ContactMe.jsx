@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import EarthCanvas from "./Earth";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useSelectedLayoutSegments } from "next/navigation";
 
 const ContactMe = () => {
   const [name, setName] = useState("");
