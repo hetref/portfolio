@@ -15,6 +15,7 @@ import useLoaderStore from "@/stores/loader";
 import Loading from "@/components/Loading";
 import MyProjects from "@/components/MyProjects";
 import ContactMe from "@/components/ContactMe";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   const [loadingState] = useLoaderStore((state) => [state.loadingState]);
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <>
+      <Toaster />
       <ScrollIndicatior />
       {/* {loadingState && <Loading />} */}
       <Header />

@@ -2,22 +2,62 @@
 
 import React, { useState } from "react";
 import EarthCanvas from "./Earth";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const ContactMe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const recaptchaRef = React.createRef();
+
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
+    setLoading(true);
 
-    alert("Thank you for contacting me");
+    const notification = toast.loading("Loading ....");
+
+    if (name == "" || phone == "" || email == "") {
+      setLoading(false);
+      toast.error("Please enter all the fields.", {
+        id: notification,
+      });
+    } else {
+      emailjs
+        .send(
+          "service_hcds1on",
+          "template_fgov8hu",
+          {
+            from_name: name,
+            from_email: email,
+            from_phone: phone,
+            message: message,
+          },
+          "sWSGeQspNkkT6Ru87"
+        )
+        .then(
+          () => {
+            setLoading(false);
+            toast.success(
+              "Thank you. I will get back to you as soon as possible.",
+              { id: notification }
+            );
+
+            setName("");
+            setEmail("");
+            setPhone("");
+            setMessage("");
+          },
+          (error) => {
+            setLoading(false);
+            toast.error("Ahh, something went wrong. Please try again.", {
+              id: notification,
+            });
+          }
+        );
+    }
   };
 
   return (
@@ -127,8 +167,23 @@ const ContactMe = () => {
               />
             </div>
 
-            <button className="button-submit" type="submit">
-              Send
+            <button
+              className="button-submit"
+              disabled={loading}
+              type="submit"
+              onClick={handleSubmit}
+            >
+              {loading ? (
+                <img
+                  className="animate-spin"
+                  src="https://hetref.github.io/portfolio-assets/loaders/loading.png"
+                  alt="Loading"
+                  height={30}
+                  width={30}
+                />
+              ) : (
+                "Send"
+              )}
             </button>
           </form>
         </div>

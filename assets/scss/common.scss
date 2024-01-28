@@ -320,6 +320,9 @@ body {
       }
 
       .button-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 20px 0 10px 0;
         background-color: #151717;
         border: none;
