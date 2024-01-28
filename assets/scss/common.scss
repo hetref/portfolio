@@ -1,10 +1,4 @@
 @import "_variables.scss";
-@import "components/Navbar.scss";
-@import "components/Header.scss";
-@import "components/AboutMe.scss";
-@import "components/ScrollIndicator.scss";
-@import "components/ScrollInfo.scss";
-@import "components/HorizontalFramer.scss";
 
 *,
 *::before,
@@ -16,8 +10,331 @@
 
 body {
   min-height: 100vh;
-  font-size: 16px;
-  line-height: 1.3;
-  font-family: "Bebas Neue", cursive;
   overflow-x: hidden;
+}
+
+// Headers
+
+.header_wrapper {
+  background: #151515;
+  color: #f4f8fb;
+}
+
+.header_textuals_wrapper {
+  background-color: hsla(0, 0%, 8%, 0.5);
+}
+
+// ScrollIndicator
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: rgba(119, 255, 0, 0.6);
+  transform-origin: 0%;
+}
+
+// ScrollInfo
+
+.scroll-section-outer {
+  overflow: hidden;
+  .scroll-section-inner {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .scroll-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      border: 4px solid $backgroundColor;
+
+      h3 {
+        width: 50vw;
+        color: var(--primaryTextColor);
+        letter-spacing: var(--headlineMedium);
+        font-size: var(--headlineMedium);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// WhatIKnow
+
+.whatiknow_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 8rem 0;
+
+  .whatiknow_heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .whatiknow_content_wrapper {
+    .whatiknow_content {
+      display: flex;
+      justify-content: space-evenly;
+      border: 2px solid #000;
+      border-radius: 20px;
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+      }
+
+      .whatiknow_box_skill {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
+
+#myprojects_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 8rem 0;
+  height: 100%;
+
+  .myprojects_heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .myprojects_body {
+    margin-top: 2%;
+    height: 100%;
+
+    .myprojects_cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 60px 2%;
+
+      .myprojects_card {
+        height: 400px;
+        position: relative;
+        background-color: #f5f5f5;
+        overflow: hidden;
+        border-radius: 4px;
+        border: 2px solid #000;
+
+        &:hover .myprojects_card_body {
+          padding: 10% 5%;
+          border-top: none;
+        }
+
+        .myprojects_card_body {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: absolute;
+          bottom: -60%;
+          left: 0;
+          background-color: #ffffffcc;
+          color: #000;
+          transition: all 0.6s ease-out;
+          padding: 3.4% 5%;
+          border-top: 2px solid #000;
+
+          .myprojects_card_title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            h1 {
+              font-size: 2rem;
+            }
+
+            .myprojects_card_icon {
+              font-size: 1.6rem;
+              cursor: pointer;
+            }
+          }
+
+          p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+          }
+
+          .my_projects_card_tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+
+            .my_projects_card_tag {
+              margin-right: 10px;
+              margin-bottom: 10px;
+              padding: 5px 10px;
+              border-radius: 5px;
+              background-color: #000;
+              color: #fff;
+              font-size: 0.9rem;
+              transition: all 0.4s ease-in;
+
+              &:hover {
+                background-color: #fff;
+                color: #000;
+              }
+            }
+          }
+        }
+
+        &:hover .myprojects_card_body {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+#contactme_wrapper {
+  background-color: #151515;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 8rem 0 5rem 0;
+
+  .contactme_header {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .contactme_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contactme_modal {
+      flex: 1;
+      height: auto;
+      width: 100%;
+
+      canvas {
+        width: 800px;
+        height: 800px;
+      }
+    }
+
+    .contactme_form {
+      flex: 1;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #ffffff;
+      padding: 50px 30px;
+      width: 500px;
+      border-radius: 20px;
+
+      button {
+        align-self: flex-end;
+      }
+
+      .flex-column > label {
+        color: #151717;
+        font-weight: 600;
+      }
+
+      .inputForm {
+        border: 1.5px solid #ecedec;
+        border-radius: 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        transition: 0.2s ease-in-out;
+      }
+
+      .textareaIputForm {
+        border: 1.5px solid #ecedec;
+        border-radius: 10px;
+        height: 100px;
+        display: flex;
+        align-items: flex-start;
+        padding-left: 10px;
+        padding-top: 10px;
+        transition: 0.2s ease-in-out;
+      }
+
+      input {
+        color: #000;
+      }
+
+      textarea {
+        resize: none;
+        color: #000;
+      }
+
+      .input {
+        margin-left: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 85%;
+        height: 100%;
+      }
+
+      .input:focus {
+        outline: none;
+      }
+
+      .inputForm:focus-within {
+        border: 1.5px solid #2d79f3;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      .flex-row > div > label {
+        font-size: 14px;
+        color: black;
+        font-weight: 400;
+      }
+
+      .button-submit {
+        margin: 20px 0 10px 0;
+        background-color: #151717;
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 10px;
+        height: 50px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .button-submit:hover {
+        background-color: #252727;
+      }
+    }
+  }
 }

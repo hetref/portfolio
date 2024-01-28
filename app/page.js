@@ -1,27 +1,31 @@
 "use client";
 
 import {
-  Navbar,
   Header,
-  ScrollInfo,
-  ScrollIndicatior,
   AboutMe,
+  ScrollIndicatior,
+  OverlayAnim,
+  WhatIKnow,
+  WorkExperience,
 } from "@/components";
 import "@/assets/scss/common.scss";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
-import HorizontalFramer from "@/components/HorizontalFramer";
+import useLoaderStore from "@/stores/loader";
+import Loading from "@/components/Loading";
+import MyProjects from "@/components/MyProjects";
+import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
+  const [loadingState] = useLoaderStore((state) => [state.loadingState]);
+
   useEffect(() => {
     const lenis = new Lenis();
-    lenis.on("scroll", (e) => {
-      console.log(e);
-    });
+    lenis.on("scroll", (e) => {});
 
-    const raf = async (time) => {
+    const raf = (time) => {
       lenis.raf(time);
-      await requestAnimationFrame(raf);
+      requestAnimationFrame(raf);
     };
 
     requestAnimationFrame(raf);
@@ -30,11 +34,14 @@ export default function Home() {
   return (
     <>
       <ScrollIndicatior />
+      {/* {loadingState && <Loading />} */}
       <Header />
-      <ScrollInfo />
       <AboutMe />
-      <HorizontalFramer />
-      {/* <Header /> */}
+      <WhatIKnow />
+      <WorkExperience />
+      <MyProjects />
+      <ContactMe />
+      {/* <OverlayAnim /> */}
     </>
   );
 }

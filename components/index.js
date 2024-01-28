@@ -1,7 +1,17 @@
 import Navbar from "./Navbar";
 import Header from "./Header";
-import AboutMe from "./AboutMe";
+import OverlayAnim from "./OverlayAnim";
 import ScrollIndicatior from "./ScrollIndicatior";
-import ScrollInfo from "./ScrollInfo";
+import AboutMe from "./AboutMe";
+import WhatIKnow from "./WhatIKnow";
+import WorkExperience from "./WorkExperience";
 
-export { Navbar, Header, AboutMe, ScrollInfo, ScrollIndicatior };
+export {
+  Navbar,
+  Header,
+  OverlayAnim,
+  AboutMe,
+  ScrollIndicatior,
+  WhatIKnow,
+  WorkExperience,
+};

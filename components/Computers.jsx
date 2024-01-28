@@ -33,19 +33,20 @@ const ComputersCanvas = () => {
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [24, 3, 5], fov: 25 }}
+      camera={{ position: [24, 3, 20], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      className="z-1"
     >
       <Suspense fallback={<ModelLoader />}>
         <OrbitControls
+          autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
         <ModelComputer isMobile={isMobile} />
+        <Preload all />
       </Suspense>
-
-      <Preload all />
     </Canvas>
   );
 };
