@@ -3,7 +3,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Typewriter from "typewriter-effect";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { BsThreads } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { motion, stagger } from "framer-motion";
 import ComputersCanvas from "./Computers";
@@ -71,29 +72,40 @@ const Hero = () => {
               }}
               className="header_social flex mt-[10%] lg:mt-[6%]"
             >
-              <motion.div
+              <div
                 className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
+                onClick={() =>
+                  window.open("https://www.instagram.com/coder_aryu/", "_blank")
+                }
               >
                 <FaInstagram />
-              </motion.div>
-              <div
-                className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
-              >
-                <FaFacebookF />
               </div>
               <div
                 className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
-              >
-                <BsTwitterX />
-              </div>
-              <div
-                className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/shindearyan/",
+                    "_blank"
+                  )
+                }
               >
                 <FaLinkedinIn />
+              </div>
+              <div
+                className="header_icon"
+                onClick={() =>
+                  window.open("https://www.threads.net/@coder_aryu", "_blank")
+                }
+              >
+                <BsThreads />
+              </div>
+              <div
+                className="header_icon"
+                onClick={() =>
+                  window.open("https://twitter.com/aryudev", "_blank")
+                }
+              >
+                <BsTwitterX />
               </div>
             </motion.div>
           </div>

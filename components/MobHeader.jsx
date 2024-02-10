@@ -2,7 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { BsThreads } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { motion, stagger } from "framer-motion";
 import ComputersCanvas from "./Computers";
@@ -41,8 +42,8 @@ const MobHero = () => {
 
   return (
     <header className="header_wrapper flex justify-center w-full items-center relative h-full overflow-hidden">
-      <div className="header_main_wrapper max-w-7xl w-full h-[100vdh]">
-        <div className="header_model h-[100dvh]">
+      <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
+        <div className="header_model h-[100lvh]">
           <ComputersCanvas />
         </div>
         <div className="header_textuals_wrapper pb-[20%] lg:pb-0 h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
@@ -95,29 +96,40 @@ const MobHero = () => {
               }}
               className="header_social flex mt-[10%] lg:mt-[6%]"
             >
-              <motion.div
+              <div
                 className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
+                onClick={() =>
+                  window.open("https://www.instagram.com/coder_aryu/", "_blank")
+                }
               >
                 <FaInstagram />
-              </motion.div>
-              <div
-                className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
-              >
-                <FaFacebookF />
               </div>
               <div
                 className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
-              >
-                <BsTwitterX />
-              </div>
-              <div
-                className="header_icon"
-                onClick={() => window.open("https://youtube.com", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/shindearyan/",
+                    "_blank"
+                  )
+                }
               >
                 <FaLinkedinIn />
+              </div>
+              <div
+                className="header_icon"
+                onClick={() =>
+                  window.open("https://www.threads.net/@coder_aryu", "_blank")
+                }
+              >
+                <BsThreads />
+              </div>
+              <div
+                className="header_icon"
+                onClick={() =>
+                  window.open("https://twitter.com/aryudev", "_blank")
+                }
+              >
+                <BsTwitterX />
               </div>
             </motion.div>
             <div>
