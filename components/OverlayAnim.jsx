@@ -29,7 +29,7 @@ const OverlayAnim = () => {
           end: "70% top",
           scrub: 0.6,
           // pin: true,
-          markers: true,
+          // markers: true,
         },
       }
     );
@@ -43,7 +43,7 @@ const OverlayAnim = () => {
         end: "100% top",
         scrub: 0.6,
         pin: true,
-        markers: true,
+        // markers: true,
       },
     });
 
@@ -56,7 +56,7 @@ const OverlayAnim = () => {
         end: "160% top",
         scrub: 0.6,
         pin: true,
-        markers: true,
+        // markers: true,
       },
     });
 

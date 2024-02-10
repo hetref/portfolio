@@ -95,7 +95,7 @@ const WorkExperience = () => {
           end: "4000 top",
           scrub: 1,
           pin: true,
-          markers: true,
+          // markers: true,
         },
       }
     );

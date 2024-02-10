@@ -52,7 +52,7 @@ const AboutMe = () => {
           // end: "2000 top",
           scrub: 1,
           pin: true,
-          markers: true,
+          // markers: true,
           end: () => "+=3000",
         },
       }
@@ -71,7 +71,7 @@ const AboutMe = () => {
         end: "4000 top",
         scrub: 0.5,
         pin: true,
-        markers: true,
+        // markers: true,
       },
     });
 
