@@ -126,7 +126,7 @@ const MyProjects = () => {
       </div>
 
       <div className="myprojects_body max-w-7xl w-full">
-        <div className="myprojects_cards">
+        <div className="myprojects_cards px-[4%]">
           {projects.map((item, index) => (
             <div className="myprojects_card" key={index}>
               <div className="myprojects_card_img">

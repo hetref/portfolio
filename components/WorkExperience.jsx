@@ -86,13 +86,13 @@ const WorkExperience = () => {
         translateX: 0,
       },
       {
-        translateX: "-210vw",
+        translateX: "-4000px",
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "2000 top",
+          end: "4000 top",
           scrub: 1,
           pin: true,
           markers: true,
@@ -110,19 +110,19 @@ const WorkExperience = () => {
   return (
     <section className="scroll-section-outer" id="workexperience">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="scroll-section-inner w-[6000px]">
+        <div ref={sectionRef} className="scroll-section-inner w-[5300px]">
           <div className="scroll-section px-[8vw] w-full flex flex-col">
             <div className="mb-[4rem]">
-              <h1 className="text-9xl mb-[2rem]">Work Experience</h1>
-              <span className="text-6xl">What have i done so far? 🤔?</span>
+              <h1 className="text-7xl mb-[1.2rem]">Work Experience</h1>
+              <span className="text-4xl">What have i done so far? 🤔?</span>
             </div>
 
             <div className="experience_timeline">
               <div className="timeline_line h-2 w-[full] bg-[#000000] rounded-full"></div>
-              <motion.div className="timeline_cards flex items-start mt-[2.6rem]">
+              <motion.div className="timeline_cards flex items-start mt-[2rem]">
                 {experience.map((item, index) => (
                   <motion.div
-                    className="timeline_card w-[600px] bg-[#000] mr-[4rem] rounded-lg relative text-[#fff]"
+                    className="timeline_card w-[550px] bg-[#000] mr-[4rem] rounded-lg relative text-[#fff]"
                     key={index}
                   >
                     <div
@@ -135,12 +135,12 @@ const WorkExperience = () => {
                     >
                       {item.date}
                     </div>
-                    <div className="p-[6%] experience_card">
+                    <div className="p-[3%] experience_card">
                       <div className="bg-[rgba(255,255,255,0.6)] text-[#000] rounded py-2 animate-pulse mb-4 flex justify-center items-center">
                         {item.category}
                       </div>
-                      <h2 className="text-3xl tracking-wider">{item.title}</h2>
-                      <h4 className="mb-6 mt-2 tracking-wider">
+                      <h2 className="text-2xl tracking-wider">{item.title}</h2>
+                      <h4 className="mb-4 mt-2 tracking-wider">
                         {item.subtitle}
                       </h4>
                       <span className="tracking-wide">{item.description}</span>

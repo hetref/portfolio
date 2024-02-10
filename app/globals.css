@@ -18,27 +18,31 @@
 
 @layer components {
   .header-h {
-    @apply text-8xl mb-4 uppercase;
+    @apply text-3xl lg:text-7xl mb-2 lg:mb-4 uppercase;
+  }
+
+  .header-main-h {
+    @apply text-5xl lg:text-7xl mb-2 lg:mb-4 uppercase;
   }
 
   .header-sm {
-    @apply text-4xl mb-4 uppercase text-center;
+    @apply text-xl lg:text-4xl mb-2 lg:mb-4 uppercase text-center;
   }
 
   .header_icon {
-    @apply border-2 border-r-0 last:border-r-2 first:rounded-l-full last:rounded-r-full border-[#f4f8fb] py-3 px-4 first:pl-4 last:pr-4 text-[1.4rem] hover:bg-[#f4f8fb] hover:text-[#000000] duration-300 cursor-pointer;
+    @apply border-2 border-r-0 last:border-r-2 first:rounded-l-full last:rounded-r-full border-[#f4f8fb] py-2 lg:py-3 px-3 lg:px-4 first:pl-4 last:pr-4 text-[1rem] lg:text-[1.4rem] hover:bg-[#f4f8fb] hover:text-[#000000] duration-300 cursor-pointer;
   }
 
   .about_card {
-    @apply bg-[#000000] text-[#f4f8fb] rounded-lg px-[4vw] py-[4vh] text-2xl w-[50vw] mx-[8vw];
+    @apply bg-[#000000] text-[#f4f8fb] rounded-lg px-[4vw] py-[4vh] text-[1.1rem] w-[50vw] mx-[8vw];
   }
 
   .about_link_card {
-    @apply w-[30vw] relative border-2 rounded-lg mx-[8vw];
+    @apply w-[26vw] relative border-2 rounded-lg mx-[8vw];
   }
 
   .about_link_card_title {
-    @apply absolute bottom-0 left-0 bg-[#000000cc] w-full py-[2vh] px-[1vw] text-4xl text-[#f4f8fb] flex justify-between cursor-pointer border-t-2 border-[#fff];
+    @apply absolute bottom-0 left-0 bg-[#000000cc] w-full py-[2vh] px-[1vw] text-xl text-[#f4f8fb] flex justify-between cursor-pointer border-t-2 border-[#fff];
   }
 
   .whatiknow_box_wrapper {
@@ -56,6 +60,7 @@
 
 * {
   font-family: "osiris";
+  @apply overflow-hidden lg:overflow-visible;
 }
 
 @font-face {

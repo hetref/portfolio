@@ -44,20 +44,23 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    position: relative;
 
     .scroll-section {
       height: 100vh;
       display: flex;
       justify-content: center;
-      border: 4px solid $backgroundColor;
 
       h3 {
-        width: 50vw;
+        // width: 50vw;
         color: var(--primaryTextColor);
         letter-spacing: var(--headlineMedium);
         font-size: var(--headlineMedium);
         text-transform: uppercase;
+      }
+
+      .about_meme img {
+        width: 400px !important;
+        border-radius: 50%;
       }
     }
   }
@@ -99,6 +102,8 @@ body {
     }
   }
 }
+
+// MyProjects
 
 #myprojects_wrapper {
   display: flex;
@@ -158,7 +163,7 @@ body {
             margin-bottom: 1rem;
 
             h1 {
-              font-size: 2rem;
+              font-size: 1.6rem;
             }
 
             .myprojects_card_icon {
@@ -168,7 +173,7 @@ body {
           }
 
           p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 20px;
           }
 
@@ -205,6 +210,8 @@ body {
   }
 }
 
+// ContactMe
+
 #contactme_wrapper {
   background-color: #151515;
   color: #ffffff;
@@ -232,8 +239,8 @@ body {
       width: 100%;
 
       canvas {
-        width: 800px;
-        height: 800px;
+        width: 500px;
+        height: 500px;
       }
     }
 
@@ -260,7 +267,7 @@ body {
       }
 
       .inputForm {
-        border: 1.5px solid #ecedec;
+        border: 1.5px solid #d9dbd9;
         border-radius: 10px;
         height: 50px;
         display: flex;

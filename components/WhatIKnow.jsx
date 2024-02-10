@@ -97,7 +97,7 @@ const WhatIKnow = () => {
         <h1 className="header-h">What I Know</h1>
         <p>Here are some of the technologies I know well</p>
       </div>
-      <div className="whatiknow_content_wrapper max-w-7xl w-full">
+      <div className="whatiknow_content_wrapper max-w-7xl w-full px-[4%]">
         <div className="whatiknow_content">
           <div className="whatiknow_box_wrapper">
             <h1>BASE</h1>

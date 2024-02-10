@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { motion, useInView } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 
 const AboutMe = () => {
   const sectionRef = useRef(null);
@@ -35,22 +36,24 @@ const AboutMe = () => {
   };
 
   useEffect(() => {
-    const pin = gsap.fromTo(
+    const sections = sectionRef.current.querySelectorAll(".scroll-section");
+
+    const pin = gsap.to(
       sectionRef.current,
+      // {
+      //   translateX: 0,
+      // },
       {
-        translateX: 0,
-      },
-      {
-        translateX: "-301vw",
+        translateX: "-270vw",
         ease: "none",
-        duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: "top top",
-          end: "2000 top",
-          scrub: 0.6,
+          // start: "top top",
+          // end: "2000 top",
+          scrub: 1,
           pin: true,
           markers: true,
+          end: () => "+=3000",
         },
       }
     );
@@ -65,7 +68,7 @@ const AboutMe = () => {
       scrollTrigger: {
         trigger: circleRef.current,
         start: "top top",
-        end: "3000 top",
+        end: "4000 top",
         scrub: 0.5,
         pin: true,
         markers: true,
@@ -90,24 +93,26 @@ const AboutMe = () => {
         <div ref={sectionRef} className="scroll-section-inner w-[400vw]">
           <div className="scroll-section items-center w-[100vw]">
             <div className="about_textuals mr-[8vw]">
-              <h1 className="text-9xl mb-[3rem]">
+              <h1 className="text-8xl mb-[2rem]">
                 About <br />
                 Me
               </h1>
-              <span className="text-6xl">Who am I 🤔?</span>
+              <span className="text-4xl">Who am I 🤔?</span>
             </div>
             <div className="about_meme">
-              <img
-                src="https://hetref.github.io/portfolio-assets/images/profile.png"
+              <Image
+                src="https://hetref.github.io/portfolio-assets/images/rounded-profile.png"
                 alt="Profile"
-                className="w-[400px] rounded-full border-[10px] border-[#000000] bg-[#000000]"
+                className="rounded-full border-[10px] border-[#000000] bg-[#000000]"
+                width={600}
+                height={400}
               />
             </div>
           </div>
-          <div className="scroll-section items-center w-[300vw] relative">
-            <div className="about_content">
+          <div className="scroll-section items-center w-[250vw]">
+            <div className="about_content relative">
               <div className="about_headings w-full">
-                <h1 className="text-8xl w-full">
+                <h1 className="text-7xl w-full">
                   I am a creative developer with crazy & more focused mindset 😁
                 </h1>
               </div>

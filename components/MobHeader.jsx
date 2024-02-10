@@ -1,23 +1,47 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
 import Typewriter from "typewriter-effect";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { motion, stagger } from "framer-motion";
 import ComputersCanvas from "./Computers";
-import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 import useIsMobileStore from "@/stores/isMobileStore";
 
-const Hero = () => {
-  gsap.registerPlugin(ScrollToPlugin);
-
+const MobHero = () => {
   const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
 
+  // useEffect(() => {
+  //   const pin = gsap.fromTo(
+  //     textRef.current,
+  //     {
+  //       fontSize: "20rem",
+  //     },
+  //     {
+  //       fontSize: "4rem",
+  //       ease: "none",
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: textRef.current,
+  //         start: "top top",
+  //         end: "bottom top",
+  //         scrub: 0.6,
+  //         pin: true,
+  //         markers: true,
+  //       },
+  //     }
+  //   );
+
+  //   return () => {
+  //     {
+  //     }
+  //     pin.kill();
+  //   };
+  // }, []);
+
   return (
-    <header className="header_wrapper flex justify-center w-full items-center relative">
-      <div className="header_main_wrapper max-w-7xl w-full h-[100svh]">
+    <header className="header_wrapper flex justify-center w-full items-center relative h-full overflow-hidden">
+      <div className="header_main_wrapper max-w-7xl w-full h-[100vdh]">
         <div className="header_model h-[100dvh]">
           <ComputersCanvas />
         </div>
@@ -96,38 +120,16 @@ const Hero = () => {
                 <FaLinkedinIn />
               </div>
             </motion.div>
+            <div>
+              <span className="text-[18px] absolute bottom-8 left-0 text-center w-full">
+                Mobile Version Coming Soon
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center">
-        <button
-          onClick={() =>
-            gsap.to(window, {
-              duration: 1.2,
-              scrollTo: { y: "#aboutme" },
-            })
-          }
-          className="flex items-center gap-4"
-        >
-          <div className="w-[26px] h-[55px] lg:w-[35px] lg:h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: isMobile ? [0, 20, 0] : [0, 30, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-[#f4f8fb] mb-1"
-            />
-          </div>
-          Click Me
-        </button>
       </div>
     </header>
   );
 };
 
-export default Hero;
+export default MobHero;
