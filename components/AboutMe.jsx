@@ -113,7 +113,7 @@ const AboutMe = () => {
             <div className="about_content relative">
               <div className="about_headings w-full">
                 <h1 className="text-7xl w-full">
-                  I am a creative developer with crazy & more focused mindset 😁
+                  I am a creative developer with crazy & more focused mindset
                 </h1>
               </div>
               <div className="about_cards flex justify-center items-start mt-[6vh]">

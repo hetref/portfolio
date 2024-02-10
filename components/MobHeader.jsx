@@ -10,36 +10,6 @@ import ComputersCanvas from "./Computers";
 import useIsMobileStore from "@/stores/isMobileStore";
 
 const MobHero = () => {
-  const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
-
-  // useEffect(() => {
-  //   const pin = gsap.fromTo(
-  //     textRef.current,
-  //     {
-  //       fontSize: "20rem",
-  //     },
-  //     {
-  //       fontSize: "4rem",
-  //       ease: "none",
-  //       duration: 1,
-  //       scrollTrigger: {
-  //         trigger: textRef.current,
-  //         start: "top top",
-  //         end: "bottom top",
-  //         scrub: 0.6,
-  //         pin: true,
-  //         markers: true,
-  //       },
-  //     }
-  //   );
-
-  //   return () => {
-  //     {
-  //     }
-  //     pin.kill();
-  //   };
-  // }, []);
-
   return (
     <header className="header_wrapper flex justify-center w-full items-center relative h-full overflow-hidden">
       <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
