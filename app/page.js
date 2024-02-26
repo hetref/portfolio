@@ -17,6 +17,7 @@ import ContactMe from "@/components/ContactMe";
 import { Toaster } from "react-hot-toast";
 import useIsMobileStore from "@/stores/isMobileStore";
 import MobHero from "@/components/MobHeader";
+import PlausibleProvider from "next-plausible";
 
 export default function Home() {
   const [loadingState] = useLoaderStore((state) => [state.loadingState]);
@@ -56,19 +57,21 @@ export default function Home() {
 
   return (
     <>
-      <div className="lg:hidden overflow-hidden">
-        <MobHero />
-      </div>
-      <div className="hidden lg:block">
-        <Toaster />
-        <ScrollIndicatior />
-        <Header />
-        <AboutMe />
-        <WhatIKnow />
-        <WorkExperience />
-        <MyProjects />
-        <ContactMe />
-      </div>
+      <PlausibleProvider domain="portfolio-hetref.vercel.app">
+        <div className="lg:hidden overflow-hidden">
+          <MobHero />
+        </div>
+        <div className="hidden lg:block">
+          <Toaster />
+          <ScrollIndicatior />
+          <Header />
+          <AboutMe />
+          <WhatIKnow />
+          <WorkExperience />
+          <MyProjects />
+          <ContactMe />
+        </div>
+      </PlausibleProvider>
     </>
   );
 }
