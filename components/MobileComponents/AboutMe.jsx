@@ -1,8 +1,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import { gsap } from "gsap";
 
 const AboutMeMob = () => {
+  const scrollToSection = (id) => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: { y: id },
+    });
+  };
+
   return (
     <section
       className="scroll-section-outer py-[6rem] overflow-x-hidden"
@@ -54,7 +62,10 @@ const AboutMeMob = () => {
                 width={1000}
                 height={1000}
               />
-              <div className="about_link_card_title">
+              <div
+                className="about_link_card_title"
+                onClick={() => scrollToSection("#whatiknow")}
+              >
                 <h1>What I Know</h1>
                 <FaArrowRight />
               </div>
@@ -73,7 +84,10 @@ const AboutMeMob = () => {
                 width={1000}
                 height={1000}
               />
-              <div className="about_link_card_title">
+              <div
+                className="about_link_card_title"
+                onClick={() => scrollToSection("#workexperience")}
+              >
                 <h1>Work Experience</h1>
                 <FaArrowRight />
               </div>
@@ -92,7 +106,10 @@ const AboutMeMob = () => {
                 width={1000}
                 height={1000}
               />
-              <div className="about_link_card_title">
+              <div
+                className="about_link_card_title"
+                onClick={() => scrollToSection("#myprojects_wrapper")}
+              >
                 <h1>Projects</h1>
                 <FaArrowRight />
               </div>

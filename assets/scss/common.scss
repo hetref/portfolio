@@ -86,9 +86,14 @@ body {
   .whatiknow_content_wrapper {
     .whatiknow_content {
       display: flex;
+      // flex-wrap: wrap;
       justify-content: space-evenly;
       border: 2px solid #000;
       border-radius: 20px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       h1 {
         text-align: center;

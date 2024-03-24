@@ -46,7 +46,7 @@
   }
 
   .whatiknow_box_wrapper {
-    @apply border-r-2 border-r-[#000000] w-full last:border-r-0 px-[2vw] py-[4vh];
+    @apply md:border-r-2 md:border-r-[#000000] w-full last:border-r-0 px-[2vw] py-[4vh];
   }
 
   .whatiknow_box_skill_progress {

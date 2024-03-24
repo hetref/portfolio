@@ -34,20 +34,24 @@ const coreskills = [
     percentage: 89,
   },
   {
-    name: "TAILWIND CSS",
-    percentage: 96,
-  },
-  {
     name: "NODE JS",
     percentage: 76,
   },
   {
-    name: "WORDPRESS",
-    percentage: 86,
+    name: "TAILWIND CSS",
+    percentage: 96,
+  },
+  {
+    name: "GraphQL",
+    percentage: 60,
   },
   {
     name: "JAVA",
     percentage: 75,
+  },
+  {
+    name: "WORDPRESS",
+    percentage: 86,
   },
   {
     name: "XML",
@@ -95,7 +99,9 @@ const WhatIKnow = () => {
     <div className="whatiknow_wrapper" id="whatiknow">
       <div className="whatiknow_heading">
         <h1 className="header-h">What I Know</h1>
-        <p>Here are some of the technologies I know well</p>
+        <p className="text-[1.2rem] mx-2 md:text-3xl">
+          Here are some of the technologies I know well
+        </p>
       </div>
       <div className="whatiknow_content_wrapper max-w-7xl w-full px-[4%]">
         <div className="whatiknow_content">
@@ -104,17 +110,21 @@ const WhatIKnow = () => {
             <div className="whatiknow_box_skills" ref={baseref}>
               {baseskills.map((item, index) => (
                 <div className="whatiknow_box_skill" key={index}>
-                  <span>{item.name}</span>
+                  <span>
+                    {item.percentage}% - {item.name}
+                  </span>
                   <div className="whatiknow_box_skill_progress">
                     <motion.div
                       className="whatiknow_box_skill_progress_elem"
+                      // animate={
+                      //   isInView
+                      //     ? { width: `${item.percentage}%` }
+                      //     : { width: 0 }
+                      // }
                       initial={{ width: 0 }}
-                      animate={
-                        isInView
-                          ? { width: `${item.percentage}%` }
-                          : { width: 0 }
-                      }
                       transition={{ duration: 1.5 }}
+                      whileInView={{ width: `${item.percentage}%` }}
+                      exit={{ width: 0 }}
                     />
                   </div>
                 </div>
@@ -126,7 +136,9 @@ const WhatIKnow = () => {
             <div className="whatiknow_box_skills">
               {coreskills.map((item, index) => (
                 <div className="whatiknow_box_skill" key={index}>
-                  <span>{item.name}</span>
+                  <span>
+                    {item.percentage}% - {item.name}
+                  </span>
                   <div className="whatiknow_box_skill_progress">
                     {/* <div
                       className="whatiknow_box_skill_progress_elem"
@@ -134,13 +146,17 @@ const WhatIKnow = () => {
                     /> */}
                     <motion.div
                       className="whatiknow_box_skill_progress_elem"
+                      // initial={{ width: 0 }}
+                      // animate={
+                      //   isInView
+                      //     ? { width: `${item.percentage}%` }
+                      //     : { width: 0 }
+                      // }
+                      // transition={{ duration: 1.5 }}
                       initial={{ width: 0 }}
-                      animate={
-                        isInView
-                          ? { width: `${item.percentage}%` }
-                          : { width: 0 }
-                      }
                       transition={{ duration: 1.5 }}
+                      whileInView={{ width: `${item.percentage}%` }}
+                      exit={{ width: 0 }}
                     />
                   </div>
                 </div>
@@ -152,7 +168,9 @@ const WhatIKnow = () => {
             <div className="whatiknow_box_skills">
               {databaseskills.map((item, index) => (
                 <div className="whatiknow_box_skill" key={index}>
-                  <span>{item.name}</span>
+                  <span>
+                    {item.percentage}% - {item.name}
+                  </span>
                   <div className="whatiknow_box_skill_progress">
                     {/* <div
                       className="whatiknow_box_skill_progress_elem"
@@ -160,13 +178,17 @@ const WhatIKnow = () => {
                     /> */}
                     <motion.div
                       className="whatiknow_box_skill_progress_elem"
+                      // initial={{ width: 0 }}
+                      // animate={
+                      //   isInView
+                      //     ? { width: `${item.percentage}%` }
+                      //     : { width: 0 }
+                      // }
+                      // transition={{ duration: 1.5 }}
                       initial={{ width: 0 }}
-                      animate={
-                        isInView
-                          ? { width: `${item.percentage}%` }
-                          : { width: 0 }
-                      }
                       transition={{ duration: 1.5 }}
+                      whileInView={{ width: `${item.percentage}%` }}
+                      exit={{ width: 0 }}
                     />
                   </div>
                 </div>
@@ -178,7 +200,9 @@ const WhatIKnow = () => {
             <div className="whatiknow_box_skills">
               {toolskills.map((item, index) => (
                 <div className="whatiknow_box_skill" key={index}>
-                  <span>{item.name}</span>
+                  <span>
+                    {item.percentage}% - {item.name}
+                  </span>
                   <div className="whatiknow_box_skill_progress">
                     {/* <div
                       className="whatiknow_box_skill_progress_elem"
@@ -186,13 +210,17 @@ const WhatIKnow = () => {
                     /> */}
                     <motion.div
                       className="whatiknow_box_skill_progress_elem"
+                      // initial={{ width: 0 }}
+                      // animate={
+                      //   isInView
+                      //     ? { width: `${item.percentage}%` }
+                      //     : { width: 0 }
+                      // }
+                      // transition={{ duration: 1.5 }}
                       initial={{ width: 0 }}
-                      animate={
-                        isInView
-                          ? { width: `${item.percentage}%` }
-                          : { width: 0 }
-                      }
                       transition={{ duration: 1.5 }}
+                      whileInView={{ width: `${item.percentage}%` }}
+                      exit={{ width: 0 }}
                     />
                   </div>
                 </div>

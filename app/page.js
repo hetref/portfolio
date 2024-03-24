@@ -68,6 +68,7 @@ export default function Home() {
           <div className="overflow-x-hidden">
             <MobHeader />
             <AboutMeMob />
+            <WhatIKnow />
           </div>
         </div>
         <div className="hidden lg:block">
