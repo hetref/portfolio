@@ -4,20 +4,23 @@ import {
   Header,
   AboutMe,
   ScrollIndicatior,
-  OverlayAnim,
   WhatIKnow,
   WorkExperience,
-} from "@/components";
+  MyProjects,
+  ContactMe,
+} from "@/components/index.js";
+import { MobHeader, AboutMeMob } from "@/components/mob";
 import "@/assets/scss/common.scss";
 import Lenis from "@studio-freight/lenis";
 import { useEffect, useState } from "react";
 import useLoaderStore from "@/stores/loader";
-import MyProjects from "@/components/MyProjects";
-import ContactMe from "@/components/ContactMe";
+// import MyProjects from "@/components/MyProjects";
+// import ContactMe from "@/components/ContactMe";
 import { Toaster } from "react-hot-toast";
 import useIsMobileStore from "@/stores/isMobileStore";
-import MobHero from "@/components/MobHeader";
+// import MobHero from "@/components/MobHeader";
 import PlausibleProvider from "next-plausible";
+// import AboutMeMob from "@/components/MobileComponents/AboutMe";
 
 export default function Home() {
   const [loadingState] = useLoaderStore((state) => [state.loadingState]);
@@ -58,12 +61,12 @@ export default function Home() {
   return (
     <>
       <PlausibleProvider domain="portfolio-hetref.vercel.app">
-        <div className="lg:hidden overflow-scroll">
+        <div className="lg:hidden">
           {/* TODO: Make the website Mobile Responsive */}
           <Toaster />
           <ScrollIndicatior />
-          <MobHero />
-          <AboutMe />
+          <MobHeader />
+          <AboutMeMob />
         </div>
         <div className="hidden lg:block">
           <Toaster />

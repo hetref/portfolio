@@ -6,7 +6,7 @@ import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { motion, stagger } from "framer-motion";
-import ComputersCanvas from "./Computers";
+import ComputersCanvas from "../Computers";
 import useIsMobileStore from "@/stores/isMobileStore";
 
 const MobHero = () => {

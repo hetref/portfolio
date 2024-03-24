@@ -1,10 +1,12 @@
-import Navbar from "./Navbar";
-import Header from "./Header";
-import OverlayAnim from "./OverlayAnim";
-import ScrollIndicatior from "./ScrollIndicatior";
-import AboutMe from "./AboutMe";
-import WhatIKnow from "./WhatIKnow";
-import WorkExperience from "./WorkExperience";
+import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
+import OverlayAnim from "@/components/OverlayAnim";
+import ScrollIndicatior from "@/components/ScrollIndicatior";
+import AboutMe from "@/components/AboutMe";
+import WhatIKnow from "@/components/WhatIKnow";
+import WorkExperience from "@/components/WorkExperience";
+import MyProjects from "@/components/MyProjects";
+import ContactMe from "./ContactMe";
 
 export {
   Navbar,
@@ -14,4 +16,6 @@ export {
   ScrollIndicatior,
   WhatIKnow,
   WorkExperience,
+  MyProjects,
+  ContactMe,
 };
