@@ -150,7 +150,7 @@ const AboutMe = () => {
                     }
                     transition={{ duration: 1.5 }}
                     className="about_link_card_title"
-                    onClick={() => scrollToSection("#whatiknow")}
+                    onClick={() => scrollToSection("#whatIKnowSection")}
                   >
                     <h1>What I Know</h1>
                     <FaArrowRight />

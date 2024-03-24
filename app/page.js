@@ -20,6 +20,7 @@ import { Toaster } from "react-hot-toast";
 import useIsMobileStore from "@/stores/isMobileStore";
 // import MobHero from "@/components/MobHeader";
 import PlausibleProvider from "next-plausible";
+import IKnow from "@/components/IKnow";
 // import AboutMeMob from "@/components/MobileComponents/AboutMe";
 
 export default function Home() {
@@ -68,7 +69,7 @@ export default function Home() {
           <div className="overflow-x-hidden">
             <MobHeader />
             <AboutMeMob />
-            <WhatIKnow />
+            <IKnow />
           </div>
         </div>
         <div className="hidden lg:block">
@@ -76,7 +77,9 @@ export default function Home() {
           <ScrollIndicatior />
           <Header />
           <AboutMe />
-          <WhatIKnow />
+          <div id="whatIKnowSection">
+            <IKnow />
+          </div>
           <WorkExperience />
           <MyProjects />
           <ContactMe />

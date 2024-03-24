@@ -48,7 +48,7 @@ const AboutMeMob = () => {
               user-friendly solutions that solve real-world problems 🔗. Let us
               join together to bring the ideas to life 🤝!
             </div>
-            <motion.div
+            {/* <motion.div
               className="about_link_card bg-[#000000cc]"
               initial={{ opacity: 0 }}
               transition={{ duration: 1 }}
@@ -64,7 +64,7 @@ const AboutMeMob = () => {
               />
               <div
                 className="about_link_card_title"
-                onClick={() => scrollToSection("#whatIknowMobile")}
+                onClick={() => scrollToSection("#iknow")}
               >
                 <h1>What I Know</h1>
                 <FaArrowRight />
@@ -113,7 +113,7 @@ const AboutMeMob = () => {
                 <h1>Projects</h1>
                 <FaArrowRight />
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
