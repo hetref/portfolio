@@ -11,7 +11,8 @@ import useIsMobileStore from "@/stores/isMobileStore";
 
 const MobHero = () => {
   return (
-    <header className="header_wrapper flex justify-center w-full items-center relative h-full overflow-hidden">
+    <header className="header_wrapper flex justify-center w-full items-center relative">
+      {/* <header className="header_wrapper flex justify-center w-full items-center relative"> */}
       <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
         <div className="header_model h-[100lvh]">
           <ComputersCanvas />

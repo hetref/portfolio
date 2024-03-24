@@ -65,8 +65,10 @@ export default function Home() {
           {/* TODO: Make the website Mobile Responsive */}
           <Toaster />
           <ScrollIndicatior />
-          <MobHeader />
-          <AboutMeMob />
+          <div className="overflow-x-hidden">
+            <MobHeader />
+            <AboutMeMob />
+          </div>
         </div>
         <div className="hidden lg:block">
           <Toaster />

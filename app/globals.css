@@ -60,7 +60,7 @@
 
 * {
   font-family: "osiris";
-  @apply overflow-hidden lg:overflow-visible;
+  @apply lg:overflow-visible;
 }
 
 @font-face {
