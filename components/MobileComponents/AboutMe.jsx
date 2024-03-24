@@ -6,7 +6,7 @@ const AboutMeMob = () => {
   return (
     <section
       className="scroll-section-outer py-[6rem] overflow-x-hidden"
-      id="aboutme"
+      id="aboutmemob"
     >
       <div className="flex items-center justify-center flex-col">
         <div className="mb-[2rem] text-center">
