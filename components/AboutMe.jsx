@@ -313,4 +313,5 @@ const AboutMeMob = () => {
   );
 };
 
-export default ResponsiveView(AboutMe, AboutMeMob);
+// export default ResponsiveView(AboutMe, AboutMeMob);
+export default AboutMe;
