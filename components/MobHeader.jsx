@@ -16,7 +16,7 @@ const MobHero = () => {
         <div className="header_model h-[100lvh]">
           <ComputersCanvas />
         </div>
-        <div className="header_textuals_wrapper pb-[20%] lg:pb-0 h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
+        <div className="header_textuals_wrapper  lg:pb-0 h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
           <div className="header_textual h-full max-w-7xl flex flex-col justify-center pr-[4%] lg:pr-[10%] pl-[4%] lg:pl-[5%] ">
             <motion.div
               animate={{ y: [0, 15, 0] }}
@@ -102,11 +102,11 @@ const MobHero = () => {
                 <BsTwitterX />
               </div>
             </motion.div>
-            <div>
+            {/* <div>
               <span className="text-[18px] absolute bottom-8 left-0 text-center w-full">
                 Mobile Version Coming Soon
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

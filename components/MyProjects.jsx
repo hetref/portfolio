@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -127,39 +128,60 @@ const MyProjects = () => {
 
       <div className="myprojects_body max-w-7xl w-full">
         <div className="myprojects_cards px-[4%]">
-          {projects.map((item, index) => (
-            <div className="myprojects_card" key={index}>
-              <div className="myprojects_card_img">
-                <img src={item.image} loading="lazy" alt="project" />
-              </div>
-              <div className="myprojects_card_body">
-                <div className="myprojects_card_header">
-                  <div className="myprojects_card_title">
-                    <h1>{item.name}</h1>
-                    <FaExternalLinkAlt
-                      className="myprojects_card_icon"
-                      onClick={() => goToLink(item.url)}
-                    />
-                  </div>
-                  <p>{item.description}</p>
+          <AnimatePresence>
+            {projects.map((item, index) => (
+              // I want to add fade in animation whileInView but it's not working
+              <motion.div
+                className="myprojects_card"
+                key={index}
+                initial={{ opacity: 0 }}
+                transition={{
+                  duration: 1,
+                  // delay: 0.4 * (index % 2),
+                  ease: "easeInOut",
+                  type: "tween",
+                }}
+                whileInView={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <div className="myprojects_card_img">
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={item.image}
+                    loading="lazy"
+                    alt="project"
+                  />
                 </div>
-                <div>
-                  <div className="my_projects_card_tags">
-                    {item.tags.map((tag, index) => (
-                      <div className="my_projects_card_tag" key={index}>
-                        {tag}
-                      </div>
-                    ))}
+                <div className="myprojects_card_body">
+                  <div className="myprojects_card_header">
+                    <div className="myprojects_card_title">
+                      <h1>{item.name}</h1>
+                      <FaExternalLinkAlt
+                        className="myprojects_card_icon"
+                        onClick={() => goToLink(item.url)}
+                      />
+                    </div>
+                    <p>{item.description}</p>
                   </div>
-                  {item.inspiration != undefined && (
-                    <span className="text-[16px]">
-                      Inspired by {item.inspiration}
-                    </span>
-                  )}
+                  <div>
+                    <div className="my_projects_card_tags">
+                      {item.tags.map((tag, index) => (
+                        <div className="my_projects_card_tag" key={index}>
+                          {tag}
+                        </div>
+                      ))}
+                    </div>
+                    {item.inspiration != undefined && (
+                      <span className="text-[16px]">
+                        Inspired by {item.inspiration}
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </div>
     </div>

@@ -124,6 +124,15 @@ const WorkExperience = () => {
                   <motion.div
                     className="timeline_card w-[550px] bg-[#000] mr-[4rem] rounded-lg relative text-[#fff]"
                     key={index}
+                    initial={{ opacity: 0 }}
+                    transition={{
+                      duration: 1,
+                      delay: 0.2,
+                      ease: "easeInOut",
+                      type: "tween",
+                    }}
+                    whileInView={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                   >
                     <div
                       className="absolute w-2 h-4 bg-[#000] left-[50%] top-[-3.1rem] rounded-full"

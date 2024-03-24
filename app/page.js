@@ -58,8 +58,12 @@ export default function Home() {
   return (
     <>
       <PlausibleProvider domain="portfolio-hetref.vercel.app">
-        <div className="lg:hidden overflow-hidden">
+        <div className="lg:hidden overflow-scroll">
+          {/* TODO: Make the website Mobile Responsive */}
+          <Toaster />
+          <ScrollIndicatior />
           <MobHero />
+          <AboutMe />
         </div>
         <div className="hidden lg:block">
           <Toaster />

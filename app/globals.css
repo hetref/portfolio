@@ -34,11 +34,11 @@
   }
 
   .about_card {
-    @apply bg-[#000000] text-[#f4f8fb] rounded-lg px-[4vw] py-[4vh] text-[1.1rem] w-[50vw] mx-[8vw];
+    @apply bg-[#000000] text-[#f4f8fb] rounded-lg px-[4vw] py-[4vh] text-[1rem] md:text-[1.1rem] md:w-[50vw] mx-[8vw];
   }
 
   .about_link_card {
-    @apply w-[26vw] relative border-2 rounded-lg mx-[8vw];
+    @apply md:w-[26vw] mx-[8vw] relative border-2 rounded-lg md:mx-[8vw] mb-4 last:mb-0;
   }
 
   .about_link_card_title {
