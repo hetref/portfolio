@@ -97,7 +97,7 @@ const WhatIKnow = () => {
 
   return (
     <div className="whatiknow_wrapper" id="whatiknow">
-      <div className="whatiknow_heading">
+      <div className="whatiknow_heading" id="whatIknowMobile">
         <h1 className="header-h">What I Know</h1>
         <p className="text-[1.2rem] mx-2 md:text-3xl">
           Here are some of the technologies I know well

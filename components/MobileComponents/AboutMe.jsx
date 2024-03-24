@@ -64,7 +64,7 @@ const AboutMeMob = () => {
               />
               <div
                 className="about_link_card_title"
-                onClick={() => scrollToSection("#whatiknow")}
+                onClick={() => scrollToSection("#whatIknowMobile")}
               >
                 <h1>What I Know</h1>
                 <FaArrowRight />
