@@ -21,6 +21,7 @@ import useIsMobileStore from "@/stores/isMobileStore";
 // import MobHero from "@/components/MobHeader";
 import PlausibleProvider from "next-plausible";
 import IKnow from "@/components/IKnow";
+import Footer from "@/components/Footer";
 // import AboutMeMob from "@/components/MobileComponents/AboutMe";
 
 export default function Home() {
@@ -70,6 +71,7 @@ export default function Home() {
             <MobHeader />
             <AboutMeMob />
             <IKnow />
+            <Footer />
           </div>
         </div>
         <div className="hidden lg:block">
@@ -83,6 +85,7 @@ export default function Home() {
           <WorkExperience />
           <MyProjects />
           <ContactMe />
+          <Footer />
         </div>
       </PlausibleProvider>
     </>
