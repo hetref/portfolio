@@ -20,6 +20,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Aryan Shinde | Portfolio</title>
+
+        {/* Adsense */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-8133714404354170"
+        ></meta>
+
         {/* Meta Data */}
         <meta name="title" content="Aryan Shinde | Portfolio" />
         <meta
