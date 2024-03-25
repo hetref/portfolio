@@ -4,7 +4,6 @@ import {
   Header,
   AboutMe,
   ScrollIndicatior,
-  WhatIKnow,
   WorkExperience,
   MyProjects,
   ContactMe,
@@ -12,25 +11,15 @@ import {
 import { MobHeader, AboutMeMob } from "@/components/mob";
 import "@/assets/scss/common.scss";
 import Lenis from "@studio-freight/lenis";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useLoaderStore from "@/stores/loader";
-// import MyProjects from "@/components/MyProjects";
-// import ContactMe from "@/components/ContactMe";
 import { Toaster } from "react-hot-toast";
 import useIsMobileStore from "@/stores/isMobileStore";
-// import MobHero from "@/components/MobHeader";
 import PlausibleProvider from "next-plausible";
 import IKnow from "@/components/IKnow";
 import Footer from "@/components/Footer";
-import Hotjar from "@hotjar/browser";
-// import AboutMeMob from "@/components/MobileComponents/AboutMe";
 
 export default function Home() {
-  // Hotjar Configs
-  const siteId = 3919334;
-  const hotjarVersion = 6;
-  Hotjar.init(siteId, hotjarVersion);
-
   const [loadingState] = useLoaderStore((state) => [state.loadingState]);
   const [setIsMobile] = useIsMobileStore((state) => [state.setIsMobile]);
 

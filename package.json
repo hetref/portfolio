@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
-    "@hotjar/browser": "^1.0.9",
     "@motionone/utils": "^10.16.3",
     "@react-three/drei": "^9.92.6",
     "@react-three/fiber": "^8.15.12",
