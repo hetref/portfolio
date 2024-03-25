@@ -2,20 +2,16 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 // import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Hotjar from "@hotjar/browser";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Add SEO with keywords to this page
-
-// export const metadata = {
-//   title: "Aryan Shinde | Portfolio",
-//   description:
-//     "Welcome to my portfolio, here you'll get all my creatives which I've made till date!",
-//   keywords:
-//     "Aryan Shinde, Portfolio, Aryan Shinde Portfolio, Aryan Shinde Projects, Aryan Shinde Skills, Aryan Shinde Experience, Aryan Shinde Contact, Aryan Shinde Resume",
-// };
-
 export default function RootLayout({ children }) {
+  // Hotjar Configs
+  const siteId = 3919334;
+  const hotjarVersion = 6;
+  Hotjar.init(siteId, hotjarVersion);
+
   return (
     <html lang="en">
       <head>
@@ -143,6 +139,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         {children}
+
         <SpeedInsights />
       </body>
     </html>
