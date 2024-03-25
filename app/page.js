@@ -22,9 +22,15 @@ import useIsMobileStore from "@/stores/isMobileStore";
 import PlausibleProvider from "next-plausible";
 import IKnow from "@/components/IKnow";
 import Footer from "@/components/Footer";
+import Hotjar from "@hotjar/browser";
 // import AboutMeMob from "@/components/MobileComponents/AboutMe";
 
 export default function Home() {
+  // Hotjar Configs
+  const siteId = 3919334;
+  const hotjarVersion = 6;
+  Hotjar.init(siteId, hotjarVersion);
+
   const [loadingState] = useLoaderStore((state) => [state.loadingState]);
   const [setIsMobile] = useIsMobileStore((state) => [state.setIsMobile]);
 
