@@ -73,6 +73,7 @@ export default function Home() {
             <IKnow />
             <ExperienceMob />
             <MyProjectsMob />
+            <ContactMe />
             <Footer />
           </div>
         </div>

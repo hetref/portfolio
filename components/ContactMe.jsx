@@ -18,7 +18,10 @@ const ContactMe = () => {
     event.preventDefault();
     setLoading(true);
 
-    const notification = toast.loading("Loading ....");
+    const notification = toast.loading("Loading ....", {
+      // id: "notification",
+      position: "bottom-right",
+    });
 
     if (name == "" || phone == "" || email == "") {
       setLoading(false);
@@ -65,7 +68,7 @@ const ContactMe = () => {
     <div id="contactme_wrapper">
       <div className="contactme_header">
         <h1 className="header-h">Contact Me</h1>
-        <p>
+        <p className="text-sm md:text-xl">
           You can contact me for any enquiry or to start your project and make
           the idea live.
         </p>
