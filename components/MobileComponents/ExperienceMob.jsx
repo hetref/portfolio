@@ -79,7 +79,7 @@ const ExperienceMob = () => {
           <h1 className="text-3xl">Work Experience</h1>
           <span className="text-lg">What have i done so far? 🤔?</span>
         </div>
-        <div classname="text-left">
+        <div className="text-left">
           {experience.map((exp, index) => (
             <div key={index} className="relative text-left">
               <div className="mt-8 bg-[#000] text-white px-4 py-6 rounded">
