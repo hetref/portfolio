@@ -8,7 +8,7 @@ import {
   MyProjects,
   ContactMe,
 } from "@/components/index.js";
-import { MobHeader, AboutMeMob } from "@/components/mob";
+import { MobHeader, AboutMeMob, ExperienceMob } from "@/components/mob";
 import "@/assets/scss/common.scss";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
@@ -66,6 +66,7 @@ export default function Home() {
             <MobHeader />
             <AboutMeMob />
             <IKnow />
+            <ExperienceMob />
             <Footer />
           </div>
         </div>

@@ -56,6 +56,10 @@
   .whatiknow_box_skill_progress_elem {
     @apply rounded-full h-2 bg-[#fff];
   }
+
+  .experiencecardmob {
+    @apply absolute h-8 w-2 top-[-8] bg-[#000] left-1/2 transform -translate-x-1/2;
+  }
 }
 
 * {

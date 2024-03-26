@@ -1,4 +1,5 @@
 import MobHeader from "@/components/MobileComponents/MobHeader";
-import AboutMeMob from "@/components/MobileComponents/AboutMe";
+import AboutMeMob from "@/components/MobileComponents/AboutMeMob";
+import ExperienceMob from "./MobileComponents/ExperienceMob";
 
-export { MobHeader, AboutMeMob };
+export { MobHeader, AboutMeMob, ExperienceMob };
