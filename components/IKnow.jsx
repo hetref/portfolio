@@ -96,7 +96,7 @@ const IKnow = () => {
     <div className="whatiknow_wrapper" id="iknow">
       <div className="whatiknow_heading" id="whatIknowMobile">
         <h1 className="header-h">What I Know</h1>
-        <p className="text-[1.2rem] mx-2 md:text-3xl">
+        <p className="text-lg mx-2 md:text-4xl">
           Here are some of the technologies I know well
         </p>
       </div>

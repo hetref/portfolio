@@ -1,6 +1,9 @@
+"use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { BsArrowDown, BsArrowUp } from "react-icons/bs";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -114,78 +117,100 @@ const projects = [
   },
 ];
 
-const MyProjects = () => {
+const MyProjectsMob = () => {
+  const [projectsLoaded, setProjectsLoaded] = useState(4);
+
   const goToLink = (url) => {
     window.open(url, "_blank");
   };
 
+  const loadMoreProjects = () => {
+    setProjectsLoaded(projectsLoaded + 2);
+  };
+
+  const showLessProjects = () => {
+    setProjectsLoaded(4);
+  };
+
   return (
-    <div id="myprojects_wrapper">
-      <div className="text-center">
+    <div className="py-[6rem] px-[4%] bg-[#f5f5f5]">
+      <div className="mb-2 text-center">
         <h1 className="header-h">My Projects</h1>
         <p className="md:text-4xl text-lg">What have I done so far?</p>
       </div>
 
-      <div className="myprojects_body max-w-7xl w-full">
-        <div className="myprojects_cards px-[4%]">
-          <AnimatePresence>
-            {projects.map((item, index) => (
-              // I want to add fade in animation whileInView but it's not working
-              <motion.div
-                className="myprojects_card"
-                key={index}
-                initial={{ opacity: 0 }}
-                transition={{
-                  duration: 1,
-                  // delay: 0.4 * (index % 2),
-                  ease: "easeInOut",
-                  type: "tween",
-                }}
-                whileInView={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 mt-[2rem]">
+        {projects.slice(0, projectsLoaded).map((project, index) => (
+          <motion.div
+            key={index}
+            className="relative border-2 border-[#000] rounded-md"
+            initial={{ opacity: 0 }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+              type: "tween",
+            }}
+            whileInView={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="project_image">
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={400}
+                height={250}
+                className="object-cover border-b-2 border-[#000b] rounded-t-md"
+              />
+            </div>
+            <div className="p-4">
+              <h1 className="text-xl">{project.name}</h1>
+              <p className="md:text-justify text-sm mt-2">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {project.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="text-sm bg-[#000] text-white px-2 py-1 rounded"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div
+                className="absolute top-3 right-3 bg-[#fff] text-black p-2 rounded-full cursor-pointer border-2 border-[#000]"
+                onClick={() => goToLink(project.url)}
               >
-                <div className="myprojects_card_img">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src={item.image}
-                    loading="lazy"
-                    alt="project"
-                  />
-                </div>
-                <div className="myprojects_card_body">
-                  <div className="myprojects_card_header">
-                    <div className="myprojects_card_title">
-                      <h1>{item.name}</h1>
-                      <FaExternalLinkAlt
-                        className="myprojects_card_icon"
-                        onClick={() => goToLink(item.url)}
-                      />
-                    </div>
-                    <p>{item.description}</p>
-                  </div>
-                  <div>
-                    <div className="my_projects_card_tags">
-                      {item.tags.map((tag, index) => (
-                        <div className="my_projects_card_tag" key={index}>
-                          {tag}
-                        </div>
-                      ))}
-                    </div>
-                    {item.inspiration != undefined && (
-                      <span className="text-[16px]">
-                        Inspired by {item.inspiration}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
+                <FaExternalLinkAlt />
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
+
+      {projectsLoaded < projects.length && (
+        <div className="text-center mt-[2rem] flex items-center justify-center">
+          <button
+            className="bg-[#000] flex justify-center gap-2 items-center text-white px-4 py-2 rounded-md"
+            onClick={loadMoreProjects}
+          >
+            Load More <BsArrowDown />
+          </button>
+        </div>
+      )}
+
+      {projectsLoaded >= projects.length && (
+        <div className="text-center mt-[2rem] flex items-center justify-center">
+          <button
+            className="bg-[#000] flex justify-center gap-2 items-center text-white px-4 py-2 rounded-md"
+            onClick={showLessProjects}
+          >
+            Show Less <BsArrowUp />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
-export default MyProjects;
+export default MyProjectsMob;

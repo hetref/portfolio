@@ -8,7 +8,12 @@ import {
   MyProjects,
   ContactMe,
 } from "@/components/index.js";
-import { MobHeader, AboutMeMob, ExperienceMob } from "@/components/mob";
+import {
+  MobHeader,
+  AboutMeMob,
+  ExperienceMob,
+  MyProjectsMob,
+} from "@/components/mob";
 import "@/assets/scss/common.scss";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
@@ -67,6 +72,7 @@ export default function Home() {
             <AboutMeMob />
             <IKnow />
             <ExperienceMob />
+            <MyProjectsMob />
             <Footer />
           </div>
         </div>
