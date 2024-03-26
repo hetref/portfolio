@@ -5,6 +5,7 @@ import EarthCanvas from "./Earth";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import Image from "next/image";
+import useIsMobileStore from "@/stores/isMobileStore";
 
 const ContactMe = () => {
   const [name, setName] = useState("");
@@ -14,12 +15,13 @@ const ContactMe = () => {
 
   const [loading, setLoading] = useState(false);
 
+  const isMobile = useIsMobileStore((state) => state.isMobile);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true);
 
     const notification = toast.loading("Loading ....", {
-      // id: "notification",
       position: "bottom-right",
     });
 
@@ -28,7 +30,7 @@ const ContactMe = () => {
       toast.error("Please enter all the fields.", {
         id: notification,
       });
-      alert("Please enter all the fields.");
+      isMobile && alert("Please enter all the fields.");
     } else {
       emailjs
         .send(
@@ -49,7 +51,8 @@ const ContactMe = () => {
               "Thank you. I will get back to you as soon as possible.",
               { id: notification }
             );
-            alert("Thank you for your message. I will get back to you soon.");
+            isMobile &&
+              alert("Thank you for your message. I will get back to you soon.");
 
             setName("");
             setEmail("");
@@ -61,7 +64,7 @@ const ContactMe = () => {
             toast.error("Ahh, something went wrong. Please try again.", {
               id: notification,
             });
-            alert("Ahh, something went wrong. Please try again.");
+            isMobile && alert("Ahh, something went wrong. Please try again.");
           }
         );
     }
