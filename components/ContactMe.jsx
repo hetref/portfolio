@@ -28,6 +28,7 @@ const ContactMe = () => {
       toast.error("Please enter all the fields.", {
         id: notification,
       });
+      alert("Please enter all the fields.");
     } else {
       emailjs
         .send(
@@ -48,6 +49,7 @@ const ContactMe = () => {
               "Thank you. I will get back to you as soon as possible.",
               { id: notification }
             );
+            alert("Thank you for your message. I will get back to you soon.");
 
             setName("");
             setEmail("");
@@ -59,6 +61,7 @@ const ContactMe = () => {
             toast.error("Ahh, something went wrong. Please try again.", {
               id: notification,
             });
+            alert("Ahh, something went wrong. Please try again.");
           }
         );
     }
