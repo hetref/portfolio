@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si";
 import { motion, stagger } from "framer-motion";
 import ComputersCanvas from "../Computers";
 import useIsMobileStore from "@/stores/isMobileStore";
@@ -73,6 +74,14 @@ const MobHero = () => {
               }}
               className="header_social flex mt-[10%] lg:mt-[6%]"
             >
+              <div
+                className="header_icon"
+                onClick={() =>
+                  window.open("https://leetcode.com/shindearyan179/", "_blank")
+                }
+              >
+                <SiLeetcode />
+              </div>
               <div
                 className="header_icon"
                 onClick={() =>
