@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import useIsMobileStore from "@/stores/isMobileStore";
 import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
