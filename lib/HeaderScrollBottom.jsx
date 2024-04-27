@@ -7,13 +7,11 @@ import { gsap } from "gsap";
 
 const HeaderScrollBottom = () => {
   gsap.registerPlugin(ScrollToPlugin);
-  // const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
+  const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
   console.log("LOADED");
 
-  if (typeof window !== "undefined") {
-    let isMobile = window.matchMedia("(max-width: 600px)").matches;
-    console.log("ISMOBILE", isMobile);
-  }
+  // let isMobile = window.matchMedia("(max-width: 600px)").matches;
+  // console.log("ISMOBILE", isMobile);
 
   return (
     <motion.button
