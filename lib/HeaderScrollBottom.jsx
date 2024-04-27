@@ -7,22 +7,40 @@ import { gsap } from "gsap";
 
 const HeaderScrollBottom = () => {
   gsap.registerPlugin(ScrollToPlugin);
-  const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
+  // const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
+  console.log("LOADED");
+
+  if (typeof window !== "undefined") {
+    let isMobile = window.matchMedia("(max-width: 600px)").matches;
+    console.log("ISMOBILE", isMobile);
+  }
 
   return (
-    <button
+    <motion.button
       onClick={() =>
         gsap.to(window, {
           duration: 1.2,
           scrollTo: { y: isMobile ? "#aboutmemob" : "#aboutme" },
         })
       }
+      initial={false}
+      animate={{
+        // y: isMobile ? [0, 20, 0] : [0, 30, 0],
+        y: [0, 20, 0],
+      }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        repeatType: "loop",
+      }}
       className="flex items-center gap-4"
     >
       <div className="w-[26px] h-[55px] lg:w-[35px] lg:h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
         <motion.div
+          initial={false}
           animate={{
-            y: isMobile ? [0, 20, 0] : [0, 30, 0],
+            // y: isMobile ? [0, 20, 0] : [0, 30, 0],
+            y: [0, 20, 0],
           }}
           transition={{
             duration: 1.5,
@@ -33,7 +51,7 @@ const HeaderScrollBottom = () => {
         />
       </div>
       Click Me
-    </button>
+    </motion.button>
   );
 };
 

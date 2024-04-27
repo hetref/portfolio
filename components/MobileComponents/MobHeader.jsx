@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import ComputersCanvas from "../Computers";
 import HeaderScrollBottom from "@/lib/HeaderScrollBottom";
 
@@ -16,14 +16,14 @@ const MobHero = () => {
         </div>
         <div className="header_textuals_wrapper  lg:pb-0 h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
           <div className="header_textual h-full max-w-7xl flex flex-col justify-center pr-[4%] lg:pr-[10%] pl-[4%] lg:pl-[5%] ">
-            <motion.div
-              initial={false}
-              animate={{ y: [0, 15, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
+            <div
+              // initial={false}
+              // animate={{ y: [0, 15, 0] }}
+              // transition={{
+              //   duration: 1.5,
+              //   repeat: Infinity,
+              //   repeatType: "loop",
+              // }}
               className="header_text flex flex-col justify-center"
             >
               <h2 className="header-h">Hii ! 👋</h2>
@@ -50,17 +50,17 @@ const MobHero = () => {
                   }}
                 />
               </div>
-            </motion.div>
-            <motion.div
-              initial={false}
-              whileInView={{
-                x: 0,
-                transition: {
-                  duration: 2,
-                  type: "spring",
-                  stiffness: 100,
-                },
-              }}
+            </div>
+            <div
+              // initial={false}
+              // whileInView={{
+              //   x: 0,
+              //   transition: {
+              //     duration: 2,
+              //     type: "spring",
+              //     stiffness: 100,
+              //   },
+              // }}
               className="header_social flex mt-[10%] lg:mt-[6%]"
             >
               <a
@@ -98,7 +98,7 @@ const MobHero = () => {
               >
                 <BsTwitterX />
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
