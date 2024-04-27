@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motion";
 
 const experience = [
   {

@@ -1,5 +1,4 @@
-import { motion, useInView, useSpring, useTransform } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const baseskills = [
   {
@@ -92,9 +91,6 @@ const toolskills = [
 ];
 
 const WhatIKnow = () => {
-  const baseref = useRef(null);
-  const isInView = useInView(baseref);
-
   return (
     <div className="whatiknow_wrapper" id="whatiknow">
       <div className="whatiknow_heading" id="whatIknowMobile">
@@ -107,7 +103,7 @@ const WhatIKnow = () => {
         <div className="whatiknow_content">
           <div className="whatiknow_box_wrapper">
             <h1>BASE</h1>
-            <div className="whatiknow_box_skills" ref={baseref}>
+            <div className="whatiknow_box_skills">
               {baseskills.map((item, index) => (
                 <div className="whatiknow_box_skill" key={index}>
                   <span>

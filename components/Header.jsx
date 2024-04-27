@@ -1,21 +1,18 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
 import Typewriter from "typewriter-effect";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import ComputersCanvas from "./Computers";
-import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
-import useIsMobileStore from "@/stores/isMobileStore";
+// import { gsap } from "gsap";
+// import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
+import HeaderScrollBottom from "@/lib/HeaderScrollBottom";
 
 const Hero = () => {
-  gsap.registerPlugin(ScrollToPlugin);
-
-  const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
+  // gsap.registerPlugin(ScrollToPlugin);
 
   return (
     <header className="header_wrapper flex justify-center w-full items-center relative">
@@ -122,7 +119,8 @@ const Hero = () => {
       </div>
 
       <div className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center">
-        <button
+        <HeaderScrollBottom />
+        {/* <button
           onClick={() =>
             gsap.to(window, {
               duration: 1.2,
@@ -145,7 +143,7 @@ const Hero = () => {
             />
           </div>
           Click Me
-        </button>
+        </button> */}
       </div>
     </header>
   );
