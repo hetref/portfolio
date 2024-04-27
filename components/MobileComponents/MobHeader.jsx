@@ -1,5 +1,3 @@
-"use client";
-
 import Typewriter from "typewriter-effect";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
@@ -7,17 +5,11 @@ import { BsTwitterX } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
 import { motion } from "framer-motion";
 import ComputersCanvas from "../Computers";
-// import useIsMobileStore from "@/stores/isMobileStore";
-// import { gsap } from "gsap";
-// import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 import HeaderScrollBottom from "@/lib/HeaderScrollBottom";
 
 const MobHero = () => {
-  // gsap.registerPlugin(ScrollToPlugin);
-
   return (
     <header className="header_wrapper flex justify-center w-full items-center relative h-[100svh]">
-      {/* <header className="header_wrapper flex justify-center w-full items-center relative"> */}
       <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
         <div className="header_model h-[100lvh]">
           <ComputersCanvas />
@@ -25,6 +17,7 @@ const MobHero = () => {
         <div className="header_textuals_wrapper  lg:pb-0 h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
           <div className="header_textual h-full max-w-7xl flex flex-col justify-center pr-[4%] lg:pr-[10%] pl-[4%] lg:pl-[5%] ">
             <motion.div
+              initial={false}
               animate={{ y: [0, 15, 0] }}
               transition={{
                 duration: 1.5,
@@ -59,9 +52,7 @@ const MobHero = () => {
               </div>
             </motion.div>
             <motion.div
-              initial={{
-                x: "200px",
-              }}
+              initial={false}
               whileInView={{
                 x: 0,
                 transition: {
@@ -72,85 +63,48 @@ const MobHero = () => {
               }}
               className="header_social flex mt-[10%] lg:mt-[6%]"
             >
-              <div
+              <a
                 className="header_icon"
-                onClick={() =>
-                  window.open("https://leetcode.com/shindearyan179/", "_blank")
-                }
+                href="https://leetcode.com/shindearyan179/"
+                target="_blank"
               >
                 <SiLeetcode />
-              </div>
-              <div
+              </a>
+              <a
                 className="header_icon"
-                onClick={() =>
-                  window.open("https://www.instagram.com/coder_aryu/", "_blank")
-                }
+                href="https://www.instagram.com/coder_aryu/"
+                target="_blank"
               >
                 <FaInstagram />
-              </div>
-              <div
+              </a>
+              <a
                 className="header_icon"
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/shindearyan/",
-                    "_blank"
-                  )
-                }
+                href="https://www.linkedin.com/in/shindearyan/"
+                target="_blank"
               >
                 <FaLinkedinIn />
-              </div>
-              <div
+              </a>
+              <a
                 className="header_icon"
-                onClick={() =>
-                  window.open("https://www.threads.net/@coder_aryu", "_blank")
-                }
+                href="https://www.threads.net/@coder_aryu"
+                target="_blank"
               >
                 <BsThreads />
-              </div>
-              <div
+              </a>
+              <a
                 className="header_icon"
-                onClick={() =>
-                  window.open("https://twitter.com/aryudev", "_blank")
-                }
+                href="https://twitter.com/aryudev"
+                target="_blank"
               >
                 <BsTwitterX />
-              </div>
+              </a>
             </motion.div>
-            {/* <div>
-              <span className="text-[18px] absolute bottom-8 left-0 text-center w-full">
-                Mobile Version Coming Soon
-              </span>
-            </div> */}
           </div>
         </div>
       </div>
 
       <div className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center">
         <HeaderScrollBottom />
-        {/* <button
-          onClick={() =>
-            gsap.to(window, {
-              duration: 1.2,
-              scrollTo: { y: "#aboutmemob" },
-            })
-          }
-          className="flex items-center gap-4"
-        >
-          <div className="w-[26px] h-[55px] lg:w-[35px] lg:h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: isMobile ? [0, 20, 0] : [0, 30, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-[#f4f8fb] mb-1"
-            />
-          </div>
-          Click Me
-        </button> */}
       </div>
     </header>
   );

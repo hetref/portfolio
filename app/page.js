@@ -26,7 +26,6 @@ export default function Home() {
       <Toaster />
       <LenisScroll />
       <div className="lg:hidden">
-        {/* TODO: Make the website Mobile Responsive */}
         <ScrollIndicatior />
         <div className="overflow-x-hidden">
           <MobHeader />
