@@ -2,7 +2,7 @@
 
 ## Welcome to my portfolio!
 
-I've made this portfolio using NextJS, GSAP, and Framer Motion. Please do check my portfolio on [`Aryan Shinde`](https://portfolio-hetref.vercel.app/)
+I've made this portfolio using NextJS, ThreeJS, GSAP, and Framer Motion. Do check my portfolio on [`Aryan Shinde`](https://portfolio-hetref.vercel.app/)
 
-Currently this is not mobile responsive, but this will be soon.
+The portfolio is completely mobile-friendly. You can view this portfolio on mobile as well as desktop.
 Connect with me on my Linkedin: [Aryan Shinde](https://www.linkedin.com/in/shindearyan/)
