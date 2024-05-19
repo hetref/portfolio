@@ -50,9 +50,9 @@ const AboutMeMob = () => {
               🎓 Second-year Diploma student in Computer Engineering at
               Vidyalankar Polytechnic with expertise in web development (HTML,
               CSS, JavaScript, ReactJS, NextJS) 💻. Known for collaboration and
-              leadership 🤝. Passionate about football ⚽ and solving Rubik's
-              cubes 🧩. Excited to bring my skills and enthusiasm to your team
-              🚀.
+              leadership 🤝. Passionate about football ⚽ and solving
+              Rubik&rsquo;s cubes 🧩. Excited to bring my skills and enthusiasm
+              to your team 🚀.
             </div>
             {/* <motion.div
               className="about_link_card bg-[#000000cc]"

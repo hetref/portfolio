@@ -135,8 +135,8 @@ const AboutMe = () => {
                   Vidyalankar Polytechnic with expertise in web development
                   (HTML, CSS, JavaScript, ReactJS, NextJS) 💻. Known for
                   collaboration and leadership 🤝. Passionate about football ⚽
-                  and solving Rubik's cubes 🧩. Excited to bring my skills and
-                  enthusiasm to your team 🚀.
+                  and solving Rubik&rsquo;s cubes 🧩. Excited to bring my skills
+                  and enthusiasm to your team 🚀.
                 </motion.div>
                 <div
                   className="about_link_card bg-[#000000cc]"
