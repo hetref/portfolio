@@ -113,7 +113,7 @@ const AboutMe = () => {
             <div className="about_content relative">
               <div className="about_headings w-full">
                 <h1 className="text-7xl w-full">
-                  I am a creative developer with crazy & more focused mindset
+                  Innovative Developer with a Focused and Creative Mindset
                 </h1>
               </div>
               <div className="about_cards flex justify-center items-start mt-[6vh]">
@@ -124,13 +124,19 @@ const AboutMe = () => {
                   transition={{ duration: 2 }}
                   className="about_card text-justify leading-relaxed"
                 >
-                  I am a skilled Full stack Web Developer 🧑‍💻 with experience in
+                  {/* I am a skilled Full stack Web Developer 🧑‍💻 with experience in
                   JavaScript, Animations, and better at frameworks like React,
                   Node.js, and Three.js. I am a good team player 🤟 and
                   collaborate closely with clients to create efficient,
                   scalable, and user-friendly solutions that solve real-world
                   problems 🔗. Let us join together to bring the ideas to life
-                  🤝!
+                  🤝! */}
+                  🎓 Second-year Diploma student in Computer Engineering at
+                  Vidyalankar Polytechnic with expertise in web development
+                  (HTML, CSS, JavaScript, ReactJS, NextJS) 💻. Known for
+                  collaboration and leadership 🤝. Passionate about football ⚽
+                  and solving Rubik's cubes 🧩. Excited to bring my skills and
+                  enthusiasm to your team 🚀.
                 </motion.div>
                 <div
                   className="about_link_card bg-[#000000cc]"

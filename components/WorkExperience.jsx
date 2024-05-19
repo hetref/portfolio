@@ -11,7 +11,7 @@ const experience = [
     subtitle: "Web Development",
     description:
       "I started my Web Development journey with HTML, CSS & JavaScript. Then I learned multiple libraries and framework i.e. ReactJS, JQuery, etc. including NodeJS.",
-    date: "Feb, 2020",
+    date: "Feb 2020",
     category: "Story Started",
   },
   {
@@ -29,6 +29,14 @@ const experience = [
       "I was led to update the official website of the company on the daily basis. I used to co-ordinate between my manager and a senior website developer to update the website.",
     date: "Nov 2021 - Mar 2022",
     category: "Internship",
+  },
+  {
+    title: "IEEE Bombay Section",
+    subtitle: "IEEE BS SAC (Volunteer)",
+    description:
+      "I was a Operations member at IEEE BS SAC where me and my team handled all the operational work of IEEE BS. Also I was a website chair and food chair at a event named 'IBSYWLC' hosted by IEEE Bs SAC.",
+    date: "2023 - 2024",
+    category: "Volunteering",
   },
   {
     title: "Winner at HACKATHON",
@@ -55,19 +63,19 @@ const experience = [
     category: "Achievement",
   },
   {
-    title: "IEEE Bombay Section",
-    subtitle: "IEEE BS SAC (Volunteer)",
-    description:
-      "I was a Operations member at IEEE BS SAC where me and my team handled all the operational work of IEEE BS. Also I was a website chair and food chair at a event named 'IBSYWLC' hosted by IEEE Bs SAC.",
-    date: "2023 - 2024",
-    category: "Volunteering",
-  },
-  {
     title: "Unscrap Media",
     subtitle: "Website Developer (Internship)",
     description:
       "I am led to create & update websites for real clients. I work with Wordpress, Shopify or custom code as per the client's requirements.",
-    date: "Jun 2023 - Present",
+    date: "Jun 2023 - Apr 2024",
+    category: "Internship",
+  },
+  {
+    title: "IEEE Bombay SEction",
+    subtitle: "Website & Content Team (Volunteer)",
+    description:
+      "I am led to create & update websites for real clients. I work with Wordpress, Shopify or custom code as per the client's requirements.",
+    date: "Mar 2024 - Present",
     category: "Internship",
   },
 ];
