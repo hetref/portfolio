@@ -73,7 +73,7 @@ const experience = [
     description:
       "I am a part of the website and content team at IEEE BS where I am led to update & fix the website for IEEE Bombay Section.",
     date: "Mar 2024 - Present",
-    category: "Internship",
+    category: "Volunteer",
   },
 ];
 

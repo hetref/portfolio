@@ -74,9 +74,9 @@ const experience = [
     title: "IEEE Bombay Section",
     subtitle: "Website & Content Team (Volunteer)",
     description:
-      "I am led to create & update websites for real clients. I work with Wordpress, Shopify or custom code as per the client's requirements.",
+      "I am a part of the website and content team at IEEE BS where I am led to update & fix the website for IEEE Bombay Section.",
     date: "Mar 2024 - Present",
-    category: "Internship",
+    category: "Volunteer",
   },
 ];
 
