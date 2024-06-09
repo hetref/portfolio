@@ -54,7 +54,7 @@ export const YelpRecentLoginEmail = ({
                   }}
                 >
                   {u_user === "admin"
-                    ? "You&apos;ve got a new contact enquiry on the website."
+                    ? "You've got a new contact enquiry on the website."
                     : "Thank you for contacting me! I'll get back to you as soon as possible."}
                 </Heading>
 
