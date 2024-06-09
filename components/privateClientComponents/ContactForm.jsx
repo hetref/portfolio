@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import useIsMobileStore from "@/stores/isMobileStore";
+import { useState } from "react";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -16,7 +15,7 @@ const ContactForm = () => {
 
   const isMobile = useIsMobileStore((state) => state.isMobile);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
 
@@ -31,46 +30,42 @@ const ContactForm = () => {
       });
       isMobile && alert("Please enter all the fields.");
     } else {
-      emailjs
-        .send(
-          "service_hcds1on",
-          "template_fgov8hu",
-          {
-            from_name: name,
-            from_email: email,
-            from_phone: phone,
-            message: message,
-          },
-          "sWSGeQspNkkT6Ru87"
-        )
-        .then(
-          () => {
-            setLoading(false);
-            toast.success(
-              "Thank you. I will get back to you as soon as possible.",
-              { id: notification }
-            );
-            isMobile &&
-              alert("Thank you for your message. I will get back to you soon.");
+      const emailresponse = await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify({
+          u_name: name,
+          u_email: email,
+          u_phone: phone,
+          u_message: message,
+        }),
+      });
 
-            setName("");
-            setEmail("");
-            setPhone("");
-            setMessage("");
-          },
-          (error) => {
-            setLoading(false);
-            console.log(error);
-            toast.error("Ahh, something went wrong. Please try again.", {
-              id: notification,
-            });
-            isMobile && alert("Ahh, something went wrong. Please try again.");
+      if (emailresponse.status === 200) {
+        toast.success(
+          "Thank you for contacting me! Will get back to you soon.",
+          {
+            id: notification,
           }
         );
+        isMobile &&
+          alert("Thank you for contacting me! Will get back to you soon.");
+      } else {
+        toast.error("Failed to contact, please try again later!", {
+          id: notification,
+        });
+        isMobile && alert("Failed to contact, please try again later!");
+      }
+
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+      setLoading(false);
     }
   };
+
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="form">
       <div className="flex-column">
         <label>Name </label>
       </div>
@@ -91,6 +86,7 @@ const ContactForm = () => {
           type="text"
           className="input"
           placeholder="Enter your Name"
+          name="name"
         />
       </div>
 
@@ -114,6 +110,7 @@ const ContactForm = () => {
           type="email"
           className="input"
           placeholder="Enter your Email"
+          name="email"
         />
       </div>
       <div className="flex-column">
@@ -136,6 +133,7 @@ const ContactForm = () => {
           type="tel"
           className="input"
           placeholder="Enter your Phone"
+          name="phone"
         />
       </div>
 
@@ -159,6 +157,7 @@ const ContactForm = () => {
           type="text"
           className="input"
           placeholder="Enter your Message"
+          name="message"
         />
       </div>
 
