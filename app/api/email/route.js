@@ -7,7 +7,7 @@ export async function POST(request) {
   const { u_name, u_email, u_phone, u_message } = await request.json();
   try {
     const { error } = await resend.emails.send({
-      from: "Aryan <contact@aryanshinde.in>",
+      from: "Aryan Shinde <contact@aryanshinde.in>",
       to: ["shindearyan179@gmail.com"],
       subject: "Portfolio Contact Enquiry",
       react: WelcomeTemplate({
@@ -20,7 +20,7 @@ export async function POST(request) {
     });
 
     const { error: uerror } = await resend.emails.send({
-      from: "Aryan <contact@aryanshinde.in>",
+      from: "Aryan Shinde <contact@aryanshinde.in>",
       to: [u_email],
       subject: "Thank you for contacting",
       react: WelcomeTemplate({
