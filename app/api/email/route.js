@@ -32,8 +32,6 @@ export async function POST(request) {
       }),
     });
 
-    // return NextResponse.json({ status: "Ok" });
-
     if (error || uerror) {
       return NextResponse.json({ error, status: 500 });
     }

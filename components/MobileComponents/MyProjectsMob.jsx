@@ -135,7 +135,7 @@ const MyProjectsMob = () => {
   return (
     <div className="py-[6rem] px-[4%] bg-[#f5f5f5]">
       <div className="mb-2 text-center">
-        <h1 className="header-h">My Projects</h1>
+        <h1 className="header-h">My Works</h1>
         <p className="md:text-4xl text-lg">
           How I applied skills in real-world?
         </p>

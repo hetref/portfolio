@@ -122,7 +122,7 @@ const MyProjects = () => {
   return (
     <div id="myprojects_wrapper">
       <div className="text-center">
-        <h1 className="header-h">My Projects</h1>
+        <h1 className="header-h">My Works</h1>
         <p className="md:text-4xl text-lg">
           How I applied skills in real-world?
         </p>

@@ -101,11 +101,11 @@ export const YelpRecentLoginEmail = ({
           </Section>
 
           <Section style={containerImageFooter}>
-            {/* <Img
+            <Img
               style={image}
               width={620}
-              src={`${baseUrl}/static/yelp-footer.png`}
-            /> */}
+              src="https://aryanshinde.in/email-footer.png"
+            />
           </Section>
 
           <Text
