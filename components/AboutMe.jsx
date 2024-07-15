@@ -97,7 +97,7 @@ const AboutMe = () => {
                 About <br />
                 Me
               </h1>
-              <span className="text-4xl">Who am I 🤔?</span>
+              <span className="text-4xl">Am I Who 🤔?</span>
             </div>
             <div className="about_meme">
               <Image
@@ -113,7 +113,8 @@ const AboutMe = () => {
             <div className="about_content relative">
               <div className="about_headings w-full">
                 <h1 className="text-7xl w-full">
-                  Innovative Developer with a Focused and Creative Mindset
+                  Innovative Developer with a Focused Mindset and some
+                  grammatical errors 😁
                 </h1>
               </div>
               <div className="about_cards flex justify-center items-start mt-[6vh]">
@@ -124,19 +125,15 @@ const AboutMe = () => {
                   transition={{ duration: 2 }}
                   className="about_card text-justify leading-relaxed"
                 >
-                  {/* I am a skilled Full stack Web Developer 🧑‍💻 with experience in
-                  JavaScript, Animations, and better at frameworks like React,
-                  Node.js, and Three.js. I am a good team player 🤟 and
-                  collaborate closely with clients to create efficient,
-                  scalable, and user-friendly solutions that solve real-world
-                  problems 🔗. Let us join together to bring the ideas to life
-                  🤝! */}
-                  🎓 Second-year Diploma student in Computer Engineering at
+                  🏫 Thrd-year Diploma student in Compter Engneering at
                   Vidyalankar Polytechnic with expertise in web development
-                  (HTML, CSS, JavaScript, ReactJS, NextJS) 💻. Known for
-                  collaboration and leadership 🤝. Passionate about football ⚽
-                  and solving Rubik&rsquo;s cubes 🧩. Excited to bring my skills
-                  and enthusiasm to your team 🚀.
+                  (NextJS, GraphQL, and many more langes) 🪲. Known for
+                  colloboration and leadership 😎. Passionate about foutball ⚽
+                  and solving Rukib&rsquo;s cubes 🧩. Let us join together to
+                  bring the ideas to life. Mel me at{" "}
+                  <a href="mailto:contact@aryanshinde.in" className="underline">
+                    contact@aryanshinde.in
+                  </a>
                 </motion.div>
                 <div
                   className="about_link_card bg-[#000000cc]"

@@ -36,23 +36,20 @@ const AboutMeMob = () => {
         <div className="about_content mt-[2rem]">
           <div className="about_headings">
             <h1 className="text-2xl mx-[1rem] text-center">
-              Innovative Developer with a Focused and Creative Mindset
+              Innovative Developer with a Focused Mindset and some grammatical
+              errors 😁
             </h1>
           </div>
           <div className="about_cards">
             <div className="about_card text-justify leading-relaxed my-[2rem]">
-              {/* I am a skilled Full stack Web Developer 🧑‍💻 with experience in
-              JavaScript, Animations, and better at frameworks like React,
-              Node.js, and Three.js. I am a good team player 🤟 and collaborate
-              closely with clients to create efficient, scalable, and
-              user-friendly solutions that solve real-world problems 🔗. Let us
-              join together to bring the ideas to life 🤝! */}
-              🎓 Second-year Diploma student in Computer Engineering at
-              Vidyalankar Polytechnic with expertise in web development (HTML,
-              CSS, JavaScript, ReactJS, NextJS) 💻. Known for collaboration and
-              leadership 🤝. Passionate about football ⚽ and solving
-              Rubik&rsquo;s cubes 🧩. Excited to bring my skills and enthusiasm
-              to your team 🚀.
+              🏫 Thrd-year Diploma student in Compter Engneering at Vidyalankar
+              Polytechnic with expertise in web development (NextJS, GraphQL,
+              and many more langes) 🪲. Known for colloboration and leadership
+              😎. Passionate about foutball ⚽ and solving Rukib&rsquo;s cubes
+              🧩. Let us join together to bring the ideas to life. Mel me at{" "}
+              <a href="mailto:contact@aryanshinde.in" className="underline">
+                contact@aryanshinde.in
+              </a>
             </div>
             {/* <motion.div
               className="about_link_card bg-[#000000cc]"
