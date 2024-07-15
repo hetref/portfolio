@@ -22,7 +22,7 @@ const AboutMeMob = () => {
             About <br />
             Me
           </h1>
-          <span className="text-2xl">Who am I 🤔?</span>
+          <span className="text-2xl">Am I Who 🤔?</span>
         </div>
         <div className="about_meme">
           <Image
@@ -35,13 +35,13 @@ const AboutMeMob = () => {
         </div>
         <div className="about_content mt-[2rem]">
           <div className="about_headings">
-            <h1 className="text-2xl mx-[1rem] text-center">
+            <p className="text-lg mx-[1rem] font-semibold text-center">
               Innovative Developer with a Focused Mindset and some grammatical
               errors 😁
-            </h1>
+            </p>
           </div>
           <div className="about_cards">
-            <div className="about_card text-justify leading-relaxed my-[2rem]">
+            <div className="about_card text-center leading-relaxed my-[2rem]">
               🏫 Thrd-year Diploma student in Compter Engneering at Vidyalankar
               Polytechnic with expertise in web development (NextJS, GraphQL,
               and many more langes) 🪲. Known for colloboration and leadership

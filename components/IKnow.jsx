@@ -18,19 +18,23 @@ const baseskills = [
     percentage: 90,
   },
   {
-    name: "SCSS",
-    percentage: 94,
+    name: "XML",
+    percentage: 80,
+  },
+  {
+    name: "JAVA",
+    percentage: 75,
   },
 ];
 
 const coreskills = [
   {
     name: "NEXT JS",
-    percentage: 80,
+    percentage: 90,
   },
   {
     name: "REACT JS",
-    percentage: 89,
+    percentage: 96,
   },
   {
     name: "NODE JS",
@@ -41,20 +45,24 @@ const coreskills = [
     percentage: 96,
   },
   {
-    name: "GraphQL",
-    percentage: 60,
+    name: "SCSS",
+    percentage: 94,
   },
   {
-    name: "JAVA",
-    percentage: 75,
+    name: "GraphQL",
+    percentage: 90,
   },
   {
     name: "WORDPRESS",
     percentage: 86,
   },
   {
-    name: "XML",
+    name: "CMS",
     percentage: 80,
+  },
+  {
+    name: "Solidity",
+    percentage: 70,
   },
 ];
 
@@ -63,15 +71,17 @@ const databaseskills = [
     name: "FIREBASE",
     percentage: 96,
   },
-
   {
     name: "SQL",
     percentage: 86,
   },
-
   {
     name: "MONGODB",
-    percentage: 74,
+    percentage: 80,
+  },
+  {
+    name: "NEON (Prisma)",
+    percentage: 70,
   },
 ];
 
@@ -88,6 +98,14 @@ const toolskills = [
     name: "GIT",
     percentage: 84,
   },
+  {
+    name: "GoHighLevel",
+    percentage: 40,
+  },
+  {
+    name: "Remix",
+    percentage: 70,
+  },
 ];
 
 const IKnow = () => {
@@ -96,8 +114,7 @@ const IKnow = () => {
       <div className="whatiknow_heading" id="whatIknowMobile">
         <h1 className="header-h">What I Know?</h1>
         <p className="text-lg mx-2 md:text-4xl">
-          {/* Here is the reason why you should trust me! */}
-          Some cool languages I am good at!
+          Here&apos;s the list of langs I know and I&apos;m good at!
         </p>
       </div>
       <div className="whatiknow_content_wrapper max-w-7xl w-full px-[4%]">
