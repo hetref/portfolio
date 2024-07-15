@@ -109,13 +109,13 @@ const WorkExperience = () => {
         translateX: 0,
       },
       {
-        translateX: "-4000px",
+        translateX: "-5000px",
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "4000 top",
+          end: "5000 top",
           scrub: 1,
           pin: true,
           // markers: true,
@@ -141,11 +141,11 @@ const WorkExperience = () => {
             </div>
 
             <div className="experience_timeline">
-              <div className="timeline_line h-2 w-[full] bg-[#000000] rounded-full"></div>
+              <div className="timeline_line h-2 w-[6200px] bg-[#000000] rounded-full"></div>
               <motion.div className="timeline_cards flex items-start mt-[2rem]">
                 {experience.map((item, index) => (
                   <motion.div
-                    className="timeline_card w-[550px] bg-[#000] mr-[4rem] rounded-lg relative text-[#fff]"
+                    className="timeline_card min-w-[500px] max-w-[600px] bg-[#000] mr-[4rem] mt-2 rounded-lg relative text-[#fff]"
                     key={index}
                     initial={{ opacity: 0 }}
                     transition={{
@@ -158,11 +158,11 @@ const WorkExperience = () => {
                     exit={{ opacity: 0 }}
                   >
                     <div
-                      className="absolute w-2 h-4 bg-[#000] left-[50%] top-[-3.1rem] rounded-full"
+                      className="absolute w-2 h-4 bg-[#000] left-[50%] top-[-2.8rem] rounded-full"
                       style={{ transform: "translateX(-50%)" }}
                     ></div>
                     <div
-                      className="absolute top-[-1.7rem] left-[50%] text-[#000]"
+                      className="absolute top-[-1.8rem] left-[50%] text-[#000]"
                       style={{ transform: "translateX(-50%)" }}
                     >
                       {item.date}
