@@ -60,21 +60,16 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div
-              // initial={{
-              //   x: "200px",
-              // }}
-              // initial={false}
-              // whileInView={{
-              //   x: 0,
-              //   transition: {
-              //     duration: 2,
-              //     type: "spring",
-              //     stiffness: 100,
-              //   },
-              // }}
-              className="header_social flex mt-[10%] lg:mt-[6%]"
-            >
+            <div className="flex flex-col gap-2 my-3">
+              <a
+                href="https://drive.google.com/file/d/11p6AlR91CVTtnyj08fobBzGFo8FiGM4_/view?usp=sharing"
+                className="text-lg border-2 border-white rounded-full px-8 py-3 w-fit"
+                target="_blank"
+              >
+                Download RESUME
+              </a>
+            </div>
+            <div className="header_social flex mt-[10%] lg:mt-[6%]">
               <a
                 className="header_icon"
                 href="https://leetcode.com/shindearyan179/"
