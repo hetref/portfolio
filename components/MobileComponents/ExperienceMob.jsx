@@ -68,6 +68,22 @@ const experience = [
     category: "Internship",
   },
   {
+    title: "Winner at HACKATHON",
+    subtitle: "TECHNOTHON 2024",
+    description:
+      "Me and my team won a 24-hour hackathon i.e. 'TECHNOTHON 2024' which was conducted by VES Polytechnic in Mumbai.",
+    date: "Feb 2024",
+    category: "Achievement",
+  },
+  {
+    title: "Winner at HACKATHON",
+    subtitle: "RECURSION 5.0",
+    description:
+      "Me and my team won a 24-hour hackathon i.e. 'RECURSION 5.0' which was conducted by Rajiv Gandhi Institute of Technology in Andheri, Mumbai.",
+    date: "Mar 2024",
+    category: "Achievement",
+  },
+  {
     title: "IEEE Bombay Section",
     subtitle: "Website & Content Team (Volunteer)",
     description:
