@@ -91,7 +91,7 @@ const AboutMe = () => {
           ref={circleRef}
         ></div>
         <div ref={sectionRef} className="scroll-section-inner w-[400vw]">
-          <div className="scroll-section items-center w-[100vw]">
+          <div className="scroll-section justify-center items-center w-[100vw]">
             <div className="about_textuals mr-[8vw]">
               <h1 className="text-8xl mb-[2rem]">
                 About <br />
@@ -109,7 +109,7 @@ const AboutMe = () => {
               />
             </div>
           </div>
-          <div className="scroll-section items-center w-[250vw]">
+          <div className="scroll-section justify-center items-center w-[250vw]">
             <div className="about_content relative">
               <div className="about_headings w-full">
                 <h1 className="text-7xl w-full">
@@ -125,12 +125,12 @@ const AboutMe = () => {
                   transition={{ duration: 2 }}
                   className="about_card text-justify leading-relaxed"
                 >
-                  🏫 Thrd-year Diploma student in Compter Engneering at
-                  Vidyalankar Polytechnic with expertise in web development
-                  (NextJS, GraphQL, and many more langes) 🪲. Known for
-                  colloboration and leadership 😎. Passionate about foutball ⚽
-                  and solving Rukib&rsquo;s cubes 🧩. Let us join together to
-                  bring the ideas to life. Mel me at{" "}
+                  Third-year Diploma student in Computer Engineering at
+                  Vidyalankar Polytechnic, specializing in web development with
+                  technologies like NextJS and GraphQL, among others. Known for
+                  strong collaboration and leadership skills. Passionate about
+                  football and solving Rubik&rsquo;s cubes. Let&rsquo;s
+                  collaborate and bring ideas to life! Contact me at{" "}
                   <a href="mailto:contact@aryanshinde.in" className="underline">
                     contact@aryanshinde.in
                   </a>

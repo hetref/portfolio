@@ -99,10 +99,12 @@ const experience = [
 const WorkExperience = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+  const headerRef = useRef(null); // New ref for the header
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    // Pin the entire section for horizontal scroll effect
     const pin = gsap.fromTo(
       sectionRef.current,
       {
@@ -118,31 +120,54 @@ const WorkExperience = () => {
           end: "5000 top",
           scrub: 1,
           pin: true,
-          // markers: true,
+          // markers: true, // Uncomment this line if you want to see ScrollTrigger markers for debugging
         },
       }
     );
 
+    // Pin the header separately until the horizontal scroll ends
+    // ScrollTrigger.create({
+    //   trigger: headerRef.current,
+    //   start: "top 0%", // Pin when the header reaches 30% from the top
+    //   end: "5000 top", // Pin until the horizontal scroll ends
+    //   scrub: true,
+    //   pin: true, // Pin the header
+    //   // markers: true, // Uncomment this line if you want to see ScrollTrigger markers for debugging
+    // });
+
+    ScrollTrigger.create({
+      trigger: headerRef.current,
+      start: "top top", // Pin when the header reaches the top of the viewport
+      end: "5000 top", // Pin until the horizontal scroll ends
+      scrub: true,
+      pin: true, // Pin the header
+      pinSpacing: false, // Avoid adding space where the header was
+      // markers: true, // Uncomment this line if you want to see ScrollTrigger markers for debugging
+    });
+
     return () => {
-      {
-      }
       pin.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
     <section className="scroll-section-outer" id="workexperience">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="scroll-section-inner w-[5300px]">
+        <div className="scroll-section-inner w-[5300px]">
           <div className="scroll-section px-[8vw] w-full flex flex-col">
-            <div className="mb-[4rem]">
+            <div
+              ref={headerRef} // Assign the headerRef to the header
+              className="mb-[4rem] bg-white z-10"
+              style={{ paddingTop: "130px" }}
+            >
               <h1 className="text-7xl mb-[1.2rem]">Work Experience</h1>
               <span className="text-4xl">What have i done so far? 🤔?</span>
             </div>
 
-            <div className="experience_timeline">
+            <div ref={sectionRef} className="experience_timeline">
               <div className="timeline_line h-2 w-[6200px] bg-[#000000] rounded-full"></div>
-              <motion.div className="timeline_cards flex items-start mt-[2rem]">
+              <motion.div className="timeline_cards flex  mt-[2rem]">
                 {experience.map((item, index) => (
                   <motion.div
                     className="timeline_card min-w-[500px] max-w-[600px] bg-[#000] mr-[4rem] mt-2 rounded-lg relative text-[#fff]"

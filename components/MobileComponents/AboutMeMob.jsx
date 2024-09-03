@@ -42,81 +42,16 @@ const AboutMeMob = () => {
           </div>
           <div className="about_cards">
             <div className="about_card text-center leading-relaxed my-[2rem]">
-              🏫 Thrd-year Diploma student in Compter Engneering at Vidyalankar
-              Polytechnic with expertise in web development (NextJS, GraphQL,
-              and many more langes) 🪲. Known for colloboration and leadership
-              😎. Passionate about foutball ⚽ and solving Rukib&rsquo;s cubes
-              🧩. Let us join together to bring the ideas to life. Mel me at{" "}
+              Third-year Diploma student in Computer Engineering at Vidyalankar
+              Polytechnic, specializing in web development with technologies
+              like NextJS and GraphQL, among others. Known for strong
+              collaboration and leadership skills. Passionate about football and
+              solving Rubik&rsquo;s cubes. Let&rsquo;s collaborate and bring
+              ideas to life! Contact me at{" "}
               <a href="mailto:contact@aryanshinde.in" className="underline">
                 contact@aryanshinde.in
               </a>
             </div>
-            {/* <motion.div
-              className="about_link_card bg-[#000000cc]"
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <Image
-                src="https://hetref.github.io/portfolio-assets/images/whatiknow-min.png"
-                alt="What I Know"
-                className="p-8 object-cover"
-                width={1000}
-                height={1000}
-              />
-              <div
-                className="about_link_card_title"
-                onClick={() => scrollToSection("#iknow")}
-              >
-                <h1>What I Know</h1>
-                <FaArrowRight />
-              </div>
-            </motion.div>
-            <motion.div
-              className="about_link_card bg-[#000000cc]"
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <Image
-                src="https://hetref.github.io/portfolio-assets/images/experience-min.png"
-                alt="Work Experience"
-                className="p-8 object-cover"
-                width={1000}
-                height={1000}
-              />
-              <div
-                className="about_link_card_title"
-                onClick={() => scrollToSection("#workexperience")}
-              >
-                <h1>Work Experience</h1>
-                <FaArrowRight />
-              </div>
-            </motion.div>
-            <motion.div
-              className="about_link_card bg-[#000000cc]"
-              initial={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <Image
-                src="https://hetref.github.io/portfolio-assets/images/projects-min.png"
-                alt="Technologies Preview"
-                className="w-full p-8 object-cover"
-                width={1000}
-                height={1000}
-              />
-              <div
-                className="about_link_card_title"
-                onClick={() => scrollToSection("#myprojects_wrapper")}
-              >
-                <h1>Projects</h1>
-                <FaArrowRight />
-              </div>
-            </motion.div> */}
           </div>
         </div>
       </div>
