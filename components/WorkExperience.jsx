@@ -94,6 +94,14 @@ const experience = [
     date: "Mar 2024 - Present",
     category: "Volunteer",
   },
+  {
+    title: "IEEE Bombay Section",
+    subtitle: "Website & Content Team (Volunteer)",
+    description:
+      "I am a part of the website and content team at IEEE BS where I am led to update & fix the website for IEEE Bombay Section.",
+    date: "Mar 2024 - Present",
+    category: "Volunteer",
+  },
 ];
 
 const WorkExperience = () => {
@@ -111,13 +119,13 @@ const WorkExperience = () => {
         translateX: 0,
       },
       {
-        translateX: "-5000px",
+        translateX: `-${Math.ceil(experience.length / 2) * 1000}px`, //6000
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "5000 top",
+          end: `${Math.ceil(experience.length / 2) * 1000} top`,
           scrub: 1,
           pin: true,
           // markers: true, // Uncomment this line if you want to see ScrollTrigger markers for debugging
@@ -125,20 +133,10 @@ const WorkExperience = () => {
       }
     );
 
-    // Pin the header separately until the horizontal scroll ends
-    // ScrollTrigger.create({
-    //   trigger: headerRef.current,
-    //   start: "top 0%", // Pin when the header reaches 30% from the top
-    //   end: "5000 top", // Pin until the horizontal scroll ends
-    //   scrub: true,
-    //   pin: true, // Pin the header
-    //   // markers: true, // Uncomment this line if you want to see ScrollTrigger markers for debugging
-    // });
-
     ScrollTrigger.create({
       trigger: headerRef.current,
       start: "top top", // Pin when the header reaches the top of the viewport
-      end: "5000 top", // Pin until the horizontal scroll ends
+      end: `${Math.ceil(experience.length / 2) * 1000 + 600} top`, // Pin until the horizontal scroll ends
       scrub: true,
       pin: true, // Pin the header
       pinSpacing: false, // Avoid adding space where the header was
@@ -166,7 +164,14 @@ const WorkExperience = () => {
             </div>
 
             <div ref={sectionRef} className="experience_timeline">
-              <div className="timeline_line h-2 w-[6200px] bg-[#000000] rounded-full"></div>
+              <div
+                className={`timeline_line h-2 w-[${
+                  experience.length * 800
+                }x] bg-[#000000] rounded-full`}
+                style={{
+                  width: `${experience.length * 580}px`,
+                }}
+              ></div>
               <motion.div className="timeline_cards flex  mt-[2rem]">
                 {experience.map((item, index) => (
                   <motion.div
