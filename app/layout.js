@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Aryan Shinde | Portfolio</title>
+        <title>Mr. Aryan Shinde | Portfolio</title>
 
         {/* Adsense */}
         <meta
