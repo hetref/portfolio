@@ -123,12 +123,6 @@ export default function RootLayout({ children }) {
           content="/favicon/ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
-
-        <script
-          defer
-          data-domain="portfolio-hetref.vercel.app"
-          src="https://plausible.io/js/script.js"
-        ></script>
       </head>
       <body className={inter.className}>
         {children}

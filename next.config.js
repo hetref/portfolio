@@ -5,7 +5,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "hetref.github.io",
-        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "api.microlink.io",
       },
     ],
   },

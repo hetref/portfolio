@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { LinkPreview } from "./ui/link-preview";
 
 const projects = [
   {
@@ -184,10 +185,13 @@ const MyProjects = () => {
                   <div className="myprojects_card_header">
                     <div className="myprojects_card_title">
                       <h1>{item.name}</h1>
-                      <FaExternalLinkAlt
-                        className="myprojects_card_icon"
-                        onClick={() => goToLink(item.url)}
-                      />
+
+                      <LinkPreview url={item.url} className="font-bold">
+                        <FaExternalLinkAlt
+                          className="myprojects_card_icon"
+                          // onClick={() => goToLink(item.url)}
+                        />
+                      </LinkPreview>
                     </div>
                     <p>{item.description}</p>
                   </div>
