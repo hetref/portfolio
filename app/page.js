@@ -23,40 +23,55 @@ import { useResponsiveJSX } from "@/hooks/useResponsiveJSX";
 
 export default function Home() {
   const breakpoint = useResponsiveJSX([425]);
+  const isMobile = breakpoint === 0;
 
   return (
+    // <>
+    //   <LenisScroll />
+    //   {breakpoint === 0 && (
+    //     <div className="lg:hidden">
+    //       <ScrollIndicatior />
+    //       <div className="overflow-x-hidden">
+    //         <MobHeader />
+    //         <AboutMeMob />
+    //         <IKnow />
+    //         <ScrollBasedText />
+    //         <ExperienceMob />
+    //         <MyProjectsMob />
+    //         <ContactMe />
+    //         <Footer />
+    //       </div>
+    //     </div>
+    //   )}
+    //   {breakpoint === 1 && (
+    //     <div className="hidden lg:block">
+    //       <ScrollIndicatior />
+    //       <Header />
+    //       <AboutMe />
+    //       <div id="whatIKnowSection">
+    //         <IKnow />
+    //       </div>
+    //       <ScrollBasedText />
+    //       <WorkExperience />
+    //       <MyProjects />
+    //       <ContactMe />
+    //       <Footer />
+    //     </div>
+    //   )}
+    // </>
     <>
       <LenisScroll />
-      {breakpoint === 0 && (
-        <div className="lg:hidden">
-          <ScrollIndicatior />
-          <div className="overflow-x-hidden">
-            <MobHeader />
-            <AboutMeMob />
-            <IKnow />
-            <ScrollBasedText />
-            <ExperienceMob />
-            <MyProjectsMob />
-            <ContactMe />
-            <Footer />
-          </div>
-        </div>
-      )}
-      {breakpoint === 1 && (
-        <div className="hidden lg:block">
-          <ScrollIndicatior />
-          <Header />
-          <AboutMe />
-          <div id="whatIKnowSection">
-            <IKnow />
-          </div>
-          <ScrollBasedText />
-          <WorkExperience />
-          <MyProjects />
-          <ContactMe />
-          <Footer />
-        </div>
-      )}
+      <ScrollIndicatior />
+      <div className={isMobile ? "lg:hidden" : "hidden lg:block"}>
+        {isMobile ? <MobHeader /> : <Header />}
+        {isMobile ? <AboutMeMob /> : <AboutMe />}
+        <IKnow />
+        <ScrollBasedText />
+        {isMobile ? <ExperienceMob /> : <WorkExperience />}
+        {isMobile ? <MyProjectsMob /> : <MyProjects />}
+        <ContactMe />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -97,11 +97,12 @@ const AboutMe = () => {
                 About <br />
                 Me
               </h1>
-              <span className="text-4xl">Am I Who 🤔?</span>
+              <span className="text-4xl">Who am I 🤔?</span>
             </div>
             <div className="about_meme">
               <Image
-                src="https://hetref.github.io/portfolio-assets/images/rounded-profile.png"
+                // src="https://hetref.github.io/portfolio-assets/images/rounded-profile.png"
+                src="/profile-white.png"
                 alt="Profile"
                 className="rounded-full border-[10px] border-[#000000] bg-[#000000]"
                 width={600}
@@ -112,9 +113,8 @@ const AboutMe = () => {
           <div className="scroll-section justify-center items-center w-[250vw]">
             <div className="about_content relative">
               <div className="about_headings w-full">
-                <h1 className="text-7xl w-full">
-                  Innovative Developer with a Focused Mindset and some
-                  grammatical errors 😁
+                <h1 className="text-8xl w-full">
+                  Innovative Developer with a Focused and Creative Mindset 🤯
                 </h1>
               </div>
               <div className="about_cards flex justify-center items-start mt-[6vh]">

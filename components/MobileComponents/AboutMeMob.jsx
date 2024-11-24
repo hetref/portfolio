@@ -22,11 +22,11 @@ const AboutMeMob = () => {
             About <br />
             Me
           </h1>
-          <span className="text-2xl">Am I Who 🤔?</span>
+          <span className="text-2xl">Who am I 🤔?</span>
         </div>
         <div className="about_meme">
           <Image
-            src="https://hetref.github.io/portfolio-assets/images/rounded-profile.png"
+            src="/profile-white.png"
             alt="Profile"
             className="rounded-full border-[10px] border-[#000000] bg-[#000000]"
             width={240}
@@ -36,8 +36,7 @@ const AboutMeMob = () => {
         <div className="about_content mt-[2rem]">
           <div className="about_headings">
             <p className="text-lg mx-[1rem] font-semibold text-center">
-              Innovative Developer with a Focused Mindset and some grammatical
-              errors 😁
+              Innovative Developer with a Focused and Creative Mindset 🤯
             </p>
           </div>
           <div className="about_cards">
