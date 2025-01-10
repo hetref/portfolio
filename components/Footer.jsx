@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -37,6 +38,17 @@ const Footer = () => {
             © All Rights Reserved <br />
             {year} Aryan Shinde&apos;s Portfolio
           </span>
+        </div>
+        <div className="w-full flex justify-between items-center gap-2 flex-col md:flex-row md:mt-6 mt-4">
+          <div>
+            <Link href="/terms-and-conditions">Terms & Conditions</Link>
+          </div>
+          <div>
+            <Link href="privacy-policy">Privacy Policy</Link>
+          </div>
+          <div>
+            <Link href="refund-policy">Refund Policy</Link>
+          </div>
         </div>
       </div>
     </footer>

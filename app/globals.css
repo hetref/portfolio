@@ -103,6 +103,14 @@
   .experiencecardmob {
     @apply absolute h-8 w-2 top-[-8] bg-[#000] left-1/2 transform -translate-x-1/2;
   }
+
+  .list-wrapper li {
+    @apply my-3;
+  }
+
+  .list-wrapper li div {
+    @apply mx-4 mt-2 text-[14px];
+  }
 }
 
 * {

@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weights: "100, 200, 300, 400, 500, 600, 700" });
 
 export default function RootLayout({ children }) {
   return (
