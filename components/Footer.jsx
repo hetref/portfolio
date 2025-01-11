@@ -21,8 +21,9 @@ const Footer = () => {
           </div>
           <div className="text-center flex flex-col gap-1 md:gap-3">
             <h1 className="text-2xl lg:text-3xl">Address</h1>
-            <a href="https://wa.me/+918097296453?text=Hii Aryan">
-              Kamothe, Navi Mumbai, Maharashtra
+            <a href="https://maps.app.goo.gl/78J2yRhk5JMYbAD5A">
+              Ravi Rachna, Sec - 25, Kamothe, <br />
+              Navi Mumbai, Maharashtra, 410206
             </a>
           </div>
         </div>
