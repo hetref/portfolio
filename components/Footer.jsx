@@ -10,13 +10,19 @@ const Footer = () => {
       <div className="max-w-7xl w-full">
         <div className="flex md:flex-row flex-col justify-around items-center gap-6 md:gap-4">
           <div className="text-center flex flex-col gap-1 md:gap-3">
-            <h1 className="text-2xl md:text-4xl">Connect on Email</h1>
+            <h1 className="text-2xl lg:text-3xl">Connect on Email</h1>
             <a href="mailto:contact@aryanshinde.in">contact@aryanshinde.in</a>
           </div>
           <div className="text-center flex flex-col gap-1 md:gap-3">
-            <h1 className="text-2xl md:text-4xl">Connect on Whatsapp</h1>
+            <h1 className="text-2xl lg:text-3xl">Connect on Whatsapp</h1>
             <a href="https://wa.me/+918097296453?text=Hii Aryan">
               +91 8097296453
+            </a>
+          </div>
+          <div className="text-center flex flex-col gap-1 md:gap-3">
+            <h1 className="text-2xl lg:text-3xl">Address</h1>
+            <a href="https://wa.me/+918097296453?text=Hii Aryan">
+              Kamothe, Navi Mumbai, Maharashtra
             </a>
           </div>
         </div>
