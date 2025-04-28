@@ -38,25 +38,16 @@ const AboutMe = () => {
   useEffect(() => {
     const sections = sectionRef.current.querySelectorAll(".scroll-section");
 
-    const pin = gsap.to(
-      sectionRef.current,
-      // {
-      //   translateX: 0,
-      // },
-      {
-        translateX: "-270vw",
-        ease: "none",
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          // start: "top top",
-          // end: "2000 top",
-          scrub: 1,
-          pin: true,
-          // markers: true,
-          end: () => "+=3000",
-        },
-      }
-    );
+    const pin = gsap.to(sectionRef.current, {
+      translateX: "-270vw",
+      ease: "none",
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scrub: 1,
+        pin: true,
+        end: () => "+=3000",
+      },
+    });
 
     const circlePin = gsap.to(circleRef.current, {
       background: "#eeeeee",
@@ -71,13 +62,10 @@ const AboutMe = () => {
         end: "4000 top",
         scrub: 0.5,
         pin: true,
-        // markers: true,
       },
     });
 
     return () => {
-      {
-      }
       pin.kill();
       circlePin.kill();
     };
@@ -101,7 +89,6 @@ const AboutMe = () => {
             </div>
             <div className="about_meme">
               <Image
-                // src="https://hetref.github.io/portfolio-assets/images/rounded-profile.png"
                 src="/profile-white.png"
                 alt="Profile"
                 className="rounded-full border-[10px] border-[#000000] bg-[#000000]"
@@ -216,5 +203,4 @@ const AboutMe = () => {
   );
 };
 
-// export default ResponsiveView(AboutMe, AboutMeMob);
 export default AboutMe;

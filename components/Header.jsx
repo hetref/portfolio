@@ -2,39 +2,33 @@
 
 import Typewriter from "typewriter-effect";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { BsThreads } from "react-icons/bs";
-import { BsTwitterX } from "react-icons/bs";
+import { BsThreads, BsTwitterX } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
 // import { motion } from "framer-motion";
 import ComputersCanvas from "./Computers";
 import { motion } from "framer-motion";
 import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 import { gsap } from "gsap";
-import useIsMobileStore from "@/stores/isMobileStore";
 
-const Hero = () => {
+const Header = () => {
   gsap.registerPlugin(ScrollToPlugin);
-  const [isMobile] = useIsMobileStore((state) => [state.isMobile]);
-  console.log("LOADED");
+
+  const handleScrollToAbout = () => {
+    gsap.to(window, {
+      duration: 1.2,
+      scrollTo: { y: "#aboutme" },
+    });
+  };
 
   return (
-    <header className="header_wrapper flex justify-center w-full items-center relative">
-      <div className="header_main_wrapper max-w-7xl w-full h-[100svh]">
-        <div className="header_model h-[100dvh]">
+    <header className="header_wrapper flex justify-center w-full items-center relative h-[100svh]">
+      <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
+        <div className="header_model h-[100lvh]">
           <ComputersCanvas />
         </div>
-        <div className="header_textuals_wrapper pb-[20%] lg:pb-0 h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
-          <div className="header_textual h-full max-w-7xl flex flex-col justify-center pr-[4%] lg:pr-[10%] pl-[4%] lg:pl-[5%] ">
-            <div
-              // initial={false}
-              // animate={{ y: [0, 15, 0] }}
-              // transition={{
-              //   duration: 1.5,
-              //   repeat: Infinity,
-              //   repeatType: "loop",
-              // }}
-              className="header_text flex flex-col justify-center"
-            >
+        <div className="header_textuals_wrapper h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
+          <div className="header_textual h-full max-w-7xl flex flex-col justify-center pr-[4%] lg:pr-[10%] pl-[4%] lg:pl-[5%]">
+            <div className="header_text flex flex-col justify-center">
               <h2 className="header-h">Hii ! 👋</h2>
               <h2 className="header-main-h">
                 I am <span>Aryan Shinde</span>
@@ -63,7 +57,7 @@ const Hero = () => {
             <div className="flex flex-col gap-2 my-3">
               <a
                 href="https://drive.google.com/file/d/11p6AlR91CVTtnyj08fobBzGFo8FiGM4_/view?usp=sharing"
-                className="text-lg border-2 border-white rounded-full px-8 py-3 w-fit"
+                className="text-lg px-8 py-3 border-2 border-white rounded-full w-fit"
                 target="_blank"
               >
                 Download RESUME
@@ -112,17 +106,8 @@ const Hero = () => {
 
       <div className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center">
         <motion.button
-          onClick={() =>
-            gsap.to(window, {
-              duration: 1.2,
-              scrollTo: { y: isMobile ? "#aboutmemob" : "#aboutme" },
-            })
-          }
-          initial={false}
-          animate={{
-            // y: isMobile ? [0, 20, 0] : [0, 30, 0],
-            y: [0, 20, 0],
-          }}
+          onClick={handleScrollToAbout}
+          animate={{ y: [0, 20, 0] }}
           transition={{
             duration: 1.5,
             repeat: Infinity,
@@ -132,11 +117,7 @@ const Hero = () => {
         >
           <div className="w-[26px] h-[55px] lg:w-[35px] lg:h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
-              initial={true}
-              animate={{
-                // y: isMobile ? [0, 20, 0] : [0, 30, 0],
-                y: [0, 20, 0],
-              }}
+              animate={{ y: [0, 20, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
@@ -152,4 +133,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Header;

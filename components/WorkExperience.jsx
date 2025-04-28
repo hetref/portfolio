@@ -66,14 +66,12 @@ const WorkExperience = () => {
 
             <div ref={sectionRef} className="experience_timeline">
               <div
-                className={`timeline_line h-2 w-[${
-                  experience.length * 800
-                }x] bg-[#000000] rounded-full`}
+                className="timeline_line h-2 bg-[#000000] rounded-full"
                 style={{
                   width: `${experience.length * 580}px`,
                 }}
               ></div>
-              <motion.div className="timeline_cards flex  mt-[2rem]">
+              <motion.div className="timeline_cards flex mt-[2rem]">
                 {experience.map((item, index) => (
                   <motion.div
                     className="timeline_card min-w-[500px] max-w-[600px] bg-[#000] mr-[4rem] mt-2 rounded-lg relative text-[#fff]"

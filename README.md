@@ -1,8 +1,27 @@
-# Aryan Shinde
+# Aryan Shinde Portfolio
+
+A modern, responsive portfolio website built with Next.js.
 
 ## Welcome to my portfolio!
 
-I've made this portfolio using NextJS, ThreeJS, GSAP, and Framer Motion. Do check my portfolio on [`Aryan Shinde`](https://portfolio-hetref.vercel.app/)
+I've made this portfolio using NextJS, ThreeJS, GSAP, and Framer Motion. You can check my portfolio at [`aryanshinde.in`](https://www.aryanshinde.in/). The portfolio is fully responsive and optimized for both mobile and desktop viewing.
 
-The portfolio is completely mobile-friendly. You can view this portfolio on mobile as well as desktop.
-Connect with me on my Linkedin: [Aryan Shinde](https://www.linkedin.com/in/shindearyan/)
+Connect with me on my LinkedIn: [Aryan Shinde](https://www.linkedin.com/in/shindearyan/)
+
+## Features
+
+- Smooth scrolling experience with Lenis
+- Interactive 3D models with Three.js
+- Animated UI elements with Framer Motion
+- Responsive design for all screen sizes
+- Optimized performance and loading
+
+## Technologies Used
+
+- Next.js
+- React
+- Three.js
+- Framer Motion
+- Tailwind CSS
+- GSAP for animations
+- Zustand for state management

@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import React, { useCallback } from "react";
-
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { LinkPreview } from "./ui/link-preview";
 import { projects } from "@/constants";
@@ -64,7 +63,7 @@ const MyProjects = () => {
                         </div>
                       ))}
                     </div>
-                    {item.inspiration != undefined && (
+                    {item.inspiration && (
                       <span className="text-[16px]">
                         Inspired by {item.inspiration}
                       </span>
