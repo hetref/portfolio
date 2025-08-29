@@ -19,19 +19,20 @@ import {
 import "@/assets/scss/common.scss";
 import LenisScroll from "@/lib/LenisScroll.js";
 import { ScrollBasedText } from "@/components/private/ScrollBasedText";
-import { useResponsiveJSX } from "@/hooks/useResponsiveJSX";
+// import { useResponsiveJSX } from "@/hooks/useResponsiveJSX";
 import MaskedWhatIKnow from "@/components/MaskedWhatIKnow";
+import NewAboutSection from "@/components/AboutMeTemp";
 
 export default function Home() {
-  const breakpoint = useResponsiveJSX([425]);
-  const isMobile = breakpoint === 0;
+  // const breakpoint = useResponsiveJSX([425]);
+  // const isMobile = breakpoint === 0;
 
   return (
     <>
       <LenisScroll />
       <ScrollIndicatior />
       <div className="overflow-x-hidden">
-        {isMobile ? (
+        {/* {isMobile ? (
           <>
             <MobHeader />
             <AboutMeMob />
@@ -42,9 +43,10 @@ export default function Home() {
             <ContactMe />
             <Footer />
           </>
-        ) : (
+        ) : ( */}
           <>
             <Header />
+            {/* <NewAboutSection/> */}
             <MaskedWhatIKnow />
             <AboutMe />
             <IKnow />
@@ -54,7 +56,7 @@ export default function Home() {
             <ContactMe />
             <Footer />
           </>
-        )}
+        {/* )} */}
       </div>
     </>
   );

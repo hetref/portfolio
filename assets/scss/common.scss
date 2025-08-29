@@ -399,7 +399,7 @@ body {
 
   .maskcontainer {
     position: relative;
-    height: 300vh;
+    height: 500vh;
     width: 100%;
     // background-color: rgb(0, 0, 0);
     overflow: hidden;
@@ -413,12 +413,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    mask-image: url("/assets/mask.svg");
-    -webkit-mask-image: url("/assets/mask.svg");
+    mask-image: url("/assets/about-text.svg");
+    -webkit-mask-image: url("/assets/about-text.svg");
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
-    mask-position: 52.35% center;
-    -webkit-mask-position: 52.35% center;
+    mask-position: 60.135% center;
+    -webkit-mask-position: 60.135% center;
     z-index: 1;
   }
 

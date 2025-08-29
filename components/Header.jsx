@@ -7,18 +7,18 @@ import { SiLeetcode } from "react-icons/si";
 import { motion } from "framer-motion";
 import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 import { gsap } from "gsap";
-import dynamic from "next/dynamic";
-import ErrorBoundary from "./ErrorBoundary";
-import ComputersFallback from "./ComputersFallback";
+// import dynamic from "next/dynamic";
+// import ErrorBoundary from "./ErrorBoundary";
+// import ComputersFallback from "./ComputersFallback";
 
-const ComputersCanvas = dynamic(() => import("./SimpleComputers"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full flex items-center justify-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-    </div>
-  ),
-});
+// const ComputersCanvas = dynamic(() => import("./SimpleComputers"), {
+//   ssr: false,
+//   loading: () => (
+//     <div className="w-full h-full flex items-center justify-center">
+//       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+//     </div>
+//   ),
+// });
 
 const Header = () => {
   gsap.registerPlugin(ScrollToPlugin);
