@@ -33,11 +33,11 @@ const Header = () => {
   return (
     <header className="header_wrapper flex justify-center w-full items-center relative h-[100svh]">
       <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
-        <div className="header_model h-[100lvh]">
+        {/* <div className="header_model h-[100lvh]">
           <ErrorBoundary>
             <ComputersCanvas />
           </ErrorBoundary>
-        </div>
+        </div> */}
         <div className="header_textuals_wrapper h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
           <div className="header_textual h-full max-w-7xl flex flex-col justify-center pr-[4%] lg:pr-[10%] pl-[4%] lg:pl-[5%]">
             <div className="header_text flex flex-col justify-center">

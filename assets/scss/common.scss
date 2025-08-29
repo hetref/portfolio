@@ -14,7 +14,6 @@ body {
 }
 
 // Headers
-
 .header_wrapper {
   background: #151515;
   color: #f4f8fb;
@@ -25,7 +24,6 @@ body {
 }
 
 // ScrollIndicator
-
 .progress-bar {
   position: fixed;
   top: 0;
@@ -37,7 +35,6 @@ body {
 }
 
 // ScrollInfo
-
 .scroll-section-outer {
   overflow: hidden;
   .scroll-section-inner {
@@ -67,7 +64,6 @@ body {
 }
 
 // WhatIKnow
-
 .whatiknow_wrapper {
   display: flex;
   flex-direction: column;
@@ -113,7 +109,6 @@ body {
 }
 
 // MyProjects
-
 #myprojects_wrapper {
   display: flex;
   flex-direction: column;
@@ -220,7 +215,6 @@ body {
 }
 
 // ContactMe
-
 #contactme_wrapper {
   background-color: #151515;
   color: #ffffff;
@@ -320,10 +314,6 @@ body {
         padding-left: 10px;
         padding-top: 10px;
         transition: 0.2s ease-in-out;
-
-        // @media (max-width: 768px) {
-        //   height: 80px;
-        // }
       }
 
       input {
@@ -395,5 +385,50 @@ body {
         background-color: #252727;
       }
     }
+  }
+}
+
+// Masked What I Know Section
+.masked-what-i-know {
+  position: relative;
+  width: 100%;
+  
+  // .maskmain {
+    // margin-bottom: 100vh;
+  // }
+
+  .maskcontainer {
+    position: relative;
+    height: 300vh;
+    width: 100%;
+    // background-color: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+
+  .stickyMask {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mask-image: url("/assets/mask.svg");
+    -webkit-mask-image: url("/assets/mask.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: 52.35% center;
+    -webkit-mask-position: 52.35% center;
+    z-index: 1;
+  }
+
+  .stickyMask Image {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 }

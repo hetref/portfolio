@@ -20,6 +20,7 @@ import "@/assets/scss/common.scss";
 import LenisScroll from "@/lib/LenisScroll.js";
 import { ScrollBasedText } from "@/components/private/ScrollBasedText";
 import { useResponsiveJSX } from "@/hooks/useResponsiveJSX";
+import MaskedWhatIKnow from "@/components/MaskedWhatIKnow";
 
 export default function Home() {
   const breakpoint = useResponsiveJSX([425]);
@@ -44,6 +45,7 @@ export default function Home() {
         ) : (
           <>
             <Header />
+            <MaskedWhatIKnow />
             <AboutMe />
             <IKnow />
             <ScrollBasedText />
