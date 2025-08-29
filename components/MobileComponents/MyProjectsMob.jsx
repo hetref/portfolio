@@ -28,6 +28,7 @@ const MyProjectsMob = () => {
   );
 
   return (
+  
     <div className="py-[6rem] px-[4%] bg-[#f5f5f5]">
       <div className="mb-2 text-center">
         <h1 className="header-h">My Works</h1>

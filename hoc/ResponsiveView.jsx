@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 
 // This is a simplified version of the HOC

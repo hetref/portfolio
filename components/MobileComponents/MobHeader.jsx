@@ -3,12 +3,22 @@ import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsThreads } from "react-icons/bs";
 import { BsTwitterX } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
-// import { motion } from "framer-motion";
-import ComputersCanvas from "../Computers";
 import { motion } from "framer-motion";
 import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 import { gsap } from "gsap";
 import useIsMobileStore from "@/stores/isMobileStore";
+import dynamic from "next/dynamic";
+import ErrorBoundary from "../ErrorBoundary";
+import ComputersFallback from "../ComputersFallback";
+
+const ComputersCanvas = dynamic(() => import("../SimpleComputers"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="animate-spin rounded-full h-24 w-24 border-b-2 border-white"></div>
+    </div>
+  ),
+});
 
 const MobHero = () => {
   gsap.registerPlugin(ScrollToPlugin);
@@ -19,7 +29,9 @@ const MobHero = () => {
     <header className="header_wrapper flex justify-center w-full items-center relative h-[100svh]">
       <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
         <div className="header_model h-[100lvh]">
-          <ComputersCanvas />
+          <ErrorBoundary>
+            <ComputersCanvas />
+          </ErrorBoundary>
         </div>
         <div className="header_textuals_wrapper  lg:pb-0 h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">
           <div className="header_textual h-full max-w-7xl flex flex-col justify-center pr-[4%] lg:pr-[10%] pl-[4%] lg:pl-[5%] ">

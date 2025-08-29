@@ -1,3 +1,5 @@
+"use client";
+
 import useLoaderStore from "@/stores/loader";
 import { Html, useProgress } from "@react-three/drei";
 import { useEffect } from "react";
