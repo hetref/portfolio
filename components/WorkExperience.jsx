@@ -58,7 +58,7 @@ const WorkExperience = () => {
             <div
               ref={headerRef} // Assign the headerRef to the header
               className="mb-[4rem] bg-white z-10"
-              style={{ paddingTop: "4rem" }}
+              style={{ paddingTop: "5rem" }}
             >
               <h1 className="text-7xl mb-[1.2rem]">Work Experience</h1>
               <span className="text-4xl">What have i done so far? 🤔?</span>

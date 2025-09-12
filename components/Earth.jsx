@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -13,6 +13,21 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Don't render on server side
+  if (!mounted) {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-400"></div>
+      </div>
+    );
+  }
+
   return (
     <Canvas
       shadows

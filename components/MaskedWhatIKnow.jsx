@@ -1,14 +1,33 @@
 "use client";
+
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import { ArrowLeftIcon, ArrowRight } from "lucide-react";
 
 export default function MaskedWhatIKnow() {
   const container = useRef(null);
   const stickyMask = useRef(null);
   const contentDiv = useRef(null);
+  const paragraph1 = useRef(null);
+  const paragraph2 = useRef(null);
+  const paragraph3 = useRef(null);
+  const paragraph4 = useRef(null);
+  const paragraph5 = useRef(null);
+
+  gsap.registerPlugin(ScrollToPlugin);
+
+  const scrollToSection = (id) => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: { y: id },
+    });
+  };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -16,12 +35,22 @@ export default function MaskedWhatIKnow() {
     // Set initial mask size
     gsap.set(stickyMask.current, {
       maskSize: "80%",
-      webkitMaskSize: "80%"
+      webkitMaskSize: "80%",
     });
 
     // Set initial content opacity
     gsap.set(contentDiv.current, {
-      opacity: 0
+      opacity: 1,
+    });
+
+    // Set initial opacity for all paragraphs
+    const paragraphs = [paragraph1, paragraph2, paragraph3, paragraph4, paragraph5];
+    paragraphs.forEach(paragraph => {
+      if (paragraph.current) {
+        gsap.set(paragraph.current, {
+          opacity: 0,
+        });
+      }
     });
 
     // Create the scroll-triggered animation for mask
@@ -37,24 +66,38 @@ export default function MaskedWhatIKnow() {
         pin: stickyMask.current,
         pinSpacing: false,
         markers: true, // Set to true for debugging
-      }
+      },
     });
 
-    // Create the scroll-triggered animation for content opacity
-    gsap.to(contentDiv.current, {
-      opacity: 1,
-      ease: "none",
-      scrollTrigger: {
-        trigger: container.current,
-        start: "60% top", // Start at 60% of container height
-        end: "80% top", // End at 80% of container height
-        scrub: true,
-        markers: false, // Set to true for debugging
+    // Calculate timing for each paragraph
+    const totalParagraphs = 5;
+    const startPercentage = 60;
+    const endPercentage = 80;
+    const totalRange = endPercentage - startPercentage;
+    const stepSize = totalRange / totalParagraphs;
+
+    // Create individual scroll-triggered animations for each paragraph
+    paragraphs.forEach((paragraph, index) => {
+      if (paragraph.current) {
+        const paragraphStart = startPercentage + (index * stepSize);
+        const paragraphEnd = startPercentage + ((index + 1) * stepSize);
+        
+        gsap.to(paragraph.current, {
+          opacity: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container.current,
+            start: `${paragraphStart}% top`,
+            end: `${paragraphEnd}% top`,
+            scrub: true,
+            markers: false, // Set to true for debugging
+          },
+        });
       }
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -66,27 +109,37 @@ export default function MaskedWhatIKnow() {
             {/* <video autoPlay muted loop>
               <source src="/assets/nature.mp4" type="video/mp4" />
             </video> */}
-            <Image src="/assets/about-bg-2.png" alt="About Background" fill draggable={false} />
-            <div ref={contentDiv} className="z-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center w-[80%] gap-[20px]">
-                <p className="w-[50%]">Third-year Diploma student in Computer Engineering at Vidyalankar Polytechnic, specializing in web development with technologies like NextJS and GraphQL, among others. Known for strong collaboration and leadership skills. Passionate about football and solving Rubik&quot;s cubes. Let&quot;s collaborate and bring ideas to life! Contact me at contact@aryanshinde.in</p>
-                <div className="grid grid-cols-2 gap-[16px] w-[50%]">
-                    <div className="border padding-2">
-                        <h4>Skills</h4>
-                        <Link href="#contact-us">Check Out</Link>
-                    </div>
-                    <div className="border padding-2">
-                        <h4>Experience</h4>
-                        <Link href="#contact-us">Check Out</Link>
-                    </div>
-                    <div className="border padding-2">
-                        <h4>Projects</h4>
-                        <Link href="#contact-us">Check Out</Link>
-                    </div>
-                    <div className="border padding-2">
-                        <h4>Contact</h4>
-                        <Link href="#contact-us">Check Out</Link>
-                    </div>
-                </div>
+            <Image
+              src="/assets/about-bg-2.png"
+              alt="About Background"
+              fill
+              draggable={false}
+            />
+            <div
+              ref={contentDiv}
+              className="z-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex w-full md:w-[80%] lg:w-[70%] gap-[20px] items-center flex-col font-roboto"
+            >
+              <p ref={paragraph1} className="w-full text-lg md:text-xl lg:text-2xl font-roboto">
+                I&quot;m a <span className="font-orisis">second-year</span> undergraduate student in Information Technology at <span className="font-orisis">M.G.M College of Engineering and Technology</span>, specializing in web
+                development with modern technologies like Next.js, GraphQL, and
+                more.
+              </p>
+              <p ref={paragraph2} className="w-full text-lg md:text-xl lg:text-2xl font-roboto">
+                Beyond coding, I&quot;m passionate about <span className="font-orisis">building meaningful</span> digital experiences, <span className="font-orisis">solving real-world problems</span>, and constantly
+                learning new tools and technologies. I thrive in collaborative
+                environments and bring <span className="font-orisis">strong leadership skills</span> to every project
+                I&quot;m part of.
+              </p>
+              <p ref={paragraph3} className="w-full text-lg md:text-xl lg:text-2xl font-roboto">
+                When I&quot;m not coding, you&quot;ll often find me on the <span className="font-orisis">football field</span> or <span className="font-orisis">exploring creative ideas</span> that blend technology
+                with everyday life.
+              </p>
+              <p ref={paragraph4} className="w-full text-lg md:text-xl lg:text-2xl">
+                Let&quot;s collaborate and bring ideas to life!
+              </p>
+              <p ref={paragraph5} className="w-full text-xl md:text-2xl lg:text-3xl">
+                Reach me at: <a href="mailto:contact@aryanshinde.in" target="_blank">contact@aryanshinde.in</a>
+              </p>
             </div>
           </div>
         </div>

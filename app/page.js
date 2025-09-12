@@ -22,6 +22,8 @@ import { ScrollBasedText } from "@/components/private/ScrollBasedText";
 // import { useResponsiveJSX } from "@/hooks/useResponsiveJSX";
 import MaskedWhatIKnow from "@/components/MaskedWhatIKnow";
 import NewAboutSection from "@/components/AboutMeTemp";
+import BasicThree from "@/components/BasicThree";
+import ModelComputer from "@/components/ModelComputer";
 
 export default function Home() {
   // const breakpoint = useResponsiveJSX([425]);
@@ -44,18 +46,20 @@ export default function Home() {
             <Footer />
           </>
         ) : ( */}
-          <>
-            <Header />
-            {/* <NewAboutSection/> */}
-            <MaskedWhatIKnow />
-            <AboutMe />
-            <IKnow />
-            <ScrollBasedText />
-            <WorkExperience />
-            <MyProjects />
-            <ContactMe />
-            <Footer />
-          </>
+        <>
+          <Header />
+          {/* <ModelComputer /> */}
+          {/* <BasicThree /> */}
+          {/* <NewAboutSection/> */}
+          <MaskedWhatIKnow />
+          {/* <AboutMe /> */}
+          <IKnow />
+          <ScrollBasedText />
+          <WorkExperience />
+          <MyProjects />
+          <ContactMe />
+          <Footer />
+        </>
         {/* )} */}
       </div>
     </>

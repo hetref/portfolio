@@ -1,12 +1,20 @@
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
+import NavigationBar from "@/components/Navbar";
 
 // Optimize font loading by only loading the weights we need
 const inter = Inter({
   subsets: ["latin"],
   display: "swap", // Use 'swap' for better performance
   weight: ["400", "500", "600", "700"], // Only load the weights we actually use
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
 });
 
 export const metadata = {
@@ -53,7 +61,8 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${roboto.variable}`}>
+        <NavigationBar />
         {children}
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
