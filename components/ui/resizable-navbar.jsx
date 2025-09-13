@@ -246,6 +246,7 @@ export const NavbarButton = ({
   className,
   variant = "primary",
   visible = false,
+  isNavbarVisible,
   ...props
 }) => {
   const baseStyles =

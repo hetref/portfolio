@@ -51,10 +51,10 @@ export default function Home() {
           {/* <ModelComputer /> */}
           {/* <BasicThree /> */}
           {/* <NewAboutSection/> */}
-          <MaskedWhatIKnow />
           {/* <AboutMe /> */}
-          <IKnow />
-          <ScrollBasedText />
+          {/* <MaskedWhatIKnow /> */}
+          {/* <IKnow /> */}
+          {/* <ScrollBasedText /> */}
           <WorkExperience />
           <MyProjects />
           <ContactMe />

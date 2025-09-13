@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 import { experience } from "@/constants";
+import { useResponsiveJSX } from "@/hooks/useResponsiveJSX";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,9 +13,10 @@ const WorkExperience = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   const headerRef = useRef(null);
-
-  const itemWidth = 500; // Width of each experience item
-  const totalWidth = useMemo(() => experience.length * itemWidth, []);
+  const breakpoint = useResponsiveJSX([425]);
+  const isMobile = breakpoint === 0;
+  const itemWidth = isMobile ? 380 : 500; // Width of each experience item
+  const totalWidth = useMemo(() => experience.length * itemWidth, [itemWidth]);
 
   useEffect(() => {
     // Pin the entire section for horizontal scroll effect
@@ -28,9 +30,10 @@ const WorkExperience = () => {
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: `${totalWidth} top`,
+          end: `${totalWidth}px bottom`,
           scrub: 1,
           pin: true,
+          markers: true,
         },
       }
     );
@@ -42,6 +45,7 @@ const WorkExperience = () => {
       scrub: true,
       pin: true, // Pin the header
       pinSpacing: false, // Avoid adding space where the header was
+      markers: true,
     });
 
     return () => {
@@ -60,21 +64,21 @@ const WorkExperience = () => {
               className="mb-[4rem] z-10"
               style={{ paddingTop: "5rem" }}
             >
-              <h1 className="text-7xl mb-[1.2rem]">Work Experience</h1>
-              <span className="text-4xl">What have i done so far? 🤔?</span>
+              <h1 className="header-h mb-[1.2rem]">Work Experience</h1>
+              <span className="text-lg md:text-4xl">What have i done so far? 🤔?</span>
             </div>
 
             <div ref={sectionRef} className="experience_timeline">
               <div
-                className="timeline_line h-2 bg-[#000000] rounded-full"
-                style={{
-                  width: `${experience.length * 580}px`,
-                }}
-              ></div>
+                className={`timeline_line h-2 bg-[#000000] rounded-full w-[${experience.length * 380}px] md:w-[${experience.length * 600}px]`}
+                ></div>
+                {/* // style={{
+                //   width: `${experience.length * 580}px`,
+                // }} */}
               <motion.div className="timeline_cards flex mt-[2rem]">
                 {experience.map((item, index) => (
                   <motion.div
-                    className="timeline_card min-w-[500px] max-w-[600px] bg-[#000] mr-[4rem] mt-2 rounded-lg relative text-[#fff]"
+                    className="timeline_card max-w-[380px] md:min-w-[500px] md:max-w-[600px] bg-[#000] mr-[1rem] md:mr-[2rem] lg:mr-[4rem] mt-2 rounded-lg relative text-[#fff]"
                     key={index}
                     initial={{ opacity: 0 }}
                     transition={{
@@ -100,11 +104,11 @@ const WorkExperience = () => {
                       <div className="bg-[rgba(255,255,255,0.6)] text-[#000] rounded py-2 animate-pulse mb-4 flex justify-center items-center">
                         {item.category}
                       </div>
-                      <h2 className="text-2xl tracking-wider">{item.title}</h2>
-                      <h4 className="mb-4 mt-2 tracking-wider">
+                      <h2 className="text-xl md:text-2xl tracking-wider">{item.title}</h2>
+                      <h4 className="mb-4 mt-2 tracking-wider text-base md:text-lg">
                         {item.subtitle}
                       </h4>
-                      <span className="tracking-wide">{item.description}</span>
+                      <span className="tracking-wide text-base md:text-lg">{item.description}</span>
                     </div>
                   </motion.div>
                 ))}
