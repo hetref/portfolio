@@ -91,37 +91,13 @@ const NavigationBar = () => {
                 </Link>
               ))}
               <div className="flex w-full flex-col gap-4">
-                {/* <SignedOut>
-                    <SignInButton>
-                      <NavbarButton
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        variant="outline"
-                        className="w-full"
-                      >
-                        LogIn
-                      </NavbarButton>
-                    </SignInButton>
-                    <SignUpButton>
-                      <NavbarButton
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        variant="primary"
-                        className="w-full"
-                      >
-                        SignUp
-                      </NavbarButton>
-                    </SignUpButton>
-                  </SignedOut> */}
-                {/* <SignedIn>
-                    <Link href="/my-account">
-                      <NavbarButton
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        variant="primary"
-                        className="w-full"
-                      >
-                        My Account
-                      </NavbarButton>
-                    </Link>
-                  </SignedIn> */}
+                <NavbarButton
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  variant="outline"
+                  className="w-full"
+                >
+                  Contact
+                </NavbarButton>
               </div>
             </MobileNavMenu>
           </MobileNav>

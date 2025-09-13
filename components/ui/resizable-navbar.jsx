@@ -19,13 +19,38 @@ export const Navbar = ({ children, className }) => {
     offset: ["start start", "end start"],
   });
   const [visible, setVisible] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
+    // Update visibility state for styling
     if (latest > 100) {
       setVisible(true);
     } else {
       setVisible(false);
     }
+
+    // Handle navbar show/hide based on scroll direction
+    const currentScrollY = latest;
+    const scrollDifference = currentScrollY - lastScrollY;
+    
+    // Always show navbar at the top of the page
+    if (currentScrollY <= 50) {
+      setIsNavbarVisible(true);
+    } else {
+      // Only hide/show based on scroll direction when not at top
+      if (Math.abs(scrollDifference) > 3) { // Reduced threshold for more responsive behavior
+        if (scrollDifference > 0 && currentScrollY > 100) {
+          // Scrolling down - hide navbar
+          setIsNavbarVisible(false);
+        } else if (scrollDifference < 0) {
+          // Scrolling up - show navbar
+          setIsNavbarVisible(true);
+        }
+      }
+    }
+    
+    setLastScrollY(currentScrollY);
   });
 
   return (
@@ -33,17 +58,26 @@ export const Navbar = ({ children, className }) => {
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
       className={cn("fixed inset-x-0 z-40 w-full", className)}
+      animate={{
+        y: isNavbarVisible ? 0 : -100,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        duration: 0.3,
+      }}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
-          ? React.cloneElement(child, { visible })
+          ? React.cloneElement(child, { visible, isNavbarVisible })
           : child
       )}
     </motion.div>
   );
 };
 
-export const NavBody = ({ children, className, visible }) => {
+export const NavBody = ({ children, className, visible, isNavbarVisible }) => {
   return (
     <motion.div
       animate={{
@@ -70,7 +104,7 @@ export const NavBody = ({ children, className, visible }) => {
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
-          ? React.cloneElement(child, { visible })
+          ? React.cloneElement(child, { visible, isNavbarVisible })
           : child
       )}
     </motion.div>
@@ -109,7 +143,7 @@ export const NavItems = ({ items, className, onItemClick, visible }) => {
   );
 };
 
-export const MobileNav = ({ children, className, visible }) => {
+export const MobileNav = ({ children, className, visible, isNavbarVisible }) => {
   return (
     <motion.div
       animate={{
@@ -136,7 +170,7 @@ export const MobileNav = ({ children, className, visible }) => {
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
-          ? React.cloneElement(child, { visible })
+          ? React.cloneElement(child, { visible, isNavbarVisible })
           : child
       )}
     </motion.div>
