@@ -37,6 +37,7 @@ body {
 // ScrollInfo
 .scroll-section-outer {
   overflow: hidden;
+  background: #f5f5f5;
   .scroll-section-inner {
     height: 100vh;
     display: flex;
@@ -114,7 +115,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: #fff;
   padding: 8rem 0;
   height: 100%;
 

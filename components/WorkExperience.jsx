@@ -53,11 +53,11 @@ const WorkExperience = () => {
   return (
     <section className="scroll-section-outer" id="workexperience">
       <div ref={triggerRef}>
-        <div className="scroll-section-inner w-[5300px]">
+        <div className="scroll-section-inner w-[5300px] flex items-center justify-center h-full">
           <div className="scroll-section px-[8vw] w-full flex flex-col">
             <div
-              ref={headerRef} // Assign the headerRef to the header
-              className="mb-[4rem] bg-white z-10"
+              ref={headerRef}
+              className="mb-[4rem] z-10"
               style={{ paddingTop: "5rem" }}
             >
               <h1 className="text-7xl mb-[1.2rem]">Work Experience</h1>

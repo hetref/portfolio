@@ -186,8 +186,7 @@ export const MobileNavToggle = ({ isOpen, onClick }) => {
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
+    <div
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 text-sm font-normal text-black"
     >
       <Image
@@ -198,7 +197,7 @@ export const NavbarLogo = () => {
         className="w-28 h-28"
       />
       {/* <span className="font-medium text-black">Startup</span> */}
-    </a>
+    </div>
   );
 };
 
@@ -208,16 +207,19 @@ export const NavbarButton = ({
   children,
   className,
   variant = "primary",
+  visible = false,
   ...props
 }) => {
   const baseStyles =
-    "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-300 inline-block text-center font-josefin-sans uppercase";
+    "px-4 py-2 rounded-md bg-white button text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-300 inline-block text-center font-josefin-sans uppercase";
 
   const variantStyles = {
     ghost: "bg-transparent",
     primary:
       "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] bg-primary rounded-full text-white",
-    outline: "border border-black rounded-full hover:text-white hover:bg-primary",
+    outline: visible 
+      ? "border border-black rounded-full bg-black text-white hover:bg-transparent hover:text-black" 
+      : "border border-black rounded-full bg-white text-black hover:text-white hover:bg-transparent hover:border-white",
     secondary: "bg-transparent border border-transparent shadow-none hover:text-primary hover:border rounded-full hover:border-primary",
     dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
     gradient:

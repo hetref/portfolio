@@ -63,33 +63,7 @@ const NavigationBar = () => {
             <NavbarLogo />
             <NavItems items={navItems} />
             {/* <div className="flex items-center gap-4"> */}
-            {/* <NavbarButton variant="outline">Contact</NavbarButton> */}
-            {/* <Link href="/cart">
-                  <NavbarButton variant="ghost" className="cursor-pointer hover:text-primary">
-                    <ShoppingBag />
-                  </NavbarButton>
-                </Link> */}
-            {/* <SignedOut>
-                  <SignInButton>
-                    
-                  </SignInButton>
-                  <SignUpButton>
-                    <NavbarButton variant="primary">Sign Up</NavbarButton>
-                  </SignUpButton>
-                </SignedOut> */}
-            {/* <SignedIn>
-                  <UserButton
-                    appearance={{
-                      elements: {
-                        avatarBox: {
-                          width: "3rem",
-                          height: "3rem",
-                        },
-                      },
-                    }}
-                  />
-                </SignedIn> */}
-            {/* </div> */}
+            <NavbarButton variant="outline">Contact</NavbarButton>
           </NavBody>
 
           {/* Mobile Navigation */}
