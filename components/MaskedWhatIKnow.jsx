@@ -43,20 +43,21 @@ export default function MaskedWhatIKnow() {
       opacity: 1,
     });
 
-    // Set initial opacity for all paragraphs
+    // Set initial opacity and position for all paragraphs
     const paragraphs = [paragraph1, paragraph2, paragraph3, paragraph4, paragraph5];
     paragraphs.forEach(paragraph => {
       if (paragraph.current) {
         gsap.set(paragraph.current, {
           opacity: 0,
+          y: 30,
         });
       }
     });
 
     // Create the scroll-triggered animation for mask
     gsap.to(stickyMask.current, {
-      maskSize: "5200%",
-      webkitMaskSize: "5200%",
+      maskSize: "9200%",
+      webkitMaskSize: "9200%",
       ease: "power2.in",
       scrollTrigger: {
         trigger: container.current,
@@ -82,16 +83,24 @@ export default function MaskedWhatIKnow() {
         const paragraphStart = startPercentage + (index * stepSize);
         const paragraphEnd = startPercentage + ((index + 1) * stepSize);
         
-        gsap.to(paragraph.current, {
-          opacity: 1,
-          ease: "none",
+        // Create a timeline for each paragraph with smooth transitions
+        const tl = gsap.timeline({
           scrollTrigger: {
             trigger: container.current,
             start: `${paragraphStart}% top`,
             end: `${paragraphEnd}% top`,
-            scrub: true,
+            scrub: 1, // Smooth scrubbing
             markers: false, // Set to true for debugging
           },
+        });
+
+        // Animate the paragraph with slide-up and fade-in
+        tl.to(paragraph.current, {
+          opacity: 1,
+          display: "block",
+          y: 0, // Slide up to final position
+          duration: 0.8,
+          ease: "power2.out",
         });
       }
     });
@@ -117,7 +126,7 @@ export default function MaskedWhatIKnow() {
             />
             <div
               ref={contentDiv}
-              className="z-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex w-full md:w-[80%] lg:w-[70%] gap-[20px] items-center flex-col font-roboto"
+              className="z-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex w-full md:w-[80%] lg:w-[70%] gap-[10px] md:gap-[20px] items-center flex-col font-roboto px-2 md:px-0"
             >
               <p ref={paragraph1} className="w-full text-lg md:text-xl lg:text-2xl font-roboto">
                 I&quot;m a <span className="font-orisis">second-year</span> undergraduate student in Information Technology at <span className="font-orisis">M.G.M College of Engineering and Technology</span>, specializing in web
