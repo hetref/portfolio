@@ -44,16 +44,16 @@ const ComputersCanvas = () => {
   }
 
   // Error fallback
-  if (hasError) {
-    return (
-      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="text-center text-white">
-          <div className="text-6xl mb-4">💻</div>
-          <div className="text-xl">3D Model Loading...</div>
-        </div>
-      </div>
-    );
-  }
+  // if (hasError) {
+  //   return (
+  //     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+  //       <div className="text-center text-white">
+  //         <div className="text-6xl mb-4">💻</div>
+  //         <div className="text-xl">3D Model Loading...</div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <Suspense fallback={

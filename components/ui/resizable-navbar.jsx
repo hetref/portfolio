@@ -177,7 +177,7 @@ export const MobileNav = ({ children, className, visible, isNavbarVisible }) => 
   );
 };
 
-export const MobileNavHeader = ({ children, className }) => {
+export const MobileNavHeader = ({ children, className, visible }) => {
   return (
     <div
       className={cn(
@@ -185,7 +185,11 @@ export const MobileNavHeader = ({ children, className }) => {
         className
       )}
     >
-      {children}
+      {React.Children.map(children, (child) =>
+        React.isValidElement(child)
+          ? React.cloneElement(child, { visible })
+          : child
+      )}
     </div>
   );
 };
@@ -210,11 +214,11 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
   );
 };
 
-export const MobileNavToggle = ({ isOpen, onClick }) => {
+export const MobileNavToggle = ({ isOpen, onClick, visible }) => {
   return isOpen ? (
-    <IconX className="text-black" onClick={onClick} />
+    <IconX className={cn("text-white", visible && "text-black")} onClick={onClick} />
   ) : (
-    <IconMenu2 className="text-black" onClick={onClick} />
+    <IconMenu2 className={cn("text-white", visible && "text-black")} onClick={onClick} />
   );
 };
 

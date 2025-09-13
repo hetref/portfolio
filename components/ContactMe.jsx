@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import ErrorBoundary from "./ErrorBoundary";
 import EarthFallback from "./EarthFallback";
 
-const EarthCanvas = dynamic(() => import("./SimpleEarth"), {
+const EarthCanvas = dynamic(() => import("./Earth"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
