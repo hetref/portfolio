@@ -79,10 +79,6 @@ export const YelpRecentLoginEmail = ({
                   <br />
                   {u_message}
                 </Text>
-                {/* <Text style={{ ...paragraph, marginTop: -5 }}>
-                  <b>Location: </b>
-                  {loginLocation}
-                </Text> */}
               </Column>
             </Row>
             <Row style={{ ...boxInfos, paddingTop: "0" }}>
@@ -115,7 +111,7 @@ export const YelpRecentLoginEmail = ({
               color: "rgb(0,0,0, 0.7)",
             }}
           >
-            © 2024 | Aryan Shinde | Portfolio | www.aryanshinde.in
+            © {new Date().getFullYear()} | Aryan Shinde | Portfolio | www.aryanshinde.in
           </Text>
         </Container>
       </Body>

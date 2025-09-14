@@ -4,11 +4,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { ArrowLeftIcon, ArrowRight } from "lucide-react";
 
 export default function MaskedAbout() {
   const container = useRef(null);
@@ -116,7 +112,7 @@ export default function MaskedAbout() {
         <div ref={container} className="maskcontainer">
           <div ref={stickyMask} className="stickyMask relative">
             <Image
-              src="/assets/about-bg-2.png"
+              src="/assets/about-bg.png"
               alt="About Background"
               fill
               draggable={false}

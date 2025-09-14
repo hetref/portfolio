@@ -1,6 +1,5 @@
 "use client";
 
-import Typewriter from "typewriter-effect";
 import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { BsThreads, BsTwitterX } from "react-icons/bs";
 import { SiLeetcode, SiN8N } from "react-icons/si";
@@ -47,15 +46,6 @@ const Header = () => {
               <MorphingText texts={["AUTOMATER", "DEVELOPER", "FREELANCER", "DESIGNER"]} />
               </div>
             </div>
-            {/* <div className="flex flex-col gap-2 my-3">
-              <a
-                href="https://drive.google.com/file/d/11p6AlR91CVTtnyj08fobBzGFo8FiGM4_/view?usp=sharing"
-                className="text-lg px-8 py-3 border-2 border-white rounded-full w-fit"
-                target="_blank"
-              >
-                Download RESUME
-              </a>
-            </div> */}
             <div className="header_social flex">
               <a
                 className="header_icon"

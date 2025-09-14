@@ -1,7 +1,6 @@
 import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
-import NavigationBar from "@/components/Navbar";
 import Preloader from "@/components/Preloader";
 import AppContentGate from "@/components/AppContentGate";
 
@@ -21,21 +20,21 @@ const roboto = Roboto({
 
 export const metadata = {
   metadataBase: new URL('https://www.aryanshinde.in'),
-  title: "Mr. Aryan Shinde | Portfolio",
+  title: "Dev. Aryan Shinde | Portfolio",
   description: "Welcome to my portfolio, here you'll get all the creatives I've made to date!",
-  keywords: "Aryan Shinde, Portfolio, Web Developer, Designer, NextJS",
+  keywords: "Aryan Shinde, Aryan Shinde Portfolio, Aryan Shinde Automation, Automation Developer, Web Developer, Designer Aryan Shinde, Developer Aryan Shinde, Freelancer in Navi Mumbai, Freelancer",
   
   openGraph: {
     type: "website",
     url: "https://www.aryanshinde.in/",
-    title: "Aryan Shinde | Portfolio",
+    title: "Dev. Aryan Shinde | Portfolio",
     description: "Welcome to my portfolio, here you'll get all the creatives I've made to date!",
     images: ["/logo.png"],
   },
   
   twitter: {
     card: "summary_large_image",
-    title: "Aryan Shinde | Portfolio",
+    title: "Dev. Aryan Shinde | Portfolio",
     description: "Welcome to my portfolio, here you'll get all the creatives I've made to date!",
     images: ["/logo.png"],
   },

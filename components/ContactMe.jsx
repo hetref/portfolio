@@ -1,7 +1,5 @@
 import ContactForm from "./privateClientComponents/ContactForm";
 import dynamic from "next/dynamic";
-import ErrorBoundary from "./ErrorBoundary";
-import EarthFallback from "./EarthFallback";
 
 const EarthCanvas = dynamic(() => import("./Earth"), {
   ssr: true,
@@ -25,9 +23,7 @@ const ContactMe = () => {
 
       <div className="contactme_body">
         <div className="contactme_modal">
-          <ErrorBoundary>
-            <EarthCanvas />
-          </ErrorBoundary>
+          <EarthCanvas />
         </div>
         <div className="contactme_form">
           <ContactForm />

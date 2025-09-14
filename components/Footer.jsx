@@ -31,7 +31,6 @@ const Footer = () => {
           <motion.div
             className="h-2 w-full text-center bg-black my-[2rem] rounded-full"
             initial={{ width: 0 }}
-            // animate={{ width: "100%" }}
             transition={{ duration: 1 }}
             whileInView={{ width: "100%" }}
             exit={{ width: 0 }}
@@ -50,10 +49,10 @@ const Footer = () => {
             <Link href="/terms-and-conditions">Terms & Conditions</Link>
           </div>
           <div>
-            <Link href="privacy-policy">Privacy Policy</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
           <div>
-            <Link href="refund-policy">Refund Policy</Link>
+            <Link href="/refund-policy">Refund Policy</Link>
           </div>
         </div>
       </div>

@@ -47,16 +47,7 @@ const ComputersCanvas = () => {
       setHasError(true);
     }
   }, []);
-
-  // Don't render on server side
-  // if (!mounted) {
-  //   return (
-  //     <div className="w-full h-full flex items-center justify-center">
-  //       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white/40"></div>
-  //     </div>
-  //   );
-  // }
-
+  
   // Error boundary fallback
   if (hasError) {
     console.error("Computers component encountered an error and is showing fallback UI");
