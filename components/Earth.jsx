@@ -3,6 +3,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import ModelLoader from "./ModelLoader";
 
 try {
   useGLTF.preload("/planet/scene.gltf");
@@ -47,7 +48,7 @@ const EarthCanvas = () => {
         position: [-4, 3, 6],
       }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<ModelLoader />}>
         <OrbitControls
           autoRotate
           enableZoom={false}

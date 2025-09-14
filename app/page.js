@@ -18,7 +18,7 @@ import NavigationBar from "@/components/Navbar";
 export default function Home() {
   return (
     <>
-        <NavigationBar />
+      <NavigationBar />
       <LenisScroll />
       <ScrollIndicatior />
       <div className="overflow-x-hidden">

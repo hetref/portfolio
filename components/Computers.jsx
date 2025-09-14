@@ -3,6 +3,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload } from "@react-three/drei";
+import ModelLoader from "./ModelLoader";
 import ModelComputer from "./ModelComputer";
 
 const ComputersCanvas = () => {
@@ -61,11 +62,7 @@ const ComputersCanvas = () => {
   }
 
   return (
-    <Suspense fallback={
-      <div className="w-full h-full flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white/40"></div>
-      </div>
-    }>
+    <Suspense fallback={<ModelLoader />}>
       <Canvas
         frameloop="demand"
         shadows
