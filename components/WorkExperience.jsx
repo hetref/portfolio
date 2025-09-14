@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 import { experience } from "@/constants";
 import { useResponsiveJSX } from "@/hooks/useResponsiveJSX";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,11 +71,15 @@ const WorkExperience = () => {
 
             <div ref={sectionRef} className="experience_timeline">
               <div
-                className={`timeline_line h-2 bg-[#000000] rounded-full w-[${experience.length * 380}px] md:w-[${experience.length * 600}px]`}
+                className={cn(
+                  "timeline_line h-2 bg-[#000000] rounded-full",
+                  // !isMobile && `w-[${experience.length * 900}px]`,
+                  // isMobile && `w-[${experience.length * 300}px]`
+                )}
+                style={{
+                  width: `${experience.length * 580}px`,
+                }}
                 ></div>
-                {/* // style={{
-                //   width: `${experience.length * 580}px`,
-                // }} */}
               <motion.div className="timeline_cards flex mt-[2rem]">
                 {experience.map((item, index) => (
                   <motion.div
