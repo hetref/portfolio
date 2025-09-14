@@ -11,19 +11,18 @@ const Footer = () => {
         <div className="flex md:flex-row flex-col justify-around items-center gap-6 md:gap-4">
           <div className="text-center flex flex-col gap-1 md:gap-3">
             <h1 className="text-2xl lg:text-3xl">Connect on Email</h1>
-            <a href="mailto:contact@aryanshinde.in">contact@aryanshinde.in</a>
+            <a href="mailto:contact@aryanshinde.in" target="_blank">contact@aryanshinde.in</a>
           </div>
           <div className="text-center flex flex-col gap-1 md:gap-3">
             <h1 className="text-2xl lg:text-3xl">Connect on Whatsapp</h1>
-            <a href="https://wa.me/+918097296453?text=Hii Aryan">
+            <a href="https://wa.me/+918097296453?text=Hii Aryan" target="_blank">
               +91 8097296453
             </a>
           </div>
           <div className="text-center flex flex-col gap-1 md:gap-3">
             <h1 className="text-2xl lg:text-3xl">Address</h1>
-            <a href="https://maps.app.goo.gl/78J2yRhk5JMYbAD5A">
-              Ravi Rachna, Sec - 25, Kamothe, <br />
-              Navi Mumbai, Maharashtra, 410206
+            <a href="https://maps.app.goo.gl/78J2yRhk5JMYbAD5A" target="_blank">
+              Kamothe, Navi Mumbai, Maharashtra, <br />India - 410206
             </a>
           </div>
         </div>
