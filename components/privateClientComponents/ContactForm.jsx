@@ -28,7 +28,7 @@ const ContactForm = () => {
       toast.error("Please enter all the fields.", {
         id: notification,
       });
-      isMobile && alert("Please enter all the fields.");
+      // isMobile && alert("Please enter all the fields.");
     } else {
       const emailresponse = await fetch("/api/email", {
         method: "POST",
@@ -47,13 +47,13 @@ const ContactForm = () => {
             id: notification,
           }
         );
-        isMobile &&
-          alert("Thank you for contacting me! Will get back to you soon.");
+        // isMobile &&
+        //   alert("Thank you for contacting me! Will get back to you soon.");
       } else {
         toast.error("Failed to contact, please try again later!", {
           id: notification,
         });
-        isMobile && alert("Failed to contact, please try again later!");
+        // isMobile && alert("Failed to contact, please try again later!");
       }
 
       setName("");
@@ -168,13 +168,7 @@ const ContactForm = () => {
         onClick={handleSubmit}
       >
         {loading ? (
-          <Image
-            className="animate-spin"
-            src="https://hetref.github.io/portfolio-assets/loaders/loading.png"
-            alt="Loading"
-            height={30}
-            width={30}
-          />
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-r-2 border-l-2 border-white"></div>
         ) : (
           "Send"
         )}

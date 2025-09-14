@@ -14,7 +14,6 @@ body {
 }
 
 // Headers
-
 .header_wrapper {
   background: #151515;
   color: #f4f8fb;
@@ -25,7 +24,6 @@ body {
 }
 
 // ScrollIndicator
-
 .progress-bar {
   position: fixed;
   top: 0;
@@ -37,9 +35,9 @@ body {
 }
 
 // ScrollInfo
-
 .scroll-section-outer {
   overflow: hidden;
+  background: #f5f5f5;
   .scroll-section-inner {
     height: 100vh;
     display: flex;
@@ -67,7 +65,6 @@ body {
 }
 
 // WhatIKnow
-
 .whatiknow_wrapper {
   display: flex;
   flex-direction: column;
@@ -113,13 +110,12 @@ body {
 }
 
 // MyProjects
-
 #myprojects_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: #fff;
   padding: 8rem 0;
   height: 100%;
 
@@ -137,6 +133,10 @@ body {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 60px 2%;
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px 2%;
+      }
 
       .myprojects_card {
         height: 400px;
@@ -220,7 +220,6 @@ body {
 }
 
 // ContactMe
-
 #contactme_wrapper {
   background-color: #151515;
   color: #ffffff;
@@ -280,7 +279,7 @@ body {
       border-radius: 20px;
 
       @media (max-width: 768px) {
-        width: 300px;
+        width: 330px;
         padding: 30px 20px;
       }
 
@@ -320,10 +319,6 @@ body {
         padding-left: 10px;
         padding-top: 10px;
         transition: 0.2s ease-in-out;
-
-        // @media (max-width: 768px) {
-        //   height: 80px;
-        // }
       }
 
       input {
@@ -395,5 +390,50 @@ body {
         background-color: #252727;
       }
     }
+  }
+}
+
+// Masked What I Know Section
+.masked-about {
+  position: relative;
+  width: 100%;
+  
+  // .maskmain {
+    // margin-bottom: 100vh;
+  // }
+
+  .maskcontainer {
+    position: relative;
+    height: 700vh;
+    width: 100%;
+    // background-color: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+
+  .stickyMask {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mask-image: url("/assets/about-text.svg");
+    -webkit-mask-image: url("/assets/about-text.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: 60.135% center;
+    -webkit-mask-position: 60.135% center;
+    z-index: 1;
+  }
+
+  .stickyMask Image {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 }

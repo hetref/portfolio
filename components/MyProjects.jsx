@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import React, { useCallback } from "react";
@@ -75,6 +77,10 @@ const MyProjects = () => {
           </AnimatePresence>
         </div>
       </div>
+      <div className="mt-[4rem]">
+        <a href="https://projects.aryanshinde.in" target="_blank" className="text-base md:text-lg lg:text-xl border-2 border-black text-black hover:text-white hover:bg-black duration-300 ease-in-out px-8 py-4 rounded-full">See All Projects</a>
+      </div>
+      
     </div>
   );
 };

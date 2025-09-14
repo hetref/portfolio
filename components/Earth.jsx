@@ -1,6 +1,15 @@
-import React, { Suspense } from "react";
+"use client";
+
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import ModelLoader from "./ModelLoader";
+
+try {
+  useGLTF.preload("/planet/scene.gltf");
+} catch (error) {
+  console.error("Error preloading 3D earth model:", error);
+}
 
 const Earth = () => {
   const earth = useGLTF("/planet/scene.gltf");
@@ -11,12 +20,30 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const [mounted, setMounted] = useState(false);
+  const [canvasKey, setCanvasKey] = useState(0);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Don't render on server side
+  if (!mounted) {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-400"></div>
+      </div>
+    );
+  }
+
   return (
     <Canvas
+      key={canvasKey}
       shadows
-      frameloop="demand"
+      frameloop="always"
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ powerPreference: "high-performance", antialias: false, alpha: true }}
+      style={{ background: "transparent" }}
       camera={{
         fov: 45,
         near: 0.1,
@@ -24,7 +51,7 @@ const EarthCanvas = () => {
         position: [-4, 3, 6],
       }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<ModelLoader />}>
         <OrbitControls
           autoRotate
           enableZoom={false}
