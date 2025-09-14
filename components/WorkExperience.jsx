@@ -34,7 +34,7 @@ const WorkExperience = () => {
           end: `${totalWidth}px bottom`,
           scrub: 1,
           pin: true,
-          markers: true,
+          markers: false,
         },
       }
     );
@@ -46,7 +46,7 @@ const WorkExperience = () => {
       scrub: true,
       pin: true,
       pinSpacing: false,
-      markers: true,
+      markers: false,
     });
 
     return () => {

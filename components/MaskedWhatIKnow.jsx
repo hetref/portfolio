@@ -66,7 +66,7 @@ export default function MaskedWhatIKnow() {
         scrub: true,
         pin: stickyMask.current,
         pinSpacing: false,
-        markers: true, // Set to true for debugging
+        markers: false, // Set to true for debugging
       },
     });
 
