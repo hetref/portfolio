@@ -238,7 +238,7 @@ export const projects = [
     name: "LinkedIn Automation",
     description:
       "Automates LinkedIn post workflow by generating content with OpenAI, managing drafts in Google Sheets, and using Gmail for approval and seamless publishing via n8n.",
-    tags: ["n8n", "LinkedIn API", "AI", "Firebase", "Resend (Email)"],
+    tags: ["n8n", "LinkedIn API", "AI"],
     image: "https://hetref.github.io/portfolio-assets/project/linkedin-post-automation-n8n.png",
     url: "https://n8n.io/workflows/4005",
   },

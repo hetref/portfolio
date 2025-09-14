@@ -16,7 +16,7 @@ const WorkExperience = () => {
   const headerRef = useRef(null);
   const breakpoint = useResponsiveJSX([425]);
   const isMobile = breakpoint === 0;
-  const itemWidth = isMobile ? 380 : 500; // Width of each experience item
+  const itemWidth = isMobile ? 360 : 480; // Width of each experience item
   const totalWidth = useMemo(() => experience.length * itemWidth, [itemWidth]);
 
   useEffect(() => {
@@ -85,8 +85,8 @@ const WorkExperience = () => {
                     key={index}
                     initial={{ opacity: 0 }}
                     transition={{
-                      duration: 1,
-                      delay: 0.2,
+                      duration: 0.8,
+                      delay: 0.06,
                       ease: "easeInOut",
                       type: "tween",
                     }}
