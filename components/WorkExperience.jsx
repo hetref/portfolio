@@ -41,11 +41,11 @@ const WorkExperience = () => {
 
     ScrollTrigger.create({
       trigger: headerRef.current,
-      start: "top top", // Pin when the header reaches the top of the viewport
-      end: `${totalWidth + 600} top`, // Pin until the horizontal scroll ends
+      start: "top top",
+      end: `${totalWidth + 600} top`,
       scrub: true,
-      pin: true, // Pin the header
-      pinSpacing: false, // Avoid adding space where the header was
+      pin: true,
+      pinSpacing: false,
       markers: true,
     });
 
@@ -73,8 +73,6 @@ const WorkExperience = () => {
               <div
                 className={cn(
                   "timeline_line h-2 bg-[#000000] rounded-full",
-                  // !isMobile && `w-[${experience.length * 900}px]`,
-                  // isMobile && `w-[${experience.length * 300}px]`
                 )}
                 style={{
                   width: `${experience.length * 580}px`,
