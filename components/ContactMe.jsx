@@ -1,12 +1,10 @@
-"use client";
-
 import ContactForm from "./privateClientComponents/ContactForm";
 import dynamic from "next/dynamic";
 import ErrorBoundary from "./ErrorBoundary";
 import EarthFallback from "./EarthFallback";
 
 const EarthCanvas = dynamic(() => import("./Earth"), {
-  ssr: false,
+  ssr: true,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-400"></div>

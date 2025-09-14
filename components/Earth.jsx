@@ -4,6 +4,12 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
+try {
+  useGLTF.preload("/planet/scene.gltf");
+} catch (error) {
+  console.error("Error preloading 3D earth model:", error);
+}
+
 const Earth = () => {
   const earth = useGLTF("/planet/scene.gltf");
 

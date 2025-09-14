@@ -12,22 +12,24 @@ import {
 import "@/assets/scss/common.scss";
 import LenisScroll from "@/lib/LenisScroll.js";
 import { ScrollBasedText } from "@/components/private/ScrollBasedText";
-import MaskedWhatIKnow from "@/components/MaskedWhatIKnow";
+import MaskedAbout from "@/components/MaskedAbout";
+import NavigationBar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <>
+        <NavigationBar />
       <LenisScroll />
       <ScrollIndicatior />
       <div className="overflow-x-hidden">
-          <Header />
-          <MaskedWhatIKnow />
-          <IKnow />
-          <ScrollBasedText />
-          <WorkExperience />
-          <MyProjects />
-          <ContactMe />
-          <Footer />
+        <Header />
+        <MaskedAbout />
+        <IKnow />
+        <ScrollBasedText />
+        <WorkExperience />
+        <MyProjects />
+        <ContactMe />
+        <Footer />
       </div>
     </>
   );

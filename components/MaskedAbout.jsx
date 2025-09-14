@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ArrowLeftIcon, ArrowRight } from "lucide-react";
 
-export default function MaskedWhatIKnow() {
+export default function MaskedAbout() {
   const container = useRef(null);
   const stickyMask = useRef(null);
   const contentDiv = useRef(null);
@@ -111,13 +111,10 @@ export default function MaskedWhatIKnow() {
   }, []);
 
   return (
-    <div className="masked-what-i-know">
+    <div className="masked-about" id="aboutme">
       <main className="maskmain">
         <div ref={container} className="maskcontainer">
           <div ref={stickyMask} className="stickyMask relative">
-            {/* <video autoPlay muted loop>
-              <source src="/assets/nature.mp4" type="video/mp4" />
-            </video> */}
             <Image
               src="/assets/about-bg-2.png"
               alt="About Background"

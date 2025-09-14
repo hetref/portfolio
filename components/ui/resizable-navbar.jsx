@@ -123,12 +123,11 @@ export const NavItems = ({ items, className, onItemClick, visible }) => {
       )}
     >
       {items.map((item, idx) => (
-        <Link
+        <button
           onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className={cn("relative px-4 py-2 text-white font-josefin-sans uppercase hover:text-white/90 hover:tracking-wide transition duration-200", visible && "text-black/90 hover:text-black/80")}
+          onClick={item.onClick || onItemClick}
+          className={cn("relative px-4 py-2 text-white font-josefin-sans uppercase hover:text-white/90 hover:tracking-wide transition duration-200 cursor-pointer", visible && "text-black/90 hover:text-black/80")}
           key={`link-${idx}`}
-          href={item.link}
         >
           {hovered === idx && (
             <motion.div
@@ -137,7 +136,7 @@ export const NavItems = ({ items, className, onItemClick, visible }) => {
             />
           )}
           <span className="relative z-20">{item.name}</span>
-        </Link>
+        </button>
       ))}
     </motion.div>
   );

@@ -10,10 +10,10 @@ import { gsap } from "gsap";
 import dynamic from "next/dynamic";
 import { MorphingText } from "@/components/magicui/morphing-text";
 const ComputersCanvas = dynamic(() => import("./Computers"), {
-  ssr: false,
+  ssr: true,
   loading: () => (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white/40"></div>
     </div>
   ),
 });
@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header_wrapper flex justify-center w-full items-center relative h-[100svh]">
+    <header id="header" className="header_wrapper flex justify-center w-full items-center relative h-[100svh]">
       <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
         <div className="header_model h-[100lvh]">
             <ComputersCanvas />

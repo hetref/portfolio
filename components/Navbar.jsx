@@ -1,16 +1,7 @@
 "use client";
 
-// import {
-//   SignedIn,
-//   SignedOut,
-//   SignInButton,
-//   SignUpButton,
-//   useAuth,
-//   UserButton,
-// } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
-// import Container from "./Container";
 import {
   Navbar,
   NavBody,
@@ -23,47 +14,63 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { ShoppingBag } from "lucide-react";
-// import { Button } from "./ui/button";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 const NavigationBar = () => {
+  gsap.registerPlugin(ScrollToPlugin);
+
+  const scrollToSection = (sectionId) => {
+    gsap.to(window, {
+      duration: 1.5,
+      scrollTo: { y: sectionId },
+      ease: "power2.inOut",
+    });
+  };
+
   const navItems = [
     {
       name: "Home",
-      link: "/",
+      link: "#",
+      onClick: () => scrollToSection("#header"),
     },
     {
       name: "About",
-      link: "/about",
+      link: "#",
+      onClick: () => scrollToSection("#aboutme"),
     },
     {
       name: "Skills",
-      link: "/products",
+      link: "#",
+      onClick: () => scrollToSection("#iknow"),
     },
     {
       name: "Experience",
-      link: "/contact",
+      link: "#",
+      onClick: () => scrollToSection("#workexperience"),
     },
     {
       name: "Works",
-      link: "/works",
+      link: "#",
+      onClick: () => scrollToSection("#myprojects_wrapper"),
     },
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  //   const { isSignedIn } = useAuth();
-
   return (
     <header className="flex justify-center items-center">
-      {/* <Container> */}
       <div className="relative w-full">
         <Navbar>
           {/* Desktop Navigation */}
           <NavBody>
             <NavbarLogo />
             <NavItems items={navItems} />
-            {/* <div className="flex items-center gap-4"> */}
-            <NavbarButton variant="outline">Contact</NavbarButton>
+            <NavbarButton 
+              variant="outline"
+              onClick={() => scrollToSection("#contactme_wrapper")}
+            >
+              Contact
+            </NavbarButton>
           </NavBody>
 
           {/* Mobile Navigation */}
@@ -81,18 +88,23 @@ const NavigationBar = () => {
               onClose={() => setIsMobileMenuOpen(false)}
             >
               {navItems.map((item, idx) => (
-                <Link
+                <button
                   key={`mobile-link-${idx}`}
-                  href={item.link}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="relative text-neutral-600"
+                  onClick={() => {
+                    item.onClick();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="relative text-neutral-600 hover:text-black transition-colors duration-200"
                 >
                   <span className="block">{item.name}</span>
-                </Link>
+                </button>
               ))}
               <div className="flex w-full flex-col gap-4">
                 <NavbarButton
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    scrollToSection("#contactme_wrapper");
+                    setIsMobileMenuOpen(false);
+                  }}
                   variant="outline"
                   className="w-full"
                 >
@@ -103,7 +115,6 @@ const NavigationBar = () => {
           </MobileNav>
         </Navbar>
       </div>
-      {/* </Container> */}
     </header>
   );
 };
