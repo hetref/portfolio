@@ -4,14 +4,14 @@ I’m a second‑year IT undergrad at M.G.M College of Engineering. I build mode
 
 - Website: [aryanshinde.in](https://www.aryanshinde.in/)
 - Email: [contact@aryanshinde.in](mailto:contact@aryanshinde.in)
-- WhatsApp: [`wa.me/+918097296453`](https://wa.me/+918097296453?text=Hii%20Aryan)
-- LinkedIn: [`/in/shindearyan`](https://www.linkedin.com/in/shindearyan/)
+- WhatsApp: [`+91 80972 96453`](https://wa.me/+918097296453?text=Hii%20Aryan)
+- LinkedIn: [`@shindearyan`](https://www.linkedin.com/in/shindearyan/)
 - Instagram: [`@coder_aryu`](https://www.instagram.com/coder_aryu/)
 - X/Twitter: [`@aryudev`](https://twitter.com/aryudev)
 - Threads: [`@coder_aryu`](https://www.threads.net/@coder_aryu)
 - YouTube: [`@aryancodelab`](https://www.youtube.com/@aryancodelab/)
-- LeetCode: [`shindearyan179`](https://leetcode.com/shindearyan179/)
-- n8n Creator: [`/creators/shindearyan`](https://n8n.io/creators/shindearyan/)
+- LeetCode: [`@shindearyan179`](https://leetcode.com/shindearyan179/)
+- n8n Creator: [`@shindearyan`](https://n8n.io/creators/shindearyan/)
 
 If you have ideas or suggestions, I’d love to hear them. And please enjoy the custom‑designed portfolio at [aryanshinde.in](https://www.aryanshinde.in/) ✨
 
@@ -187,7 +187,7 @@ public/ (desktop_pc, planet, assets, favicon)
 Recommendations, ideas, and PRs are welcome. If something can be faster, cleaner, or more delightful—please open an issue or a pull request. You can also reach me directly:
 
 - Email: [contact@aryanshinde.in](mailto:contact@aryanshinde.in)
-- WhatsApp: [`wa.me/+918097296453`](https://wa.me/+918097296453?text=Hii%20Aryan)
+- WhatsApp: [`+91 80972 96453`](https://wa.me/+918097296453?text=Hii%20Aryan)
 
 If you liked the experience, do share the live site: [aryanshinde.in](https://www.aryanshinde.in/)
 
