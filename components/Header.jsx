@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header id="header" className="header_wrapper flex justify-center w-full items-center relative h-[100svh]">
       <div className="header_main_wrapper max-w-7xl w-full h-[100lvh]">
-        <div className="header_model h-[100lvh]">
+        <div className="header_model h-[100lvh] ">
             <ComputersCanvas />
         </div>
         <div className="header_textuals_wrapper h-full absolute w-[100vw] top-0 left-0 flex items-center justify-center">

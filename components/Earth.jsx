@@ -21,6 +21,7 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   const [mounted, setMounted] = useState(false);
+  const [canvasKey, setCanvasKey] = useState(0);
 
   useEffect(() => {
     setMounted(true);
@@ -37,10 +38,12 @@ const EarthCanvas = () => {
 
   return (
     <Canvas
+      key={canvasKey}
       shadows
-      frameloop="demand"
+      frameloop="always"
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ powerPreference: "high-performance", antialias: false, alpha: true }}
+      style={{ background: "transparent" }}
       camera={{
         fov: 45,
         near: 0.1,

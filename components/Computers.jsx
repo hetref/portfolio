@@ -10,6 +10,7 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [canvasKey, setCanvasKey] = useState(0);
 
   useEffect(() => {
     try {
@@ -64,11 +65,13 @@ const ComputersCanvas = () => {
   return (
     <Suspense fallback={<ModelLoader />}>
       <Canvas
-        frameloop="demand"
+        key={canvasKey}
+        frameloop="always"
         shadows
         dpr={[1, 2]}
         camera={{ position: [24, 3, 20], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}
+        gl={{ powerPreference: "high-performance", antialias: false, alpha: true }}
+        style={{ background: "transparent" }}
         className="z-1"
         onError={(error) => {
           console.error("Canvas error:", error);
@@ -77,6 +80,21 @@ const ComputersCanvas = () => {
         onCreated={({ gl, scene, camera }) => {
           try {
             console.log("Canvas created successfully");
+            const canvas = gl.domElement;
+            try { gl.setClearColor(0x000000, 0); } catch {}
+            const handleLost = (event) => {
+              try {
+                event.preventDefault();
+              } catch {}
+              console.warn("WebGL context lost, remounting canvas");
+              setCanvasKey((k) => k + 1);
+            };
+            const handleRestored = () => {
+              console.log("WebGL context restored, remounting canvas");
+              setCanvasKey((k) => k + 1);
+            };
+            canvas.addEventListener("webglcontextlost", handleLost, false);
+            canvas.addEventListener("webglcontextrestored", handleRestored, false);
           } catch (error) {
             console.error("Error in Canvas onCreated:", error);
           }

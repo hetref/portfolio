@@ -13,7 +13,7 @@ const ModelComputer = ({ isMobile = false }) => {
   const [mounted, setMounted] = useState(false);
   const [hasError, setHasError] = useState(false);
   
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("/desktop_pc/scene.gltf");
 
   useEffect(() => {
     try {
