@@ -126,7 +126,7 @@ export default function MaskedAbout() {
               className="z-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex w-full md:w-[80%] lg:w-[70%] gap-[10px] md:gap-[20px] items-center flex-col font-roboto px-2 md:px-0"
             >
               <p ref={paragraph1} className="w-full text-lg md:text-xl lg:text-2xl font-roboto">
-                I&quot;m a <span className="font-orisis">second-year</span> undergraduate student in Information Technology at <span className="font-orisis">M.G.M College of Engineering and Technology</span>, specializing in web
+                I&quot;m a <span className="font-orisis">second-year</span> undergraduate student in <span className="font-orisis">Information Technology</span> at <span className="font-orisis">M.G.M College of Engineering</span>, specializing in web
                 development with modern technologies like Next.js, GraphQL, and
                 more.
               </p>

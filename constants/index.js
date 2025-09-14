@@ -1,3 +1,107 @@
+export const baseskills = [
+  {
+    name: "HTML",
+    percentage: 98,
+  },
+  {
+    name: "CSS",
+    percentage: 94,
+  },
+  {
+    name: "JS",
+    percentage: 96,
+  },
+  {
+    name: "JQUERY",
+    percentage: 90,
+  },
+  {
+    name: "XML",
+    percentage: 80,
+  },
+  {
+    name: "JAVA",
+    percentage: 75,
+  },
+];
+
+export const coreskills = [
+  {
+    name: "NEXT JS",
+    percentage: 90,
+  },
+  {
+    name: "REACT JS",
+    percentage: 96,
+  },
+  {
+    name: "NODE JS",
+    percentage: 80,
+  },
+  {
+    name: "TAILWIND CSS",
+    percentage: 96,
+  },
+  {
+    name: "SCSS",
+    percentage: 94,
+  },
+  {
+    name: "GraphQL",
+    percentage: 92,
+  },
+  {
+    name: "WORDPRESS",
+    percentage: 90,
+  },
+  {
+    name: "Solidity",
+    percentage: 80,
+  },
+];
+
+export const databaseskills = [
+  {
+    name: "FIREBASE",
+    percentage: 90,
+  },
+  {
+    name: "SQL",
+    percentage: 72,
+  },
+  {
+    name: "MONGODB",
+    percentage: 76,
+  },
+  {
+    name: "NEON (Prisma)",
+    percentage: 80,
+  },
+];
+
+export const toolskills = [
+  {
+    name: "CANVA",
+    percentage: 90,
+  },
+  {
+    name: "FIGMA",
+    percentage: 88,
+  },
+  {
+    name: "GIT",
+    percentage: 90,
+  },
+  {
+    name: "GoHighLevel",
+    percentage: 70,
+  },
+  {
+    name: "Remix",
+    percentage: 80,
+  },
+];
+
 export const experience = [
   {
     title: "Journey Started",
@@ -11,7 +115,7 @@ export const experience = [
     title: "Taught Students",
     subtitle: "Online & Offline",
     description:
-      "I teach Web Development, and App Development to over 100+ students online and more than 60+ students offline.",
+      "I taught Web Development, and App Development to over 100+ students online and more than 60+ students offline.",
     date: "Sep 2021 - Oct 2022",
     category: "Passion",
   },
@@ -27,7 +131,7 @@ export const experience = [
     title: "IEEE Bombay Section",
     subtitle: "IEEE BS SAC (Volunteer)",
     description:
-      "I was a Operations member at IEEE BS SAC where me and my team handled all the operational work of IEEE BS. Also I was a website chair and food chair at a event named 'IBSYWLC' hosted by IEEE Bs SAC.",
+      "I was a Operations member at IEEE BS SAC where me and my team handled all the operational work of IEEE BS. Also been web head at a event 'IBSYWLC' hosted by IEEE BS SAC.",
     date: "2023 - 2024",
     category: "Volunteering",
   },
@@ -85,35 +189,35 @@ export const experience = [
     description:
       "I make website and deliver it to my clients as a freelancer, where I work with Wordpress, Shopify or custom code as per the client's requirements.",
     date: "Jan 2024 - Present",
-    category: "Volunteer",
+    category: "Work",
+  },
+  {
+    title: "Workshops",
+    subtitle: "Offline Sessions",
+    description:
+      "I take interactive and most engaging Workshops on Web Development, and Automation with more than 100+ students.",
+    date: "Jan 2025 - Present",
+    category: "Passion",
+  },
+  {
+    title: "Participant at DIPEX'25",
+    subtitle: "DIPEX 2025",
+    description:
+      "Me and my team were selected at biggest project competition in Mahashtra for Diploma students, where we presented Thikana.",
+    date: "3 - 6 Apr 2025",
+    category: "Achievement",
+  },
+  {
+    title: "n8n Creator",
+    subtitle: "Automation Development",
+    description:
+      "I build automations on n8n or custom coded and deliver it to my clients or automate my daily life tasks. Also publish templates on n8n Creator.",
+    date: "May 2025 - Present",
+    category: "Work",
   },
 ];
 
 export const projects = [
-  {
-    name: "Navkar Academy Store",
-    description:
-      "Navkar Academy is a tution classes website where they also want to sell custom made notes to students online. I developed a complete e-commerce website using razopay.",
-    tags: [
-      "NextJS",
-      "TailwindCSS",
-      "ShadCN",
-      "Firebase",
-      "Resend (Email)",
-      "Razorpay",
-    ],
-    image:
-      "https://hetref.github.io/portfolio-assets/project/navkar-store-min.png",
-    url: "https://navkar-academy-store.vercel.app/",
-  },
-  {
-    name: "Navkar Academy",
-    description:
-      "Navkar Academy is a tution classes website where they take tutions for school students. I developed their academy's landing page with complete responsiveness.",
-    tags: ["NextJS", "TailwindCSS", "ShadCN", "Firebase", "Resend (Email)"],
-    image: "https://hetref.github.io/portfolio-assets/project/navkar-min.png",
-    url: "https://navkar-academy.vercel.app/",
-  },
   {
     name: "Triya",
     description:
@@ -123,135 +227,27 @@ export const projects = [
     url: "https://triya.co",
   },
   {
-    name: "Shishyakul | Classes",
+    name: "Blog Generation",
     description:
-      "Shishyakul is one of my successful clients, who own this exclusive website which includes Student Management with Attendance, Profile Information of Students & Test Paper Management.",
-    tags: ["NextJS", "TailwindCSS", "ShadCN", "Firebase", "Resend (Email)"],
-    image: "https://hetref.github.io/portfolio-assets/project/shishyakul.png",
-    url: "https://shishyakul.in",
+      "Automates SEO-rich WordPress blog creation using Gemini LLM, Tavily search, human review, image generation, and direct publishing with Google Sheets audit.",
+    tags: ["n8n", "Wordpress", "AI", "Tavily"],
+    image: "https://hetref.github.io/portfolio-assets/project/blog-generation-n8n.png",
+    url: "https://n8n.io/workflows/8356",
   },
   {
-    name: "DocAI",
+    name: "LinkedIn Automation",
     description:
-      "DocAI is a project developed in accordance to learn Prisma, offering a user-friendly platform for creating and managing your written work with the power of AI.",
-    tags: [
-      "NextJS",
-      "TailwindCSS",
-      "ShadCN",
-      "Neon DB",
-      "Clerk",
-      "Prisma(ORM)",
-      "GeminiAI",
-    ],
-    image: "https://hetref.github.io/portfolio-assets/project/docai.png",
-    url: "https://docai.aryanshinde.in",
-    inspiration: "Oliver the Dev",
+      "Automates LinkedIn post workflow by generating content with OpenAI, managing drafts in Google Sheets, and using Gmail for approval and seamless publishing via n8n.",
+    tags: ["n8n", "LinkedIn API", "AI", "Firebase", "Resend (Email)"],
+    image: "https://hetref.github.io/portfolio-assets/project/linkedin-post-automation-n8n.png",
+    url: "https://n8n.io/workflows/4005",
   },
   {
-    name: "Filedrop",
+    name: "3D MAAC Jayanagar",
     description:
-      "Filedrop simplifies file sharing with a user-friendly interface. Built using NextJS, ShadCN, Firebase, Zustand, and Clerk, this project ensures efficient and reliable file transfer experiences.",
-    tags: ["NextJS", "ShadCN", "Firebase", "Clerk", "Zustand"],
-    image: "https://hetref.github.io/portfolio-assets/project/filedrop-min.png",
-    url: "https://filedrop.aryanshinde.in",
-    inspiration: "Sonny Sangha",
-  },
-  {
-    name: "AISYWLC",
-    description:
-      "AISYWLC, powered by WordPress, delivers a captivating online presence. Explore the world of this project with its immersive content and engaging features.",
-    tags: ["Wordpress"],
-    image: "https://hetref.github.io/portfolio-assets/project/aisywlc-min.png",
-    url: "https://aisywlc.ieeebombay.org/",
-  },
-  {
-    name: "IBSYWLC",
-    description:
-      "IBSYWLC presents a modern and visually appealing website built with ReactJS and TailwindCSS. Experience a seamless and aesthetically pleasing user interface.",
-    tags: ["ReactJS", "TailwindCSS"],
-    image: "https://hetref.github.io/portfolio-assets/project/ibsywlc-min.png",
-    url: "https://ieeebombay.org/ibsywlc23/",
-  },
-  {
-    name: "CrownVitrea",
-    description:
-      "CrownVitrea is a feature-rich WordPress website that exudes elegance. Explore the royal charm and captivating content embedded in this online presence.",
-    tags: ["Wordpress"],
-    image:
-      "https://hetref.github.io/portfolio-assets/project/crownvitrea-min.png",
-    url: "https://crownvitrea.com/",
-  },
-  {
-    name: "IDream Realty",
-    description:
-      "IDream Realty, a WordPress-based project, offers a glimpse into the world of dream properties. Discover a user-friendly platform for real estate enthusiasts.",
-    tags: ["Wordpress"],
-    image:
-      "https://hetref.github.io/portfolio-assets/project/idream-realty-min.png",
-    url: "https://idreamrealty.ca/",
-  },
-  {
-    name: "Lehagen",
-    description:
-      "Lehagen, a WordPress project, showcases a captivating online presence. Dive into the content and experience the unique charm of this website.",
-    tags: ["Wordpress"],
-    image: "https://hetref.github.io/portfolio-assets/project/lehagen-min.png",
-    url: "https://lehagen.in/",
-  },
-  // {
-  //   name: "Devoutlooks",
-  //   description:
-  //     "Devoutlooks combines the power of ReactJS, Firebase, and Bootstrap to create a visually stunning and functionally rich platform. Explore the latest in fashion with this dynamic project.",
-  //   tags: ["ReactJS", "Firebase", "Bootstrap"],
-  //   image:
-  //     "https://hetref.github.io/portfolio-assets/project/devoutlooks-min.png",
-  //   url: "https://devoutlook.netlify.app/",
-  // },
-  {
-    name: "Customize Shirts",
-    description:
-      "Express your style with Customize Shirts, a platform where you can design and personalize your own shirts. Created with NextJS, ThreeJS, and ShadCN, unleash your creativity in the world of customized fashion.",
-    tags: ["NextJS", "ThreeJS", "ShadCN"],
-    image:
-      "https://hetref.github.io/portfolio-assets/project/customize-shirt-min.png",
-    url: "https://customizeshirt.netlify.app/",
-    inspiration: "JS Mastery",
-  },
-  {
-    name: "Lottery DAPP",
-    description:
-      "A decentralized application (DAPP) designed for lottery enthusiasts. Experience seamless and secure lottery transactions powered by NextJS, Solidity, ShadCN, and ThirdWeb technologies.",
-    tags: ["NextJS", "Solidity", "ShadCN", "ThirdWeb"],
-    image:
-      "https://hetref.github.io/portfolio-assets/project/lottery-dapp-min.png",
-    url: "https://lottery-dapp-hetref.vercel.app",
-    inspiration: "Sonny Sangha",
-  },
-  {
-    name: "TextUtils",
-    description:
-      "TextUtils provides essential text manipulation tools in a convenient ReactJS application. Seamlessly perform various text operations to enhance your content.",
-    tags: ["ReactJS"],
-    image:
-      "https://hetref.github.io/portfolio-assets/project/textutils-min.png",
-    url: "https://hetref.github.io/textutils/",
-    inspiration: "CodeWithHarry",
-  },
-  {
-    name: "YourTodo",
-    description:
-      "Manage your tasks efficiently with YourTodo. This project, crafted with HTML, CSS, JavaScript, MaterializeCSS, and Firebase, offers a user-friendly interface for organizing your daily activities.",
-    tags: ["HTML", "CSS", "JavaScript", "MaterializeCSS", "Firebase"],
-    image: "https://hetref.github.io/portfolio-assets/project/yourtodo-min.png",
-    url: "https://hetref.github.io/yourtodo/",
-  },
-  // {
-  //   name: "Tile Game",
-  //   description:
-  //     "Tile Game is an engaging project built with HTML, CSS, and JavaScript. Challenge yourself with this interactive tile-based game that promises hours of entertainment.",
-  //   tags: ["HTML", "CSS", "JavaScript"],
-  //   image:
-  //     "https://hetref.github.io/portfolio-assets/project/tile-game-min.png",
-  //   url: "https://hetref.github.io/tilesgame/",
-  // },
+      "MAAC Jayanagar is a Franchise of the best Animation Coaching Institute named MAAC. Providing multiple animation & designing courses and degrees offline.",
+    tags: ["HTML", "CSS", "BOOTSTRAP", "FraudClicks (CRM)"],
+    image: "https://hetref.github.io/portfolio-assets/project/3d-maac-jayanagar.png",
+    url: "https://3d.maacjayanagar.com/",
+  }
 ];

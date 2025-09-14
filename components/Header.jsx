@@ -3,12 +3,13 @@
 import Typewriter from "typewriter-effect";
 import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { BsThreads, BsTwitterX } from "react-icons/bs";
-import { SiLeetcode } from "react-icons/si";
+import { SiLeetcode, SiN8N } from "react-icons/si";
 import { motion } from "framer-motion";
 import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 import { gsap } from "gsap";
 import dynamic from "next/dynamic";
 import { MorphingText } from "@/components/magicui/morphing-text";
+
 const ComputersCanvas = dynamic(() => import("./Computers"), {
   ssr: true,
   loading: () => (
@@ -46,7 +47,7 @@ const Header = () => {
               <MorphingText texts={["AUTOMATER", "DEVELOPER", "FREELANCER", "DESIGNER"]} />
               </div>
             </div>
-            <div className="flex flex-col gap-2 my-3">
+            {/* <div className="flex flex-col gap-2 my-3">
               <a
                 href="https://drive.google.com/file/d/11p6AlR91CVTtnyj08fobBzGFo8FiGM4_/view?usp=sharing"
                 className="text-lg px-8 py-3 border-2 border-white rounded-full w-fit"
@@ -54,8 +55,8 @@ const Header = () => {
               >
                 Download RESUME
               </a>
-            </div>
-            <div className="header_social flex mt-[10%] lg:mt-[6%]">
+            </div> */}
+            <div className="header_social flex">
               <a
                 className="header_icon"
                 href="https://leetcode.com/shindearyan179/"
@@ -83,6 +84,13 @@ const Header = () => {
                 target="_blank"
               >
                 <FaYoutube />
+              </a>
+              <a
+                className="header_icon"
+                href="https://n8n.io/creators/shindearyan/"
+                target="_blank"
+              >
+                <SiN8N />
               </a>
               <a
                 className="header_icon"
