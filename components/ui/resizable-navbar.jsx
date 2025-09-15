@@ -249,7 +249,7 @@ export const NavbarButton = ({
   ...props
 }) => {
   const baseStyles =
-    "px-4 py-2 rounded-md bg-white button text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-300 inline-block text-center font-josefin-sans uppercase";
+    "px-4 py-2 rounded-md bg-white button text-black text-sm font-semibold relative cursor-pointer hover:-translate-y-0.5 transition duration-300 inline-block text-center font-josefin-sans uppercase";
 
   const variantStyles = {
     ghost: "bg-transparent",
