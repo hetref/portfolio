@@ -3,8 +3,11 @@
 import { Html, useProgress } from "@react-three/drei";
 import useLoaderStore from "@/stores/loader";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const Preloader = () => {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const { progress, active } = useProgress();
   const [loading, setIsLoading, setLoadingState] = useLoaderStore((state) => [
     state.loading,
@@ -13,20 +16,50 @@ const Preloader = () => {
   ]);
 
   useEffect(() => {
+    // Only control loading on the homepage
+    if (!isHome) {
+      setLoadingState(false);
+      return;
+    }
+
+    // let alreadyLoaded = false;
+    // try {
+    //   alreadyLoaded = sessionStorage.getItem("models_loaded") === "true";
+    // } catch {}
+
+    // if (alreadyLoaded) {
+    //   setLoadingState(false);
+    //   try {
+    //     document.documentElement.style.overflow = "";
+    //   } catch {}
+    //   return;
+    // }
+
     const pct = Number.isFinite(progress) ? Math.floor(progress) : 0;
     setIsLoading(pct);
-    setLoadingState(!(progress >= 100));
+    const stillLoading = !(progress >= 100);
+    setLoadingState(stillLoading);
 
-    if (!(progress >= 100)) {
+    if (stillLoading) {
       try {
         document.documentElement.style.overflow = "hidden";
       } catch {}
     } else {
       try {
         document.documentElement.style.overflow = "";
+        // localStorage.setItem("models_loaded", "true");
       } catch {}
     }
-  }, [progress, setIsLoading, setLoadingState]);
+  }, [isHome, progress, setIsLoading, setLoadingState]);
+
+  // Only render overlay on homepage and if models not yet loaded
+  if (!isHome) return null;
+
+  // let alreadyLoaded = false;
+  // try {
+  //   alreadyLoaded = typeof window !== "undefined" && sessionStorage.getItem("models_loaded") === "true";
+  // } catch {}
+  // if (alreadyLoaded) return null;
 
   // Overlay that sits above the app until loading completes
   return (
