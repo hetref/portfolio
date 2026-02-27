@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
@@ -14,16 +14,8 @@ export default function MaskedAbout() {
   const paragraph3 = useRef(null);
   const paragraph4 = useRef(null);
   const paragraph5 = useRef(null);
-  const [videoError, setVideoError] = useState(false);
 
   gsap.registerPlugin(ScrollToPlugin);
-
-  const scrollToSection = (id) => {
-    gsap.to(window, {
-      duration: 2,
-      scrollTo: { y: id },
-    });
-  };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
