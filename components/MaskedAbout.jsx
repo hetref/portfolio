@@ -3,7 +3,6 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 export default function MaskedAbout() {
@@ -111,15 +110,18 @@ export default function MaskedAbout() {
       <main className="maskmain">
         <div ref={container} className="maskcontainer">
           <div ref={stickyMask} className="stickyMask relative">
-            <Image
-              src="/assets/about-bg.png"
-              alt="About Background"
-              fill
+            <video
+              src="/assets/about-video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               draggable={false}
+              className="absolute inset-0 w-full h-full object-cover"
             />
             <div
               ref={contentDiv}
-              className="z-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex w-full md:w-[80%] lg:w-[70%] gap-[10px] md:gap-[20px] items-center flex-col font-roboto px-4 md:px-0"
+              className="z-1 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex w-full md:w-[80%] lg:w-[70%] gap-[10px] md:gap-[20px] items-center flex-col font-roboto px-4 md:px-0 text-white"
             >
               <p ref={paragraph1} className="w-full text-lg md:text-xl lg:text-2xl font-roboto">
                 I&quot;m a <span className="font-orisis">second-year</span> undergraduate student in <span className="font-orisis">Information Technology</span> at <span className="font-orisis">M.G.M College of Engineering</span>, specializing in web
