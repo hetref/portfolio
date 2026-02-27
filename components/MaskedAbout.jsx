@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
@@ -14,6 +14,7 @@ export default function MaskedAbout() {
   const paragraph3 = useRef(null);
   const paragraph4 = useRef(null);
   const paragraph5 = useRef(null);
+  const [videoError, setVideoError] = useState(false);
 
   gsap.registerPlugin(ScrollToPlugin);
 
@@ -117,6 +118,8 @@ export default function MaskedAbout() {
               muted
               playsInline
               draggable={false}
+              preload="metadata"
+              poster="/about/about-bg.png"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div
