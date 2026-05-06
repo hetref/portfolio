@@ -33,7 +33,7 @@ export const Navbar = ({ children, className }) => {
     // Handle navbar show/hide based on scroll direction
     const currentScrollY = latest;
     const scrollDifference = currentScrollY - lastScrollY;
-    
+
     // Always show navbar at the top of the page
     if (currentScrollY <= 50) {
       setIsNavbarVisible(true);
@@ -49,7 +49,7 @@ export const Navbar = ({ children, className }) => {
         }
       }
     }
-    
+
     setLastScrollY(currentScrollY);
   });
 
@@ -123,20 +123,33 @@ export const NavItems = ({ items, className, onItemClick, visible }) => {
       )}
     >
       {items.map((item, idx) => (
-        <button
-          onMouseEnter={() => setHovered(idx)}
-          onClick={item.onClick || onItemClick}
-          className={cn("relative px-4 py-2 text-white font-josefin-sans uppercase hover:text-white/90 hover:tracking-wide transition duration-200 cursor-pointer", visible && "text-black/90 hover:text-black/80")}
-          key={`link-${idx}`}
-        >
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className={cn("absolute inset-0 h-full w-full rounded-full bg-black/60", visible && "bg-gray-100")}
-            />
-          )}
-          <span className="relative z-20">{item.name}</span>
-        </button>
+        item.link && item.link !== "#" ? (
+          <Link
+            href={item.link}
+            key={`link-${idx}`}
+            className={cn(
+              "relative px-4 py-2 text-white font-josefin-sans uppercase hover:text-white/90 hover:tracking-wide transition duration-200 cursor-pointer",
+              visible && "text-black/90 hover:text-black/80",
+            )}
+          >
+            <span className="relative z-20">{item.name}</span>
+          </Link>
+        ) : (
+          <button
+            onMouseEnter={() => setHovered(idx)}
+            onClick={item.onClick || onItemClick}
+            className={cn("relative px-4 py-2 text-white font-josefin-sans uppercase hover:text-white/90 hover:tracking-wide transition duration-200 cursor-pointer", visible && "text-black/90 hover:text-black/80")}
+            key={`link-${idx}`}
+          >
+            {hovered === idx && (
+              <motion.div
+                layoutId="hovered"
+                className={cn("absolute inset-0 h-full w-full rounded-full bg-black/60", visible && "bg-gray-100")}
+              />
+            )}
+            <span className="relative z-20">{item.name}</span>
+          </button>
+        )
       ))}
     </motion.div>
   );
@@ -255,8 +268,8 @@ export const NavbarButton = ({
     ghost: "bg-transparent",
     primary:
       "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] bg-primary rounded-full text-white",
-    outline: visible 
-      ? "border border-black rounded-full bg-black text-white hover:bg-transparent hover:text-black" 
+    outline: visible
+      ? "border border-black rounded-full bg-black text-white hover:bg-transparent hover:text-black"
       : "border border-black rounded-full bg-white text-black hover:text-white hover:bg-transparent hover:border-white",
     secondary: "bg-transparent border border-transparent shadow-none hover:text-primary hover:border rounded-full hover:border-primary",
     dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",

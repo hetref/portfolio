@@ -54,6 +54,11 @@ const NavigationBar = () => {
       link: "#",
       onClick: () => scrollToSection("#myprojects_wrapper"),
     },
+    {
+      name: "SaaS",
+      link: "/saas",
+      onClick: () => { },
+    },
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -65,7 +70,7 @@ const NavigationBar = () => {
           <NavBody>
             <NavbarLogo />
             <NavItems items={navItems} />
-            <NavbarButton 
+            <NavbarButton
               variant="outline"
               onClick={() => scrollToSection("#contactme_wrapper")}
             >
@@ -88,16 +93,27 @@ const NavigationBar = () => {
               onClose={() => setIsMobileMenuOpen(false)}
             >
               {navItems.map((item, idx) => (
-                <button
-                  key={`mobile-link-${idx}`}
-                  onClick={() => {
-                    item.onClick();
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="relative text-neutral-600 hover:text-black transition-colors duration-200"
-                >
-                  <span className="block">{item.name}</span>
-                </button>
+                item.link && item.link !== "#" ? (
+                  <Link
+                    key={`mobile-link-${idx}`}
+                    href={item.link}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="relative text-neutral-600 hover:text-black transition-colors duration-200"
+                  >
+                    <span className="block">{item.name}</span>
+                  </Link>
+                ) : (
+                  <button
+                    key={`mobile-link-${idx}`}
+                    onClick={() => {
+                      item.onClick();
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="relative text-neutral-600 hover:text-black transition-colors duration-200"
+                  >
+                    <span className="block">{item.name}</span>
+                  </button>
+                )
               ))}
               <div className="flex w-full flex-col gap-4">
                 <NavbarButton
