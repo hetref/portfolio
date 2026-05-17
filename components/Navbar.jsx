@@ -54,11 +54,11 @@ const NavigationBar = () => {
       link: "#",
       onClick: () => scrollToSection("#myprojects_wrapper"),
     },
-    {
-      name: "SaaS",
-      link: "/saas",
-      onClick: () => { },
-    },
+    // {
+    //   name: "SaaS",
+    //   link: "/saas",
+    //   onClick: () => { },
+    // },
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
